@@ -1,17 +1,20 @@
 import Login from "@/components/login";
 import styles from '/app/page.module.css'
-import Nav from "@/components/sidebar/page";
+import Sidebar from "@/components/sidebar";
 
 function login() {
   return (
-    <main className={styles.main}>
-      <div>
-        <>
-        <Nav />
+       
+        <div className={styles.main}>
+      <div className={styles.wast}>
         <Login/>
-        </>
       </div>
-    </main>
+        <div className={styles.SideBar}>
+                <Sidebar/>
+
+      </div>
+       
+      </div>
   );
 }
 export default login;

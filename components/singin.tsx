@@ -5,7 +5,6 @@ import styles from '/app/page.module.css'
   return (
     <div >
     <div>
-      <form action="" >
         <div className={styles.formul}>
         <div className={styles.group}>
           <label htmlFor="email" className={styles.label}>name</label>
@@ -32,7 +31,7 @@ import styles from '/app/page.module.css'
         <button className={styles.btn}>singin</button>
         <Link  href="/login"><button className={styles.btn}>i have account</button></Link>
         </div>
-      </form>
+      
       
     </div>
 </div>

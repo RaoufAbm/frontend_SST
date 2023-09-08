@@ -1,22 +1,14 @@
-"use client"; // This is a client component 👈🏽
+import Login from "@/components/login";
+import styles from '/app/page.module.css'
+import Sidebar from "@/components/sidebar";
 
-import { BrowserRouter } from "react-router-dom";
-import Login from "./login";
-import React from "react";
-
-
-function home() {
- 
+function login() {
   return (
-    <React.StrictMode>
-     <BrowserRouter>
-    {/* <Home/> */}
-    <Login/>
-
-    </BrowserRouter>
-    </React.StrictMode>
-
+       
+        <div className={styles.main}>
+        <Login/>
+       
+      </div>
   );
 }
-
-export default home;
+export default login;

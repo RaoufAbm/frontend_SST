@@ -1,12 +1,32 @@
+
 .main {
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 6rem;
-  min-height: 100vh;
+  /* min-height: 100vh; */
+  background-color: rgb(255, 255, 255);
+height: 10vh;
 }
+.SideBar{
+  width: 25%;
+  margin-left: 0%;
+  position: fixed;
 
+}
+.navbar{
+  width: 100%;
+
+}
+.wast{
+  background-color: rgb(253, 253, 255);
+  border: #cac9c9c4 5px solid;
+  border-radius: 10px;
+  width: 74%;
+  height: 100vh;
+  margin-left: 26%;
+  position: fixed;
+}
 .description {
   display: inherit;
   justify-content: inherit;

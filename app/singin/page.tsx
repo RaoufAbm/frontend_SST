@@ -1,17 +1,19 @@
 import Singin from "@/components/singin";
-import Link from "next/link";
-import styles  from "/app/page.module.css"
-import Nav from "@/components/sidebar/page";
+import styles from "/app/page.module.css";
+import Sidebar from "@/components/sidebar";
 
 function singin() {
   return (
-    <main className={styles.main}>
-      <div>
-      <Nav />
+    <div className={styles.main}>
+      <div className={styles.wast}>
         <h1 className={styles.titre}>singin</h1>
-        <Singin/>
+        <Singin />
       </div>
-    </main>
+      <div className={styles.SideBar}>
+                <Sidebar/>
+
+      </div>
+    </div>
   );
 }
 export default singin;
