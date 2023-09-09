@@ -8,7 +8,7 @@ import Swal from "sweetalert2";
 function login() {
   const [values, setValues] = useState({
     Name: "",
-    password: "",
+    Password: "",
   });
 
   const handleInput = (event: { target: { name: any; value: any } }) => {
@@ -27,11 +27,11 @@ function login() {
           Swal.fire({
             position: "top",
             icon: "success",
-            title: "Your work has been saved",
+            title: "Connexion réussie.",
             showConfirmButton: false,
             timer: 1500,
           }).then(function () {
-            window.location.href = "/home";
+            window.location.href = "/station";
           });
         } else {
           // alert("no existed");
@@ -60,39 +60,42 @@ function login() {
                 <div className="mb-md-5 mt-md-4 pb-5">
                   <h2 className="fw-bold mb-2 text-uppercase">Login</h2>
                   <form onSubmit={handleSubmit}>
-                    <div className="form-outline form-white mb-4">
-                      <label className="form-label float-start " htmlFor="Name">
-                        Name
+                    <div className="form-outline form-white mb-4 ">
+                      <label className="form-label  " htmlFor="Name">
+                        {/* Name */}
                       </label>
                       <input
                         type="Name"
                         className="form-control form-control-lg"
                         name="Name"
+                        placeholder="Name"
                         onChange={handleInput}
                       />
                     </div>
 
                     <div className="form-outline form-white mb-4">
-                      <label className="form-label float-start" htmlFor="password">
-                        password
+                      <label
+                        className="form-label float-start"
+                        htmlFor="Password"
+                      >
+                        {/* Password */}
                       </label>
                       <input
-                        type="password"
+                        placeholder="Password"
+                        type="Password"
                         className="form-control form-control-lg"
-                        name="password"
+                        name="Password"
                         onChange={handleInput}
                       />
                     </div>
-<br />
-<br />
+
+                    <br />
+                    <br />
                     <button className="btn btn-outline-light btn-lg px-5  ">
                       Login
                     </button>
                   </form>
-                 
                 </div>
-
-               
               </div>
             </div>
           </div>

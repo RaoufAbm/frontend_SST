@@ -5,7 +5,7 @@ import Sidebar from "@/components/sidebar";
 function singin() {
   return (
     <div className={styles.main}>
-      <div className={styles.wast}>
+      <div className={styles.content}>
         <h1 className={styles.titre}>singin</h1>
         <Singin />
       </div>
