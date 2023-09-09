@@ -17,27 +17,19 @@ function station() {
       <Header />
     </div>
     
-      <div className=' d-flex justify-content-start  pl-5 align-items-stretch flex-wrap row bg-transparent' style={{marginTop:"-8%" }}  >
-        <Cards />
-        <Cards />
-        <Cards />
-        <Cards />
-        <Cards />
-        <Cards />
-        <Cards />
-        <Cards />
-        <Cards />
-    {/* display: flex!important;
-     align-content: flex-start; 
-     flex-direction: column; 
-     justify-content: center; 
-    flex-direction: row;
-    align-items: baseline;
-    flex-wrap: wrap;
-    justify-content: start;  */}
+      <div className=' d-flex justify-content-start  pl-5 align-items-stretch flex-wrap row bg-transparent text-decoration-none'  style={{marginTop:"-8%" }}  >
+     <a className="text-decoration-none" href="/home"><Cards /></a>
+     <a className="text-decoration-none" href="/home"><Cards /></a>
+     <a className="text-decoration-none" href="/home"><Cards /></a>
+     <a className="text-decoration-none" href="/home"><Cards /></a>
+     <a className="text-decoration-none" href="/home"><Cards /></a>
+     <a className="text-decoration-none" href="/home"><Cards /></a>
+     <a className="text-decoration-none" href="/home"><Cards /></a>
+     <a className="text-decoration-none" href="/home"><Cards /></a>
+     <a className="text-decoration-none" href="/home"><Cards /></a>
+     <a className="text-decoration-none" href="/home"><Cards /></a>
+     
 
-      
-        
       </div>
     </div>
   );

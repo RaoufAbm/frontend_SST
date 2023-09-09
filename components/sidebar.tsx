@@ -1,6 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
 
+import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
 
 export function sidebar() {
   return (
@@ -11,22 +11,15 @@ export function sidebar() {
         <a href="#" className="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
           <span className="fs-5 d-none d-sm-inline">Menu</span>
         </a>
-        <ul className="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
-          <li className="nav-item ">
-            <a href="/home" className="nav-link align-middle px-0">
-           
-              <i className="fs-4 bi-house" /> <span className="ms-1 d-none d-sm-inline">Home</span>
-            
-            </a>
-          </li>
+        <ul className="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">   
           <li>
             <a href="/home" data-bs-toggle="collapse" className="nav-link px-0 align-middle">
-              <i className="fs-4 bi-speedometer2" /> <span className="ms-1 d-none d-sm-inline">Dashboard</span> </a>
+              <i className="fs-4 bi-speedometer2" /> <span className="ms-1 d-none d-sm-inline">tableau de bord</span> </a>
           
           </li>
           <li>
             <a href="/login" className="nav-link px-0 align-middle">
-              <i className="fs-4 bi-table" /> <span className="ms-1 d-none d-sm-inline">Orders</span></a>
+              <i className="fs-4 bi-table" /> <span className="ms-1 d-none d-sm-inline">Pompist  </span></a>
           </li>
           <li>
             <a href="/singin" data-bs-toggle="collapse" className="nav-link px-0 align-middle ">
