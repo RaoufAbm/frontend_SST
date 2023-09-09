@@ -18,13 +18,21 @@ function home() {
       <Navbar />
 
       </div>
+
+      
+    <div className={styles.body}>
+      <div className={styles.SideBar}>
+              <Sidebar/>
+    </div>
     <div className={styles.content}>
       <h1>home</h1>
     <Table/>
+    <Table/>
+    <Table/>
+    <Table/>
+    <Table/>
+    <Table/>
     </div>
-      <div className={styles.SideBar}>
-              <Sidebar/>
-
     </div>
      
     </div>
