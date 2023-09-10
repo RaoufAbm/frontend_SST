@@ -10,7 +10,7 @@ import Link from "next/link";
 
 export function sidebar() {
   return (
-    <div className="col-auto  col-xl-0 px-sm-2 px-0  bg-dark">
+    <div className="col-auto  col-xl-0 px-sm-2 px-0  " style={{background:"#17141D"}}>
       <div className="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
         <ul
           className="nav nav-pills flex-column mb-sm-auto  align-items-center align-items-sm-start vh-100"
@@ -37,14 +37,14 @@ export function sidebar() {
             <li >
               {/* <i className="fs-4 bi-bootstrap" /> */}
               {/* <FontAwesomeIcon icon={faHome} /> */}
-              <FontAwesomeIcon icon={faTruckDroplet} />
+              {/* <FontAwesomeIcon icon={faTruckDroplet} /> */}
               <span className="ml-3 ms-1 d-none d-sm-inline">Achat</span>
             </li>
           </Link>
           <Link href="/indexSST" className={`${styles.li} ${styles.aHerf}`}>
             <li >
               {/* <i className="fs-4 bi-grid" /> */}
-              <FontAwesomeIcon icon={faPenToSquare} />
+              {/* <FontAwesomeIcon icon={faPenToSquare} /> */}
 
               <span className="ml-3 ms-1 d-none d-sm-inline">Index</span>
             </li>
@@ -52,7 +52,7 @@ export function sidebar() {
           <Link href="/statistique" className={`${styles.li} ${styles.aHerf}`}>
             <li>
               {/* <i className="fs-4 bi-table" /> */}
-              <FontAwesomeIcon icon={faChartLine} />
+              {/* <FontAwesomeIcon icon={faChartLine} /> */}
               <span className="ml-3 ms-1 d-none d-sm-inline">statistique</span>
             </li>
           </Link>

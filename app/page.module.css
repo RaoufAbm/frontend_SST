@@ -39,8 +39,8 @@
   
 }
 .ul{
-  width: 127%;
-  margin-left: -13%;
+  /* width: 127%; */
+  /* margin-left: -13%; */
   /* height: 100vh; */
   /* background-color: red; */
 }
@@ -81,11 +81,224 @@ text-decoration: none;
   text-decoration: none;
 }
 
+/* _______________________________ */ 
 
 /* ------------------------------Project current------------------------------------- */
 
+/* ______________Cuve joge__________________ */
 
-/* _______________________________ */ 
+.CuveSST{
+  position: absolute;
+  /* background-color: red; */
+}
+.cylinder {
+	position: relative;
+	overflow: hidden;
+	margin: 0 auto;
+  margin-top: -60%;
+	width:110px;
+	height: 30vh;
+  border: rgba(255, 255, 255, 0.308) 1px solid;
+
+	border-radius: 50px/25px;
+background-color:rgb(0, 0, 0);
+}	
+
+.cylinder:before {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 110px;
+	height: 50px;
+	border-radius: 50px/25px;
+	background-color:rgb(0, 0, 0);
+	content: '';
+}
+.water {
+  position: absolute;
+  z-index: 10;
+  /* left: 0; */
+  /* top: 50; */
+  top: 75%;
+  /* bottom: 0; */
+  width: 458px;
+  height: 461px;
+  padding-top: 100%;
+  margin-left: -154%;
+  background-color: #ffae00;
+  transition: 0.3s linear;
+  transition: 0.3s lineary;
+  border-radius: 44%;
+  transform: rotate(360deg);
+  transition: all 4s ease;
+  animation: wave 150s linear infinite;
+
+}
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(3600deg); }
+}
+
+/* .water:before {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100px;
+	height: 50px;
+	border-radius: 50px/25px;
+	background-color: #F1A501;
+	content: '';
+} */
+/* .water:after {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100px;
+	height: 50px;
+	border-radius: 50px/25px;
+	background-color: #F1A501;
+	content: '';
+} */
+.water--0:checked ~ .cylinder .water {
+	bottom: -50px;
+}
+
+.water--30:checked ~ .cylinder .water {
+	height: calc(250px * 0.3);
+}
+
+.water--50:checked ~ .cylinder .water {
+	height: calc(250px * 0.5);
+}
+
+.water--90:checked ~ .cylinder .water {
+	height: calc(250px * 0.9);
+}
+
+/* ______________box Cuve SST__________________ */
+
+.wrapper {
+  padding: 1%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+ grid-column-gap: 1%;
+ grid-row-gap:1%;
+}
+.box{
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  height: 350px;
+  width: 100%;
+  min-width: 250px;
+  padding: 1rem;
+  border-radius: 16px;
+  background: #17141d;
+  box-shadow: -1rem 0 3rem #00000067;
+  transition: .2s;
+  font-family: 'Inter', sans-serif;
+  margin-left: 1%;
+  margin-top: 1%;
+}
+
+.box:hover {
+  transform: translateY(-0.4rem);
+}
+
+.boxAuthor {
+  position: relative;
+  display: grid;
+  grid-template-columns: 75px 1fr;
+  align-items: center;
+  margin: 3rem 0 0;
+}
+
+.authorName {
+  color: #7a7a8c;
+}
+
+.authorNamePrefix {
+  color: #e52e71;
+  font-weight: 600;
+}
+
+.authorAvatar span {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #f2f2f2;
+  margin: 16px 10px;
+}
+
+.halfCircle {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 48px;
+  fill: none;
+  stroke: #ff8a00;
+  stroke-width: 8;
+  stroke-linecap: round;
+}
+
+.boxHeader {
+  margin-bottom: auto;
+  color: #7a7a8c;
+}
+
+.paragraph {
+  font-size: 14px;
+  margin: 0 0 1rem;
+  color: #7a7a8c;
+}
+
+.title {
+  font-size: 25px;
+  margin: .25rem 0 auto;
+  cursor: pointer;
+  font-family: 'Arial Black', sans-serif;
+}
+
+.title:hover {
+  background: linear-gradient(90deg,#ff8a00,#e52e71);
+  text-shadow: none;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tags {
+  margin: 1rem 0 2rem;
+  padding: .5rem 0 1rem;
+  line-height: 2;
+  margin-bottom: 0;
+}
+
+.tags a {
+  font-style: normal;
+  font-weight: 700;
+  color: #7a7a8c;
+  text-transform: uppercase;
+  font-size: .66rem;
+  border: 3px solid #28242f;
+  border-radius: 2rem;
+  padding: .2rem .85rem .25rem;
+  position: relative;
+}
+
+.tags a:hover {
+  background: linear-gradient(90deg,#ff8a00,#e52e71);
+  text-shadow: none;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  background-clip: text;
+  border-color: white;
+}
+
 
 
 /* .VosStations {
@@ -102,6 +315,8 @@ backdrop-filter: blur(12.3px);
 border: 1px solid rgba(170, 170, 170, 0.82);
 width: 80%;
 } */
+
+
 
 /* --------------------------------react css ------------------------------------------ */
 

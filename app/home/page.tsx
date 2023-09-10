@@ -2,10 +2,11 @@
 import Sidebar from "@/components/sidebar";
 import styles from "/app/page.module.css";
 import Navbar from "@/components/navbar";
-import React from "react";
-import Table from "@/components/table";
+import React, { useRef } from "react";
+import Cuve from "@/components/cuve";
 
 function home() {
+
   return (
     <div className={styles.main}>
       <div className={styles.navbar}>
@@ -17,13 +18,13 @@ function home() {
           <Sidebar />
         </div>
         <div className={styles.content}>
-          <h1>home</h1>
-          <Table />
-          <Table />
-          <Table />
-          <Table />
-          <Table />
-          <Table />
+          <div className={styles.wrapper}>
+
+       <Cuve />
+       <Cuve/>
+       <Cuve/>
+       <Cuve/>
+          </div>
         </div>
       </div>
     </div>
