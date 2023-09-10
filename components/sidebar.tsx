@@ -17,7 +17,7 @@ export function sidebar() {
           style={{ width: "118%", marginLeft: "-9%" }}
           id="menu"
         >
-          <Link href="/home" className={styles.li}>
+          <Link href="/home" className={`${styles.li} ${styles.aHerf}`}>
             <li >
               {/* <i className="fs-4 bi-speedometer2" /> */}
               <i className="bi bi-calendar3-range-fill"></i>
@@ -26,14 +26,14 @@ export function sidebar() {
               </span>
             </li>
           </Link>
-          <Link href="/pompist" className={styles.li}>
+          <Link href="/pompist" className={`${`${styles.li} ${styles.aHerf}`}`}>
             <li >
               <i className="fs-4 bi-people" />
 
               <span className="ml-3 ms-1 d-none d-sm-inline">Pompist</span>
             </li>
           </Link>
-          <Link href="/achat" className={styles.li}>
+          <Link href="/achat" className={`${styles.li} ${styles.aHerf}`}>
             <li >
               {/* <i className="fs-4 bi-bootstrap" /> */}
               {/* <FontAwesomeIcon icon={faHome} /> */}
@@ -41,7 +41,7 @@ export function sidebar() {
               <span className="ml-3 ms-1 d-none d-sm-inline">Achat</span>
             </li>
           </Link>
-          <Link href="/indexSST" className={styles.li}>
+          <Link href="/indexSST" className={`${styles.li} ${styles.aHerf}`}>
             <li >
               {/* <i className="fs-4 bi-grid" /> */}
               <FontAwesomeIcon icon={faPenToSquare} />
@@ -49,7 +49,7 @@ export function sidebar() {
               <span className="ml-3 ms-1 d-none d-sm-inline">Index</span>
             </li>
           </Link>
-          <Link href="/statistique" className={styles.li}>
+          <Link href="/statistique" className={`${styles.li} ${styles.aHerf}`}>
             <li>
               {/* <i className="fs-4 bi-table" /> */}
               <FontAwesomeIcon icon={faChartLine} />
@@ -59,7 +59,7 @@ export function sidebar() {
           
           <Link href="/" >
             <li
-              className={styles.li}
+              className={`${styles.li} ${styles.aHerf}`}
               style={{ bottom: "5%",height:"6vh",borderTop:"1px solid rgba(255, 255, 255, 0.177)" ,position: "absolute" }}
             >
               <i className="bi bi-box-arrow-left"></i>

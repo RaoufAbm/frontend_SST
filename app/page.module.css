@@ -50,26 +50,43 @@
   font-weight: 200;
   width: 100%;
   height: 5vh;
-  text-decoration: none;
   padding-left: 5%;
   padding-top: 3%;
   border-bottom: 0.1px solid rgba(255, 255, 255, 0.177);
 }
-.li:hover {
+ .li:hover {
   background-color: rgb(232, 123, 7);
   width: 100%;
   padding-left: 10%;
-  text-decoration: none;
   color: white;
+  transition: 0.4s;
 }
 
-/* _______________________________ */
-.link {
-  color: red;
-  text-decoration: none;
-  
+
+.NavbarBrand {
+  color: white;
+font-size: 25px;
+font-weight: 600;
+width: 20%;
+margin-left: 0%;
+text-align: center;
 }
+.NavbarBrand:hover {
+  color: white;
+}
+.aHerf{
+text-decoration: none;
+}
+.aHerf:hover{
+  text-decoration: none;
+}
+
+
 /* ------------------------------Project current------------------------------------- */
+
+
+/* _______________________________ */ 
+
 
 /* .VosStations {
   color: rgb(143 0 0);

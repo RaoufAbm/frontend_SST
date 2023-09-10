@@ -1,5 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
+import styles from "@/app/page.module.css";
 
 
 export function navbar() {
@@ -10,18 +11,8 @@ export function navbar() {
       <span className="navbar-toggler-icon" />
     </button>
     <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-      <a className="navbar-brand text-white " href="#">Hidden brand</a>
-      {/* <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-        <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#">Link</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link disabled" href="#" tabIndex={-1} aria-disabled="true">Disabled</a>
-        </li>
-      </ul> */}
+      <a className={`${styles.NavbarBrand} ${styles.aHerf}`}  href="#">BI Analytic solutions</a>
+    
       
         <input className="form-control " type="search" style={{width:"15%",marginLeft:"70%"}} placeholder="Search" aria-label="Search" />
         <button className="btn text-white border-white btn-outline-primary ml-1 " type="submit">Search</button>
