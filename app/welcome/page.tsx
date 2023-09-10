@@ -1,12 +1,27 @@
+"use client";
+import Sidebar from "@/components/sidebar";
 import styles from "/app/page.module.css";
+import Navbar from "@/components/navbar";
+import React from "react";
+import Table from "@/components/table";
 
-function welcome() {
+function home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.content}>
-        <h1>welcome</h1>
+    <div className={styles.main}>
+      <div className={styles.navbar}>
+        <Navbar />
       </div>
-    </main>
+
+      <div className={styles.body}>
+        <div className={styles.SideBar}>
+          <Sidebar />
+        </div>
+        <div className={styles.content}>
+          <h1>home</h1>
+          <Table />
+        </div>
+      </div>
+    </div>
   );
 }
-export default welcome;
+export default home;

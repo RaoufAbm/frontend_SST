@@ -1,50 +1,70 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import styles from '@/app/page.module.css';
 import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
 
 export function sidebar() {
   return (
-
-  
     <div className="col-auto  col-xl-0 px-sm-2 px-0  bg-dark">
       <div className="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
-        <a href="#" className="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-          <span className="fs-5 d-none d-sm-inline">Menu</span>
-        </a>
-        <ul className="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">   
-          <li>
-            <a href="/home" data-bs-toggle="collapse" className="nav-link px-0 align-middle">
-              <i className="fs-4 bi-speedometer2" /> <span className="ms-1 d-none d-sm-inline">tableau de bord</span> </a>
-          
+      
+        <ul
+          className="nav nav-pills flex-column mb-sm-auto mt-5 align-items-center align-items-sm-start" style={{width:"118%",marginLeft:"-9%"}}
+          id="menu"
+        >
+          <li className={styles.li}>
+            <a
+              href="/home"
+              data-bs-toggle="collapse"
+              className="nav-link px-0 align-middle h3 text-white"
+            >
+              <i className="fs-4 bi-speedometer2" />
+              <span className="ml-3 ms-1 d-none d-sm-inline">
+                tableau de bord
+              </span>
+            </a>
           </li>
-          <li>
-            <a href="/login" className="nav-link px-0 align-middle">
-              <i className="fs-4 bi-table" /> <span className="ms-1 d-none d-sm-inline">Pompist  </span></a>
+          <li className={styles.li}>
+            <a href="/pompist" className="nav-link px-0 align-middle h3 text-white">
+              <i className="fs-4 bi-people" />
+
+              <span className="ml-3 ms-1 d-none d-sm-inline">Pompist</span>
+            </a>
           </li>
-          <li>
-            <a href="/singin" data-bs-toggle="collapse" className="nav-link px-0 align-middle ">
-              <i className="fs-4 bi-bootstrap" /> <span className="ms-1 d-none d-sm-inline">Bootstrap2</span></a>
-         
+          <li className={styles.li}>
+            <a
+              href="/achat"
+              data-bs-toggle="collapse"
+              className="nav-link px-0 align-middle  h3 text-white"
+            >
+              <i className="fs-4 bi-bootstrap" />
+              <span className="ml-3 ms-1 d-none d-sm-inline">Achat</span>
+            </a>
           </li>
-          <li>
-            <a href="#submenu3" data-bs-toggle="collapse" className="nav-link px-0 align-middle">
-              <i className="fs-4 bi-grid" /> <span className="ms-1 d-none d-sm-inline">Products</span> </a>
+          <li className={styles.li}>
+            <a
+              href="/indexSST"
+              data-bs-toggle="collapse"
+              className="nav-link px-0 align-middle h3 text-white"
+            >
+              <i className="fs-4 bi-grid" />
+              <span className="ml-3 ms-1 d-none d-sm-inline">Index</span>
+            </a>
           </li>
-          <li>
-            <a href="#" className="nav-link px-0 align-middle">
-              <i className="fs-4 bi-people" /> <span className="ms-1 d-none d-sm-inline">Customers</span> </a>
+          <li className={styles.li}>
+            <a href="/statistique" className="nav-link px-0 align-middle h3 text-white">
+              <i className="fs-4 bi-table" />
+              <span className="ml-3 ms-1 d-none d-sm-inline">statistique</span>
+            </a>
           </li>
-          <li>
-            <a href="/" className="nav-link px-0 align-middle">
-              <i className="fs-4 bi-people" /> <span className="ms-1 d-none d-sm-inline">Logout</span> </a>
+          <li className={styles.li}>
+            <a href="/" className="nav-link px-0 align-middle h3 text-white">
+              <i className="fs-4 bi-people" />
+              <span className="ml-3 ms-1 d-none d-sm-inline">Logout</span>
+            </a>
           </li>
         </ul>
-    
       </div>
     </div>
-   
-
-
-  )
+  );
 }
 export default sidebar;

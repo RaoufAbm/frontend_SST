@@ -39,6 +39,21 @@
   margin-left: 15%;
   
 }
+.ul{
+  width: 127%;
+  margin-left: -13%;
+}
+.li{
+  color: white;
+  width: 100%;
+  padding-left: 5%;
+}
+.li:hover {
+  background-color: rgb(232, 123, 7);
+  width: 100%;
+  padding-left: 15%;
+
+}
 /* _______________________________ */
 .link {
   color: red;

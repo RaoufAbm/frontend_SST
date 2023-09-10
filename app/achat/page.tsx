@@ -5,7 +5,7 @@ import Navbar from "@/components/navbar";
 import React from "react";
 import Table from "@/components/table";
 
-function home() {
+function achat() {
   return (
     <div className={styles.main}>
       <div className={styles.navbar}>
@@ -17,11 +17,11 @@ function home() {
           <Sidebar />
         </div>
         <div className={styles.content}>
-          <h1>home</h1>
+          <h1>achat</h1>
           <Table />
         </div>
       </div>
     </div>
   );
 }
-export default home;
+export default achat;
