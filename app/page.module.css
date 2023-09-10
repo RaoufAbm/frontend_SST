@@ -20,6 +20,24 @@
   z-index: 1;
   height: 5vh;
 }
+.NavbarBrand {
+  color: white;
+font-size: unset;
+font-weight: 600;
+width: 20%;
+margin-left: 0%;
+text-align: center;
+}
+.NavbarBrand:hover {
+  color: white;
+}
+.aHerf{
+text-decoration: none;
+}
+.aHerf:hover{
+  text-decoration: none;
+}
+
 /* _____________body_____________ */
 .body{
   display: flex;
@@ -60,25 +78,6 @@
   padding-left: 10%;
   color: white;
   transition: 0.4s;
-}
-
-
-.NavbarBrand {
-  color: white;
-font-size: 25px;
-font-weight: 600;
-width: 20%;
-margin-left: 0%;
-text-align: center;
-}
-.NavbarBrand:hover {
-  color: white;
-}
-.aHerf{
-text-decoration: none;
-}
-.aHerf:hover{
-  text-decoration: none;
 }
 
 /* _______________________________ */ 

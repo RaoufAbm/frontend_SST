@@ -26,6 +26,9 @@ function home() {
        <Cuve />
        <Cuve/>
        <Cuve/>
+       <Cuve />
+       <Cuve/>
+       <Cuve/>
           </div>
         </div>
       </div>
