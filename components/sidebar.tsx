@@ -1,67 +1,70 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import styles from '@/app/page.module.css';
+import styles from "@/app/page.module.css";
 import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
+import ReactDOM from "react-dom";
+import { faTruckDroplet } from "@fortawesome/free-solid-svg-icons";
+import { faChartLine } from "@fortawesome/free-solid-svg-icons";
+import { faPenToSquare } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Link from "next/link";
 
 export function sidebar() {
   return (
     <div className="col-auto  col-xl-0 px-sm-2 px-0  bg-dark">
       <div className="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
-      
         <ul
-          className="nav nav-pills flex-column mb-sm-auto mt-5 align-items-center align-items-sm-start" style={{width:"118%",marginLeft:"-9%"}}
+          className="nav nav-pills flex-column mb-sm-auto  align-items-center align-items-sm-start vh-100"
+          style={{ width: "118%", marginLeft: "-9%" }}
           id="menu"
         >
-          <li className={styles.li}>
-            <a
-              href="/home"
-              data-bs-toggle="collapse"
-              className="nav-link px-0 align-middle h3 text-white"
-            >
-              <i className="fs-4 bi-speedometer2" />
+          <Link href="/home" className={styles.li}>
+            <li className={styles.li}>
+              {/* <i className="fs-4 bi-speedometer2" /> */}
+              <i className="bi bi-calendar3-range-fill"></i>
               <span className="ml-3 ms-1 d-none d-sm-inline">
                 tableau de bord
               </span>
-            </a>
-          </li>
-          <li className={styles.li}>
-            <a href="/pompist" className="nav-link px-0 align-middle h3 text-white">
+            </li>
+          </Link>
+          <Link href="/pompist" className={styles.li}>
+            <li className={styles.li}>
               <i className="fs-4 bi-people" />
 
               <span className="ml-3 ms-1 d-none d-sm-inline">Pompist</span>
-            </a>
-          </li>
-          <li className={styles.li}>
-            <a
-              href="/achat"
-              data-bs-toggle="collapse"
-              className="nav-link px-0 align-middle  h3 text-white"
-            >
-              <i className="fs-4 bi-bootstrap" />
+            </li>
+          </Link>
+          <Link href="/achat" className={styles.li}>
+            <li className={styles.li}>
+              {/* <i className="fs-4 bi-bootstrap" /> */}
+              {/* <FontAwesomeIcon icon={faHome} /> */}
+              <FontAwesomeIcon icon={faTruckDroplet} />
               <span className="ml-3 ms-1 d-none d-sm-inline">Achat</span>
-            </a>
-          </li>
-          <li className={styles.li}>
-            <a
-              href="/indexSST"
-              data-bs-toggle="collapse"
-              className="nav-link px-0 align-middle h3 text-white"
-            >
-              <i className="fs-4 bi-grid" />
+            </li>
+          </Link>
+          <Link href="/indexSST" className={styles.li}>
+            <li className={styles.li}>
+              {/* <i className="fs-4 bi-grid" /> */}
+              <FontAwesomeIcon icon={faPenToSquare} />
+
               <span className="ml-3 ms-1 d-none d-sm-inline">Index</span>
-            </a>
-          </li>
-          <li className={styles.li}>
-            <a href="/statistique" className="nav-link px-0 align-middle h3 text-white">
-              <i className="fs-4 bi-table" />
+            </li>
+          </Link>
+          <Link href="/statistique" className={styles.li}>
+            <li className={styles.li}>
+              {/* <i className="fs-4 bi-table" /> */}
+              <FontAwesomeIcon icon={faChartLine} />
               <span className="ml-3 ms-1 d-none d-sm-inline">statistique</span>
-            </a>
-          </li>
-          <li className={styles.li}>
-            <a href="/" className="nav-link px-0 align-middle h3 text-white">
-              <i className="fs-4 bi-people" />
+            </li>
+          </Link>
+          <Link href="/" >
+            <li
+              className={styles.li}
+              style={{ bottom: "11%",height:"6vh", position: "absolute" }}
+            >
+              <i className="bi bi-box-arrow-left"></i>
               <span className="ml-3 ms-1 d-none d-sm-inline">Logout</span>
-            </a>
-          </li>
+            </li>
+          </Link>
         </ul>
       </div>
     </div>
