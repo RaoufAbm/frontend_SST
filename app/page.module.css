@@ -37,7 +37,15 @@ text-decoration: none;
 .aHerf:hover{
   text-decoration: none;
 }
-
+.notification{
+  display: inline ;
+  /* background-color: red; */
+  border: 1px yellow solid;
+  margin-left: 45%;
+  width: 50%;
+  height: inherit;
+  position: absolute;
+}
 /* _____________body_____________ */
 .body{
   display: flex;
@@ -95,17 +103,18 @@ text-decoration: none;
 
 
 .CuveSST{
-  position: absolute;
-margin-top: -60%;
-
+  position: relative;
+height: 40vh;
+margin-top: -320%;
 }
+
 .cylinder {
 	position: relative;
 	overflow: hidden;
 	margin: 0 auto;
   margin-top: 0%;
 	width:130px;
-	height: 22vh;
+	height: 100%;
   border: rgba(255, 255, 255, 0.308) 1px solid;
 
 	border-radius: 50px/25px;
@@ -375,7 +384,7 @@ column-gap: 14px;
   /* margin: .25rem 0 auto; */
   cursor: pointer;
   font-family: 'Arial Black', sans-serif;
-  margin-left: -40%;
+  margin-left: 30%;
   position: relative;
 }
 
@@ -595,8 +604,19 @@ width: 80%;
   .grid {
     grid-template-columns: repeat(2, 50%);
   }
+
 }
 /* Mobile */
 @media (max-width: 700px) {
 
+}
+
+/* Max ecran */
+
+@media  (min-width: 1850px) {
+  .CuveSST{
+    position: relative;
+  height: 30vh;
+  margin-top: -350%;
+  }
 }

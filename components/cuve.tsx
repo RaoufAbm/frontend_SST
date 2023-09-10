@@ -20,7 +20,7 @@ function cuve() {
       <header className={styles.boxHeader}>
   <span className={styles.title}>Cuve : Diesel 01</span>
         
-        <p className={styles.paragraph} style={{ marginTop: "0%" ,marginLeft:"-69%"}}>Capacite <strong>5000 L</strong></p>
+        <p className={styles.paragraph} style={{ marginTop: "0%" ,marginLeft:"49%"}}>Capacite <strong>5000 L</strong></p>
         {/* <div className={styles.line} style={{marginTop: "-2%"}}></div> */}
      {/* <p className={styles.paragraph} style={{marginLeft:"8%",marginBottom:"2%",color:"#ffae00"}}>
         Etat actuel
@@ -43,18 +43,22 @@ function cuve() {
           </div>
         </div>
 
+{/* <div className={styles.notification}>
+</div> */}
       </div>
-      {/* <div className={styles.tags}>
+      <div className={styles.tags}>
         <a onClick={handleClick} href="#">
-          html
+        <img src="../images/info.png" alt="" />
+
         </a>
         <a onClick={half} href="#">
-          css
+        <img src="../images/alert.png" alt="" />
+
         </a>
         <a onClick={empty} href="#">
-          web-dev
+        <img src="../images/warnning.png" alt="" />
         </a>
-      </div> */}
+      </div>
    {/* ________________________________Circle Juge _________________________________________*/}
 
 {/* <div className={styles.positionCircleJuge}>
