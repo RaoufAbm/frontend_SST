@@ -18,7 +18,7 @@ export function sidebar() {
           id="menu"
         >
           <Link href="/home" className={styles.li}>
-            <li className={styles.li}>
+            <li >
               {/* <i className="fs-4 bi-speedometer2" /> */}
               <i className="bi bi-calendar3-range-fill"></i>
               <span className="ml-3 ms-1 d-none d-sm-inline">
@@ -27,14 +27,14 @@ export function sidebar() {
             </li>
           </Link>
           <Link href="/pompist" className={styles.li}>
-            <li className={styles.li}>
+            <li >
               <i className="fs-4 bi-people" />
 
               <span className="ml-3 ms-1 d-none d-sm-inline">Pompist</span>
             </li>
           </Link>
           <Link href="/achat" className={styles.li}>
-            <li className={styles.li}>
+            <li >
               {/* <i className="fs-4 bi-bootstrap" /> */}
               {/* <FontAwesomeIcon icon={faHome} /> */}
               <FontAwesomeIcon icon={faTruckDroplet} />
@@ -42,7 +42,7 @@ export function sidebar() {
             </li>
           </Link>
           <Link href="/indexSST" className={styles.li}>
-            <li className={styles.li}>
+            <li >
               {/* <i className="fs-4 bi-grid" /> */}
               <FontAwesomeIcon icon={faPenToSquare} />
 
@@ -50,16 +50,17 @@ export function sidebar() {
             </li>
           </Link>
           <Link href="/statistique" className={styles.li}>
-            <li className={styles.li}>
+            <li>
               {/* <i className="fs-4 bi-table" /> */}
               <FontAwesomeIcon icon={faChartLine} />
               <span className="ml-3 ms-1 d-none d-sm-inline">statistique</span>
             </li>
           </Link>
+          
           <Link href="/" >
             <li
               className={styles.li}
-              style={{ bottom: "11%",height:"6vh", position: "absolute" }}
+              style={{ bottom: "5%",height:"6vh",borderTop:"1px solid rgba(255, 255, 255, 0.177)" ,position: "absolute" }}
             >
               <i className="bi bi-box-arrow-left"></i>
               <span className="ml-3 ms-1 d-none d-sm-inline">Logout</span>

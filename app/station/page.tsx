@@ -3,6 +3,7 @@ import Header from "@/components/header";
 import styles from "/app/page.module.css";
 import Navbar from "@/components/navbar";
 import { Margarine } from "next/font/google";
+import Link from "next/link";
 
 
 function station() {
@@ -18,17 +19,10 @@ function station() {
     </div>
     
       <div className=' d-flex justify-content-start  pl-5 align-items-stretch flex-wrap row bg-transparent text-decoration-none'  style={{marginTop:"-8%" }}  >
-     <a className="text-decoration-none" href="/home"><Cards /></a>
-     <a className="text-decoration-none" href="/home"><Cards /></a>
-     <a className="text-decoration-none" href="/home"><Cards /></a>
-     <a className="text-decoration-none" href="/home"><Cards /></a>
-     <a className="text-decoration-none" href="/home"><Cards /></a>
-     <a className="text-decoration-none" href="/home"><Cards /></a>
-     <a className="text-decoration-none" href="/home"><Cards /></a>
-     <a className="text-decoration-none" href="/home"><Cards /></a>
-     <a className="text-decoration-none" href="/home"><Cards /></a>
-     <a className="text-decoration-none" href="/home"><Cards /></a>
-     
+      <Link href="/home" style={{textDecoration:"none"}} ><Cards /></Link>
+      <Link href="/home" style={{textDecoration:"none"}} ><Cards /></Link>
+      <Link href="/home" style={{textDecoration:"none"}} ><Cards /></Link>
+      <Link href="/home" style={{textDecoration:"none"}} ><Cards /></Link>
 
       </div>
     </div>
