@@ -20,15 +20,12 @@ function home() {
         <div className={styles.content}>
           <div className={styles.wrapper}>
 
-       <Cuve />
-       <Cuve/>
-       <Cuve/>
-       <Cuve />
-       <Cuve/>
-       <Cuve/>
-       <Cuve />
-       <Cuve/>
-       <Cuve/>
+       <Cuve title="Diesel" Capacite="50000" Qte="14000" percentage="29%" />
+       <Cuve title="Essence"Capacite="50000" Qte="7000"  percentage="15%" />
+       <Cuve title="Diesel" Capacite="60000" Qte="0"     percentage="0%" />
+       <Cuve title="Diesel" Capacite="40000" Qte="14000" percentage="23%" />
+       <Cuve title="Essence"Capacite="20000" Qte="5000"  percentage="12%" />
+       
           </div>
         </div>
       </div>

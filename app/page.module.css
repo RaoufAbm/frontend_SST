@@ -96,8 +96,18 @@ text-decoration: none;
 
 /* ------------------------------Project current------------------------------------- */
 
-
-
+.alert{
+  height: 28vh;
+  width: 15%;
+  margin-left: 41%;
+  margin-top: 0%;
+  background-image: url(../images/info.png);
+}
+.DevlEncour{
+  color :rgb(0, 174, 255);
+  font-size: 50px;
+  margin-top: 20%;
+}
 
 /* ______________Cuve joge__________________ */
 

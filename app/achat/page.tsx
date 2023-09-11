@@ -17,9 +17,8 @@ function achat() {
           <Sidebar />
         </div>
         <div className={styles.content}>
-          <h1>achat</h1>
-          <Table />
-        </div>
+          <h1 className={styles.DevlEncour}>Développement en cours ..</h1>
+          <div className={styles.alert}></div>        </div>
       </div>
     </div>
   );

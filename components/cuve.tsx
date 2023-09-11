@@ -1,30 +1,38 @@
 import styles from "/app/page.module.css";
 import React, { useRef } from "react";
 
-function cuve() {
+type headP={
+  title:string,
+}
+
+function cuve(props) {
   const divRef = useRef(null);
-  const handleClick = () => {
-    divRef.current.style.top = "100%";
-    divRef.current.style.backgroundColor = "red";
-  };
-  const half = () => {
-    divRef.current.style.top = "88%";
-    divRef.current.style.backgroundColor = "blue";
-  };
-  const empty = () => {
-    divRef.current.style.top = "50%";
-    divRef.current.style.backgroundColor = "green";
-  };
+  // const handleClick = () => {
+   
+  
+// if (props.percentage!=0) {
+  
+//   divRef.current.style.top = props.percentage;
+//   divRef.current.style.backgroundColor = "red";
+// }
+  // };
+  // const half = () => {
+  //   divRef.current.style.top = "88%";
+  //   divRef.current.style.backgroundColor = "blue";
+  // };
+  // const empty = () => {
+  //   divRef.current.style.top = "50%";
+  //   divRef.current.style.backgroundColor = "green";
+  // };
   return (
-    <div className={styles.box}>
+    <div className={styles.box} ref={divRef} >
       <header className={styles.boxHeader}>
-        <span className={styles.title}>Cuve : Diesel 01</span>
+        <span className={styles.title}>Cuve : {props.title}</span>
 
         <p
           className={styles.paragraph}
-          style={{ marginTop: "0%", marginLeft: "49%" }}
-        >
-          Capacite <strong>5000 L</strong>
+          style={{ marginTop: "0%", marginLeft: "49%" }}>
+          Capacite <strong>{props.Capacite} L</strong>
         </p>
         {/* <div className={styles.line} style={{marginTop: "-2%"}}></div> */}
         {/* <p className={styles.paragraph} style={{marginLeft:"8%",marginBottom:"2%",color:"#ffae00"}}>
@@ -34,10 +42,8 @@ function cuve() {
           <div className={styles.infoContent}>
             <p
               className={styles.paragraph}
-              style={{ color: "#ffae00;", fontSize: "35px" }}
-            >
-              {" "}
-              29% <br /> <strong>14000</strong>L
+              style={{ color: "#ffae00;", fontSize: "35px", marginLeft:"-25%" ,textAlignLast: "start" }}>         
+              {props.percentage} <br /> <strong>{props.Qte}</strong>L
             </p>
           </div>
         </div>
@@ -48,23 +54,14 @@ function cuve() {
 
         <div className={styles.CuveSST}>
           <div className={styles.cylinder}>
-            <div className={styles.water} ref={divRef}></div>
+            <div className={styles.water} ></div>
           </div>
         </div>
-
-        {/* <div className={styles.notification}>
-</div> */}
       </div>
       <div className={styles.tags}>
-        <a onClick={handleClick} href="#">
           <img src="../images/info.png" alt="" />
-        </a>
-        <a onClick={half} href="#">
           <img src="../images/alert.png" alt="" />
-        </a>
-        <a onClick={empty} href="#">
           <img src="../images/warnning.png" alt="" />
-        </a>
       </div>
       {/* ________________________________Circle Juge _________________________________________*/}
 

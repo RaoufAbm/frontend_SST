@@ -17,9 +17,8 @@ function statistique() {
           <Sidebar />
         </div>
         <div className={styles.content}>
-          <h1>statistique</h1>
-          <Table />
-        </div>
+          <h1 className={styles.DevlEncour}>Développement en cours ..</h1>
+          <div className={styles.alert}></div>        </div>
       </div>
     </div>
   );

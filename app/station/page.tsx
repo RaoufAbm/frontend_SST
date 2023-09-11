@@ -2,7 +2,7 @@ import Cards from "@/components/cards";
 import Header from "@/components/header";
 import styles from "/app/page.module.css";
 import Navbar from "@/components/navbar";
-import { Margarine } from "next/font/google";
+// import { Margarine } from "next/font/google";
 import Link from "next/link";
 
 
