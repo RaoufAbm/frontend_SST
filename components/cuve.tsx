@@ -18,24 +18,33 @@ function cuve() {
   return (
     <div className={styles.box}>
       <header className={styles.boxHeader}>
-  <span className={styles.title}>Cuve : Diesel 01</span>
-        
-        <p className={styles.paragraph} style={{ marginTop: "0%" ,marginLeft:"49%"}}>Capacite <strong>5000 L</strong></p>
+        <span className={styles.title}>Cuve : Diesel 01</span>
+
+        <p
+          className={styles.paragraph}
+          style={{ marginTop: "0%", marginLeft: "49%" }}
+        >
+          Capacite <strong>5000 L</strong>
+        </p>
         {/* <div className={styles.line} style={{marginTop: "-2%"}}></div> */}
-     {/* <p className={styles.paragraph} style={{marginLeft:"8%",marginBottom:"2%",color:"#ffae00"}}>
+        {/* <p className={styles.paragraph} style={{marginLeft:"8%",marginBottom:"2%",color:"#ffae00"}}>
         Etat actuel
      </p> */}
-     <div className={styles.infoCuve}>
-        <div className={styles.infoContent}>
-           <p className={styles.paragraph} style={{color:"#ffae00;",fontSize:"35px" }}> 29% <br /> <strong>14000</strong>L</p>
-            </div> 
-            </div>
-            {/* <div className={styles.line} style={{marginTop: "-10%", marginLeft:" 33%",width: "27%"}}></div> */}
-
+        <div className={styles.infoCuve}>
+          <div className={styles.infoContent}>
+            <p
+              className={styles.paragraph}
+              style={{ color: "#ffae00;", fontSize: "35px" }}
+            >
+              {" "}
+              29% <br /> <strong>14000</strong>L
+            </p>
+          </div>
+        </div>
+        {/* <div className={styles.line} style={{marginTop: "-10%", marginLeft:" 33%",width: "27%"}}></div> */}
       </header>
       <div className={styles.boxAuthor}>
-    
-   {/* ________________________________cuve _________________________________________*/}
+        {/* ________________________________cuve _________________________________________*/}
 
         <div className={styles.CuveSST}>
           <div className={styles.cylinder}>
@@ -43,25 +52,23 @@ function cuve() {
           </div>
         </div>
 
-{/* <div className={styles.notification}>
+        {/* <div className={styles.notification}>
 </div> */}
       </div>
       <div className={styles.tags}>
         <a onClick={handleClick} href="#">
-        <img src="../images/info.png" alt="" />
-
+          <img src="../images/info.png" alt="" />
         </a>
         <a onClick={half} href="#">
-        <img src="../images/alert.png" alt="" />
-
+          <img src="../images/alert.png" alt="" />
         </a>
         <a onClick={empty} href="#">
-        <img src="../images/warnning.png" alt="" />
+          <img src="../images/warnning.png" alt="" />
         </a>
       </div>
-   {/* ________________________________Circle Juge _________________________________________*/}
+      {/* ________________________________Circle Juge _________________________________________*/}
 
-{/* <div className={styles.positionCircleJuge}>
+      {/* <div className={styles.positionCircleJuge}>
       <div className={styles.circleWrap}>
         <div className={styles.circle}>
           <div className= {`${styles.mask} ${styles.full}`}>

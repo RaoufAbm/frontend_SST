@@ -18,12 +18,13 @@ function station() {
       <Header />
     </div>
     
+     
       <div className=' d-flex justify-content-start  pl-5 align-items-stretch flex-wrap row bg-transparent text-decoration-none'  style={{marginTop:"-8%" }}  >
-      <Link href="/home" style={{textDecoration:"none"}} ><Cards /></Link>
-      <Link href="/home" style={{textDecoration:"none"}} ><Cards /></Link>
-      <Link href="/home" style={{textDecoration:"none"}} ><Cards /></Link>
-      <Link href="/home" style={{textDecoration:"none"}} ><Cards /></Link>
-
+      
+      <Link href="/home" style={{textDecoration:"none"}} ><Cards title="station 1" cors="betiwa"  /></Link>
+      <Link href="/home" style={{textDecoration:"none"}} ><Cards title="station 2" cors="arzio"  /></Link>
+     
+    
       </div>
     </div>
   );
