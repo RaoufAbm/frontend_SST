@@ -146,7 +146,8 @@ background-color:#8e8c9222;
   z-index: 10;
   /* left: 0; */
   /* top: 50; */
-  top: 75%;
+  top: 50;
+  /* margin-top: 10%; */
   /* bottom: 0; */
   width: 458px;
   height: 461px;

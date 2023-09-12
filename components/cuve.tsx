@@ -3,27 +3,15 @@ import React, { useRef } from "react";
 
 type headP={
   title:string,
+  color_:string,
+  Capacite :number ,
+  percentage :number,
+  Qte :number,
+
 }
 
-function cuve(props) {
+function cuve(props:headP) {
   const divRef = useRef(null);
-  // const handleClick = () => {
-   
-  
-// if (props.percentage!=0) {
-  
-//   divRef.current.style.top = props.percentage;
-//   divRef.current.style.backgroundColor = "red";
-// }
-  // };
-  // const half = () => {
-  //   divRef.current.style.top = "88%";
-  //   divRef.current.style.backgroundColor = "blue";
-  // };
-  // const empty = () => {
-  //   divRef.current.style.top = "50%";
-  //   divRef.current.style.backgroundColor = "green";
-  // };
   return (
     <div className={styles.box} ref={divRef} >
       <header className={styles.boxHeader}>
@@ -43,7 +31,7 @@ function cuve(props) {
             <p
               className={styles.paragraph}
               style={{ color: "#ffae00;", fontSize: "35px", marginLeft:"-25%" ,textAlignLast: "start" }}>         
-              {props.percentage} <br /> <strong>{props.Qte}</strong>L
+              {props.percentage}% <br /> <strong>{props.Qte}</strong>L
             </p>
           </div>
         </div>
@@ -54,7 +42,8 @@ function cuve(props) {
 
         <div className={styles.CuveSST}>
           <div className={styles.cylinder}>
-            <div className={styles.water} ></div>
+            <div className={styles.water} style={{ backgroundColor: props.color_ ,top: (100-(props.percentage))+"%"  }}></div>
+            
           </div>
         </div>
       </div>
