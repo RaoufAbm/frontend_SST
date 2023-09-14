@@ -4,9 +4,9 @@ import React, { useRef } from "react";
 type headP={
   title:string,
   color_:string,
-  Capacite :number ,
-  percentage :number,
-  Qte :number,
+  Capacity :int,
+  percentage :int,
+  Qte:int,
 
 }
 
@@ -18,20 +18,15 @@ function cuve(props:headP) {
         <span className={styles.title}>Cuve : {props.title}</span>
 
         <p
-          className={styles.paragraph}
-          style={{ marginTop: "0%", marginLeft: "49%" }}>
-          Capacite <strong>{props.Capacite} L</strong>
+          className={styles.capacity}>
+          Capacite <strong>{props.Capacity} L</strong>
         </p>
-        {/* <div className={styles.line} style={{marginTop: "-2%"}}></div> */}
-        {/* <p className={styles.paragraph} style={{marginLeft:"8%",marginBottom:"2%",color:"#ffae00"}}>
-        Etat actuel
-     </p> */}
+      
         <div className={styles.infoCuve}>
-          <div className={styles.infoContent}>
-            <p
-              className={styles.paragraph}
-              style={{ color: "#ffae00;", fontSize: "35px", marginLeft:"-25%" ,textAlignLast: "start" }}>         
-              {props.percentage}% <br /> <strong>{props.Qte}</strong>L
+          <div className={styles.infoContent} >
+          <span className={styles.EtatTitle}>Etat actuel :</span>
+            <p  className={styles.EtatActuel}>
+              {props.percentage}%  <br /><strong>{props.Qte}</strong>L
             </p>
           </div>
         </div>

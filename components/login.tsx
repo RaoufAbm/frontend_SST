@@ -21,7 +21,7 @@ function login() {
     event.preventDefault();
 
     axios
-      .post("http://localhost:8000/message", values)
+      .post("http://localhost:5000/login", values)
       .then((res) => {
         if (res.data === "Success") {
           Swal.fire({

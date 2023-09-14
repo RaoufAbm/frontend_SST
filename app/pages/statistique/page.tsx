@@ -5,17 +5,13 @@ import Navbar from "@/components/navbar";
 import React from "react";
 import Table from "@/components/table";
 
-function pompist() {
+function statistique() {
   return (
     <div className={styles.main}>
-      <div className={styles.navbar}>
-        <Navbar />
-      </div>
+      
 
       <div className={styles.body}>
-        <div className={styles.SideBar}>
-          <Sidebar />
-        </div>
+     
         <div className={styles.content}>
           <h1 className={styles.DevlEncour}>Développement en cours ..</h1>
           <div className={styles.alert}></div>        </div>
@@ -23,4 +19,4 @@ function pompist() {
     </div>
   );
 }
-export default pompist;
+export default statistique;

@@ -17,7 +17,7 @@ export function sidebar() {
           style={{ width: "118%", marginLeft: "-9%" }}
           id="menu"
         >
-          <Link href="/home" className={`${styles.li} ${styles.aHerf}`}>
+          <Link href="/pages/home"  className={`${styles.li} ${styles.aHerf}`}>
             <li >
               {/* <i className="fs-4 bi-speedometer2" /> */}
               <i className="bi bi-calendar3-range-fill"></i>
@@ -26,14 +26,14 @@ export function sidebar() {
               </span>
             </li>
           </Link>
-          <Link href="/pompist" className={`${`${styles.li} ${styles.aHerf}`}`}>
+          <Link href="/pages/pompist" className={`${`${styles.li} ${styles.aHerf}`}`}>
             <li >
               <i className="fs-4 bi-people" />
 
               <span className="ml-3 ms-1 d-none d-sm-inline">Pompist</span>
             </li>
           </Link>
-          <Link href="/achat" className={`${styles.li} ${styles.aHerf}`}>
+          <Link href="/pages/achat" className={`${styles.li} ${styles.aHerf}`}>
             <li >
               {/* <i className="fs-4 bi-bootstrap" /> */}
               {/* <FontAwesomeIcon icon={faHome} /> */}
@@ -41,7 +41,7 @@ export function sidebar() {
               <span className="ml-3 ms-1 d-none d-sm-inline">Achat</span>
             </li>
           </Link>
-          <Link href="/indexSST" className={`${styles.li} ${styles.aHerf}`}>
+          <Link href="/pages/indexSST" className={`${styles.li} ${styles.aHerf}`}>
             <li >
               {/* <i className="fs-4 bi-grid" /> */}
               {/* <FontAwesomeIcon icon={faPenToSquare} /> */}
@@ -49,7 +49,7 @@ export function sidebar() {
               <span className="ml-3 ms-1 d-none d-sm-inline">Index</span>
             </li>
           </Link>
-          <Link href="/statistique" className={`${styles.li} ${styles.aHerf}`}>
+          <Link href="/pages/statistique" className={`${styles.li} ${styles.aHerf}`}>
             <li>
               {/* <i className="fs-4 bi-table" /> */}
               {/* <FontAwesomeIcon icon={faChartLine} /> */}

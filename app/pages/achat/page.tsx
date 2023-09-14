@@ -8,17 +8,11 @@ import Table from "@/components/table";
 function achat() {
   return (
     <div className={styles.main}>
-      <div className={styles.navbar}>
-        <Navbar />
-      </div>
-
       <div className={styles.body}>
-        <div className={styles.SideBar}>
-          <Sidebar />
-        </div>
         <div className={styles.content}>
           <h1 className={styles.DevlEncour}>Développement en cours ..</h1>
-          <div className={styles.alert}></div>        </div>
+          <div className={styles.alert}></div>{" "}
+        </div>
       </div>
     </div>
   );

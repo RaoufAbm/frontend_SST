@@ -4,10 +4,10 @@ import Sidebar from "@/components/sidebar";
 function login() {
   return (
        
-        <div className={styles.main}>
+        // <div className={styles.main}>
         <Login/>
 
-      </div>
+      // </div>
   );
 }
 export default login;
