@@ -32,66 +32,6 @@ text-align: center;
   color: white;
 }
 
-.notification{
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
-  /* border: 1px yellow solid; */
-  margin-left:5%;
-  margin-top: 80%;
-  width: 30%;
-  position: absolute;
-}
-.BattrieReseax{
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
-  /* border: 1px yellow solid; */
-  margin-left:60%;
-  width: 30%;
-  position: absolute;
-}
-.borderBattery{
-  width: 90%;
-  height: 80%;
-  margin: 5%;
-  border: 1px solid #7a7a8c;
-  border-radius: 2px;
-  padding: 1px 1px;
-
-}
-.battery {
-  width: 55%;
-  height: 11.5px;
-  background: #c0b7b7;
-  border-radius: 1px;
-
-}
-.BatteryDiv{
-  position: absolute;
-  margin-left: 28%;
-  top: 28%;
-  z-index: 11;
-  content: " ";
-  width: 4px;
-  height: 8px;
-  background: #c0b7b7;
-  border-radius: 0px 2px 2px 0px;
-}
-.PercentageBattery{
-  font-size:10px;
-  margin-left:40%;
-  margin-top:3%;
-  position:absolute;
-  color: rgb(255, 255, 255);
-  font-style: italic;
-}
-.wifi{
-  position: absolute;
-  margin-left:85%;
-  margin-top: -2%;
-  font-size: 20px;
-  color: white;
-}
-
 
 
 
@@ -159,6 +99,7 @@ text-align: center;
   }
   .aHerf:hover{
     text-decoration: none;
+    cursor: pointer;
   }
 
 
@@ -418,19 +359,21 @@ column-gap: 14px;
 .box{
   display: flex;
   position: relative;
+  border-radius: 16px;
+  background: #17141d;
+  transition: .2s;
+  font-family: 'Inter', sans-serif;
+  margin-top: 2%;
+  padding: 1rem;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+.boxInformation{
+  display: flex;
   flex-direction: column;
   height: 400px;
   width: 100%;
-  min-width: 250px;
-  padding: 1rem;
-  border-radius: 16px;
-  background: #17141d;
-  box-shadow: -1rem 0 3rem #00000067;
-  transition: .2s;
   font-family: 'Inter', sans-serif;
-  margin-left: 0%;
-  margin-top: 2%;
-  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;}
+}
 
 .box:hover {
   transform: translateY(-0.4rem);
@@ -505,7 +448,7 @@ column-gap: 14px;
   font-size: 20px;
   cursor: pointer;
   font-family: 'Arial Black', sans-serif;
-  margin-left: -43%;
+  margin-left: -15%;
   position: absolute;
   background-color: #27242c;
   border: #7a7a8c 1px solid;
@@ -515,12 +458,13 @@ column-gap: 14px;
   overflow: hidden;
   text-overflow: ellipsis;
   width: 50%;
+  color: #7a7a8c;
 }
 
 .title:hover {
   font-size: 20px;
   font-family: 'Arial Black', sans-serif;
-  margin-left: -65%;
+  margin-left: -40%;
   position: absolute;
   background: linear-gradient(90deg,#ff8a00,#e52e71);
   text-shadow: none;
@@ -533,8 +477,9 @@ column-gap: 14px;
 }
 .capacity{
   color: #7a7a8c;
-  margin-top: 15%;
-  margin-left: -51%;
+  margin-top: 50%;
+  margin-left: 25%;
+  width: 100%;
 }
 
 .tags {
@@ -567,6 +512,70 @@ column-gap: 14px;
   box-decoration-break: clone;
   background-clip: text;
   border-color: white;
+}
+
+.notification{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
+  /* border: 1px yellow solid; */
+  margin-left:5%;
+  margin-top: 80%;
+  width: 30%;
+  position: absolute;
+  z-index: 100;
+  /* background-color: red; */
+}
+
+.Battrie{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
+  margin-left:60%;
+  margin-top:2%;
+  width: 30%;
+
+  position: absolute;
+}
+.borderBattery{
+  width: 90%;
+  height: 80%;
+  margin: 5%;
+  border: 1px solid #7a7a8c;
+  border-radius: 2px;
+  padding: 1px 1px;
+
+}
+.battery {
+  width: 55%;
+  height: 11.5px;
+  background: #c0b7b7;
+  border-radius: 1px;
+
+}
+.BatteryDiv{
+  position: absolute;
+  margin-left: 28%;
+  top: 28%;
+  z-index: 11;
+  content: " ";
+  width: 4px;
+  height: 8px;
+  background: #c0b7b7;
+  border-radius: 0px 2px 2px 0px;
+}
+.PercentageBattery{
+  font-size:10px;
+  margin-left:40%;
+  margin-top:3%;
+  position:absolute;
+  color: rgb(255, 255, 255);
+  font-style: italic;
+}
+.Reseax{
+  position: absolute;
+  margin-left:85%;
+  margin-top: 0%;
+  font-size: 20px;
+  color: white;
 }
 
 

@@ -33,9 +33,9 @@ const notif = {
        return  <Cuve title={cuve.type_carburant}  Capacity={cuve.volume_cuve} Qte={cuve.} percentage={cuve.} color_={cuve.} />
       })}
        </ Link>  */}
-       <Link href="/pages/indexSST"  className={styles.aHerf}> <Cuve title="Diesel "  Capacity="50000" Qte="14000" percentage="75"  color_="blue"   notification={notif}  wifi="1" battery="77"/> </ Link>
-       <Link href="/pages/indexSST"  className={styles.aHerf}> <Cuve title="Essence"  Capacity="50000" Qte="7000"  percentage="49"  color_="orange" notification={notif}  wifi="2" battery="80"/> </ Link>
-       <Link href="/pages/indexSST"  className={styles.aHerf}> <Cuve title="Diesel"   Capacity="60000" Qte="0"     percentage="4"   color_="red"    notification={notif}  wifi="3" battery="20"/> </ Link> 
+       <Cuve title="Diesel "  Capacity="50000" Qte="14000" percentage="75"  color_="blue"   notification={notif}  wifi="1" battery="77"/>
+       <Cuve title="Essence"  Capacity="50000" Qte="7000"  percentage="49"  color_="orange" notification={notif}  wifi="2" battery="80"/>
+       <Cuve title="Diesel"   Capacity="60000" Qte="0"     percentage="4"   color_="red"    notification={notif}  wifi="3" battery="20"/> 
       
           </div>
 
