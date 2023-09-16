@@ -8,6 +8,7 @@ import axios from "axios";
 import { log } from "console";
 import Link from "next/link";
 
+
 function home() {
 //  const [data,setData]=useState([])
 //  useEffect(()=> {
@@ -15,26 +16,30 @@ function home() {
 //   .then(res=> console.log(res))
 //   .catch(err=> console.log(err));
 //  },[])
+const notif = {
+  a:"1",
+  b:"1",
+  c:"1"
 
+}
   return (
     <div className={styles.main}>
-     
-
       <div className={styles.body}>
-    
-        <div className={styles.content}>
+        <div className={styles.Content}>
           <div className={styles.wrapper}>
             
-          {/* <Link href="/indexSST"  className={styles.aHerf}>
+          {/* <Link href="/pages/indexSST"  className={styles.aHerf}>
           { data.map((cuve ,index ) => {
        return  <Cuve title={cuve.type_carburant}  Capacity={cuve.volume_cuve} Qte={cuve.} percentage={cuve.} color_={cuve.} />
       })}
        </ Link>  */}
-       <Link href="/pages/indexSST"  className={styles.aHerf}> <Cuve title="Diesel 01ghgfghfg"  Capacity="50000" Qte="14000" percentage="75"  color_="blue" /> </ Link>
-       <Link href="/pages/indexSST"  className={styles.aHerf}> <Cuve title="Essence" Capacity="50000" Qte="7000"  percentage="49"  color_="orange"/> </ Link>
-       <Link href="/pages/indexSST"  className={styles.aHerf}> <Cuve title="Diesel"  Capacity="60000" Qte="0"     percentage="9"   color_="red"/> </ Link> 
-       
+       <Link href="/pages/indexSST"  className={styles.aHerf}> <Cuve title="Diesel "  Capacity="50000" Qte="14000" percentage="75"  color_="blue"   notification={notif}  wifi="1" battery="77"/> </ Link>
+       <Link href="/pages/indexSST"  className={styles.aHerf}> <Cuve title="Essence"  Capacity="50000" Qte="7000"  percentage="49"  color_="orange" notification={notif}  wifi="2" battery="80"/> </ Link>
+       <Link href="/pages/indexSST"  className={styles.aHerf}> <Cuve title="Diesel"   Capacity="60000" Qte="0"     percentage="4"   color_="red"    notification={notif}  wifi="3" battery="20"/> </ Link> 
+      
           </div>
+
+
         </div>
       </div>
     </div>

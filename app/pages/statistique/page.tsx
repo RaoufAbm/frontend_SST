@@ -12,7 +12,7 @@ function statistique() {
 
       <div className={styles.body}>
      
-        <div className={styles.content}>
+        <div className={styles.Content}>
           <h1 className={styles.DevlEncour}>Développement en cours ..</h1>
           <div className={styles.alert}></div>        </div>
       </div>
