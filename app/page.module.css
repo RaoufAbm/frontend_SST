@@ -114,11 +114,13 @@ text-align: center;
 /* ------------------------------Project current------------------------------------- */
 
 .alert{
-  height: 28vh;
-  width: 15%;
-  margin-left: 51%;
+  width: 100%;
+  height: 100%;
+  margin-left: 40%;
   margin-top: 0%;
-  background-image: url(../images/info.png);
+  background-image: url(/_next/static/media/info.bd442e3b.png);
+  background-size: inherit;
+  background-repeat: no-repeat;
 }
 .DevlEncour{
   color :rgb(0, 174, 255);
@@ -246,79 +248,6 @@ background-color: #8e8c9222;
 /* ______________________end___________________________ */
 
 
-/* ____________________________circle joge______________________________ */
-
-
-.positionCircleJuge{
-  margin-left:70%;
-  margin-top:0%;
-  position: absolute;
-}
-.circleWrap {
-  margin: 150px auto;
-  width: 150px;
-  height: 150px;
-  background: #fefcff;
-  border-radius: 50%;
-  border: 1px solid #cdcbd0;
-  position: absolute;
-}
-
- .mask,.fill {
-  width: 150px;
-  height: 150px;
-  position: absolute;
-  border-radius: 50%;
-}
-
-.circleWrap .circle .mask {
-  clip: rect(0px, 150px, 150px, 75px);
-}
-
-.circleWrap .insideCircle {
-  width: 122px;
-  height: 122px;
-  border-radius: 50%;
-  background: #d2eaf1;
-  line-height: 120px;
-  text-align: center;
-  margin-top: 14px;
-  margin-left: 14px;
-  color: #1e51dc;
-  position: absolute;
-  z-index: 100;
-  font-weight: 700;
-  font-size: 2em;
-}
-
-/* color animation */
-
-/* 3rd progress bar */
-.mask .fill {
-  clip: rect(0px, 75px, 150px, 0px);
-  background-color: #227ded;
-  background: -webkit-linear-gradient(left, #ff0000, #fffefe);
- 
-}
-
-.mask.full,
- .fill {
-  animation: fill ease-in-out 3s;
-  transform: rotate(135deg);
-}
-
-@keyframes fill{
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(135deg);
-  }
-}
-/* ______________________end___________________________ */
-
-
-
 /* ______________box Cuve SST__________________ */
 
 
@@ -435,14 +364,7 @@ column-gap: 14px;
   top: -33%;
   left: 59%;
 }
-/* .circle{
-  border: #7a7a8c 1px;
-  border-radius: 50%;
-  width: 25%;
-  height: 30%;
-  background-color: rgb(255, 255, 255);
-  position: absolute;
-} */
+
 
 .title {
   font-size: 20px;
@@ -752,7 +674,7 @@ width: 80%;
 /* ______________________________________responsivite___________________________________ */
 
 /* Mobile */
-@media (max-width: 700px) {
+@media  (max-width: 425px) {
 
   .infoContent{
     position: absolute;
@@ -779,67 +701,141 @@ width: 80%;
     width: 28%;
     height: 15vh;
     /* background-color:#8d8d96; */
-  }
-  
-}
-
-/* Tablet and Smaller Desktop */
-@media (min-width: 701px) and (max-width: 1120px) {
-  .grid {
-    grid-template-columns: repeat(2, 50%);
-  }
-
-  .infoContent{
-    position: absolute;
-    display: flex;
-    margin-top: 45%;
-    margin-left: 5%;
-    align-items: start;
-    width: 100%;
-    z-index: 100;
-  }
-  .EtatTitle{
-    font-family: 'Arial Black', sans-serif; 
-     font-size: 20px;
-  }
-  .EtatActuel{
-    color: white;
-    font-size: 20px;
-    margin-left: 15%;
-    margin-top: -6%;
-    text-align: start;
-    border: 1px solid white;
-    padding: 6%;
-    border-radius: 25px 25% 25% 25px;
-    width: 28%;
-    height: 15vh;
-    /* background-color:#8d8d96; */
-  }
-  
-}
-
-/* Max ecran */
-
-@media  (min-width: 1850px) {
-  .CuveSST{
-    position: relative;
-  height: 30vh;
-  margin-top: -350%;
-  }
-  .infoContent{
-    position: absolute;
-    display: flex;
-    margin-top: 45%;
-    margin-left: 5%;
-  
   }
   .Content {
     text-align: center;
-    background-color: white;
+    background-color: rgb(0, 204, 255);
     width: 83%;
     margin-left: 16%;
     margin-top: 1%;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
     padding-bottom: 10%;
   }
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 426px) and (max-width: 768px) {
+ 
+
+  .infoContent{
+    position: absolute;
+    display: flex;
+    margin-top: 45%;
+    margin-left: 5%;
+    align-items: start;
+    width: 100%;
+    z-index: 100;
+  }
+  .EtatTitle{
+    font-family: 'Arial Black', sans-serif; 
+     font-size: 20px;
+  }
+  .EtatActuel{
+    color: white;
+    font-size: 20px;
+    margin-left: 15%;
+    margin-top: -6%;
+    text-align: start;
+    border: 1px solid white;
+    padding: 6%;
+    border-radius: 25px 25% 25% 25px;
+    width: 28%;
+    height: 15vh;
+    /* background-color:#8d8d96; */
+  }
+  
+}
+
+/* yellow */
+@media (min-width: 778px) and (max-width:1170px) {
+  
+
+  .Content {
+    background-color: rgb(255, 234, 0);
+   
+  }
+    /* ______________Cuve joge__________________ */
+
+.bouchon1{
+  margin-left: 275%;
+}
+.bouchon2{
+  margin-left: 270%;
+  margin-top:-65%;
+}
+.cylinder {
+width:280px;
+}	
+.infoContent{
+  margin-top: auto;
+}
+.notification{
+  margin-top: 90%;
+
+}
+}
+
+/* Max ecran */
+@media  (min-width: 1554px) {
+  .infoContent{
+    margin-top: 55%;
+  }
+  .notification{
+    margin-top: 100%;
+  
+  }
+
+  /* .Content {
+    background-color: rgb(255, 0, 0);
+  } */
+    /* ______________Cuve joge__________________ */
+
+.bouchon1{
+  margin-left: 255%;
+ 
+}
+.bouchon2{
+  margin-left: 250%;
+}
+.cylinder {
+width:280px;
+margin-left:0%;
+height: 15vh;
+
+}	
+}
+
+@media (min-width: 1171px) and (max-width:1553px) {
+  
+
+  .infoContent{
+    margin-top: 25vh;
+ 
+  }
+  .notification{
+    margin-top: 50vh;
+  
+  }
+  /* .Content {
+    background-color: rgb(60, 0, 255);
+  
+  
+  } */
+  /* ______________Cuve joge__________________ */
+
+.bouchon1{
+  margin-left: 255%;
+ 
+}
+.bouchon2{
+  margin-left: 250%;
+}
+.cylinder {
+width:380%;
+margin-left:0%;
+}	
+
+
+
+
 }

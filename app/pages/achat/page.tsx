@@ -10,7 +10,7 @@ function achat() {
     <div className={styles.main}>
       <div className={styles.body}>
         <div className={styles.Content}>
-          <h1 className={styles.DevlEncour}>Développement en cours ..</h1>
+        <h1 className={styles.DevlEncour}>En cours de développement ...</h1>
           <div className={styles.alert}></div>{" "}
         </div>
       </div>

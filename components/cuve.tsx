@@ -60,16 +60,16 @@ function cuve(props: headP) {
               Capacite <strong>{props.Capacity} L</strong>
             </p>
 
-            <div className={styles.infoCuve}>
+            {/* <div className={styles.infoCuve}> */}
               <div className={styles.infoContent}>
                 <span className={styles.EtatTitle}>Etat actuel :</span>
                 <p className={styles.EtatActuel}>
                   {props.percentage}% <br />
                   <strong>{props.Qte}</strong>L
                 </p>
-                <div className={styles.line}></div>
+                {/* <div className={styles.line}></div> */}
               </div>
-            </div>
+            {/* </div> */}
           </header>
           {/* ________________________________cuve _________________________________________*/}
           <div className={styles.boxAuthor}>
