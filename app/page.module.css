@@ -111,7 +111,7 @@ text-align: center;
 
 
 
-/* ------------------------------Project current------------------------------------- */
+/* -----------------------------------------Project current------------------------------------- */
 
 .alert{
   width: 100%;
@@ -127,6 +127,34 @@ text-align: center;
   font-size: 50px;
   margin-top: 20%;
 }
+
+/* *******************************************index page******************************************* */
+.carburant{
+margin-top: 10%;
+margin-left: -50%;
+}
+.SaisIndex{
+  display: inline-grid;
+  text-align: center;
+  position: absolute;
+  width: 8%;
+  /* border:1px solid red; */
+  justify-content: center;
+  justify-items: center;
+  margin-top: 3.3vh;
+  margin-left: 15.3%;
+
+}
+.IndexInput{
+  height: 5vh;
+  width: 80%;
+  margin: 1px;
+  border-radius: 5px;
+}
+
+ /********************************************end index page******************************************* */
+
+/* *******************************************home page*********************************************** */
 
 /* ______________Cuve joge__________________ */
 
@@ -502,7 +530,7 @@ column-gap: 14px;
 
 
 
-/* ______________________end___________________________ */
+ /********************************************end home page******************************************* */
 
 /* .VosStations {
   color: rgb(143 0 0);
@@ -561,8 +589,9 @@ width: 80%;
 .grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(25%, auto));
-  max-width: 100%;
-  width: var(--max-width);
+  width: 100%;
+  /* max-width: 100%; */
+  /* width: var(--max-width); */
 }
 
 .card {
@@ -813,7 +842,7 @@ height: 15vh;
  
   }
   .notification{
-    margin-top: 50vh;
+    margin-top: 45vh;
   
   }
   /* .Content {
@@ -831,7 +860,7 @@ height: 15vh;
   margin-left: 250%;
 }
 .cylinder {
-width:380%;
+width:365px;
 margin-left:0%;
 }	
 
