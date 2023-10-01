@@ -71,22 +71,7 @@ function cuve(props: headP) {
               </div>
             {/* </div> */}
           </header>
-          {/* ________________________________cuve _________________________________________*/}
-          <div className={styles.boxAuthor}>
-            <div className={styles.CuveSST}>
-              <div className={styles.bouchon1}></div>
-              <div className={styles.bouchon2}></div>
-              <div className={styles.cylinder}>
-                <div
-                  className={styles.water}
-                  style={{
-                    backgroundColor: props.color_,
-                    top: 100 - props.percentage + "%",
-                  }}
-                ></div>
-              </div>
-            </div>
-          </div>
+        
           {/* ________________________________battrie reseax_________________________________________*/}
           <div className={styles.Battrie}>
             <div className={styles.borderBattery}>
@@ -120,7 +105,24 @@ function cuve(props: headP) {
         </div>
       </Link>
       {/* ________________________________notification_________________________________________*/}
-
+  {/* ________________________________cuve _________________________________________*/}
+  <Link href="/pages/musurs" className={styles.aHerf}>
+  <div className={styles.boxAuthor}>
+            <div className={styles.CuveSST}>
+              <div className={styles.bouchon1}></div>
+              <div className={styles.bouchon2}></div>
+              <div className={styles.cylinder}>
+                <div
+                  className={styles.water}
+                  style={{
+                    backgroundColor: props.color_,
+                    top: 100 - props.percentage + "%",
+                  }}
+                ></div>
+              </div>
+            </div>
+          </div>
+          </Link>
       <div className={styles.notification}>
         <Link href="/pages/achat" className={styles.aHerf}>
           <Image

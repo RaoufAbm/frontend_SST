@@ -56,12 +56,12 @@ text-align: center;
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
   padding-bottom: 20%;
 }
-.ul{
-  /* width: 127%; */
-  /* margin-left: -13%; */
-  /* height: 100vh; */
-  /* background-color: red; */
-}
+/* .ul{
+  width: 127%;
+  margin-left: -13%;
+  height: 100vh;
+  background-color: red;
+} */
 .li{
   color: white;
   font-size: 20px;
@@ -705,32 +705,6 @@ width: 80%;
 /* Mobile */
 @media  (max-width: 425px) {
 
-  .infoContent{
-    position: absolute;
-    display: flex;
-    margin-top: 45%;
-    margin-left: 5%;
-    align-items: start;
-    width: 100%;
-    z-index: 100;
-  }
-  .EtatTitle{
-    font-family: 'Arial Black', sans-serif; 
-     font-size: 20px;
-  }
-  .EtatActuel{
-    color: white;
-    font-size: 20px;
-    margin-left: 15%;
-    margin-top: -6%;
-    text-align: start;
-    border: 1px solid white;
-    padding: 6%;
-    border-radius: 25px 25% 25% 25px;
-    width: 28%;
-    height: 15vh;
-    /* background-color:#8d8d96; */
-  }
   .Content {
     text-align: center;
     background-color: rgb(0, 204, 255);
@@ -740,6 +714,28 @@ width: 80%;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
     padding-bottom: 10%;
   }
+  
+    /* ______________Cuve joge__________________ */
+
+.bouchon1{
+  margin-left: 255%;
+ 
+}
+.bouchon2{
+  margin-left: 250%;
+}
+.cylinder {
+width:300px;
+margin-left:0%;
+}	
+.infoContent{
+  margin-top: 30vh;
+
+}
+.notification{
+  margin-top: 55vh;
+
+}
 }
 
 /* Tablet and Smaller Desktop */
@@ -755,22 +751,26 @@ width: 80%;
     width: 100%;
     z-index: 100;
   }
-  .EtatTitle{
-    font-family: 'Arial Black', sans-serif; 
-     font-size: 20px;
+  /* ______________Cuve joge__________________ */
+
+  .bouchon1{
+    margin-left: 255%;
+   
   }
-  .EtatActuel{
-    color: white;
-    font-size: 20px;
-    margin-left: 15%;
-    margin-top: -6%;
-    text-align: start;
-    border: 1px solid white;
-    padding: 6%;
-    border-radius: 25px 25% 25% 25px;
-    width: 28%;
-    height: 15vh;
-    /* background-color:#8d8d96; */
+  .bouchon2{
+    margin-left: 250%;
+  }
+  .cylinder {
+  width:300px;
+  margin-left:0%;
+  }	
+  .infoContent{
+    margin-top: 30vh;
+  
+  }
+  .notification{
+    margin-top: 55vh;
+  
   }
   
 }
@@ -778,46 +778,12 @@ width: 80%;
 /* yellow */
 @media (min-width: 778px) and (max-width:1170px) {
   
-
   .Content {
-    background-color: rgb(255, 234, 0);
-   
-  }
-    /* ______________Cuve joge__________________ */
-
-.bouchon1{
-  margin-left: 275%;
-}
-.bouchon2{
-  margin-left: 270%;
-  margin-top:-65%;
-}
-.cylinder {
-width:280px;
-}	
-.infoContent{
-  margin-top: auto;
-}
-.notification{
-  margin-top: 90%;
-
-}
-}
-
-/* Max ecran */
-@media  (min-width: 1554px) {
-  .infoContent{
-    margin-top: 55%;
-  }
-  .notification{
-    margin-top: 100%;
+    background-color: rgb(255, 221, 0);
+  
   
   }
-
-  /* .Content {
-    background-color: rgb(255, 0, 0);
-  } */
-    /* ______________Cuve joge__________________ */
+  /* ______________Cuve joge__________________ */
 
 .bouchon1{
   margin-left: 255%;
@@ -827,14 +793,58 @@ width:280px;
   margin-left: 250%;
 }
 .cylinder {
-width:280px;
+width:300px;
 margin-left:0%;
-height: 15vh;
-
 }	
+.infoContent{
+  margin-top: 30vh;
+
+}
+.notification{
+  margin-top: 55vh;
+
+}
 }
 
-@media (min-width: 1171px) and (max-width:1553px) {
+/* small desktop */
+@media (min-width: 1171px) and (max-width:1489px) {
+  
+
+  .infoContent{
+    margin-top: 30vh;
+ 
+  }
+  .notification{
+    margin-top: 55vh;
+  
+  }
+  .Content {
+    background-color: rgb(60, 0, 255);
+  
+  
+  }
+  /* ______________Cuve joge__________________ */
+
+.bouchon1{
+  margin-left: 255%;
+ 
+}
+.bouchon2{
+  margin-left: 250%;
+}
+.cylinder {
+width:300px;
+margin-left:0%;
+}	
+
+
+
+
+}
+
+/* large desktop */
+
+@media (min-width: 1490px) and (max-width:1553px) {
   
 
   .infoContent{
@@ -867,4 +877,34 @@ margin-left:0%;
 
 
 
+}
+
+/* Max ecran */
+@media  (min-width: 1554px) {
+  .infoContent{
+    margin-top: 55%;
+  }
+  .notification{
+    margin-top: 100%;
+  
+  }
+
+  /* .Content {
+    background-color: rgb(255, 0, 0);
+  } */
+    /* ______________Cuve joge__________________ */
+
+.bouchon1{
+  margin-left: 255%;
+ 
+}
+.bouchon2{
+  margin-left: 250%;
+}
+.cylinder {
+width:280px;
+margin-left:0%;
+height: 15vh;
+
+}	
 }

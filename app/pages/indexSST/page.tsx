@@ -2,6 +2,7 @@
 import Carburant from "@/components/carburant";
 import styles from "/app/page.module.css";
 import React from "react";
+import Table from "@/components/table";
 
 function indexSST() {
   return (
@@ -16,6 +17,7 @@ function indexSST() {
             <Carburant NameCarb="Diegfdgsel "  />
             <Carburant NameCarb="g "  />
             <Carburant NameCarb="g "  />
+
           </div>
         </div>
       </div>
