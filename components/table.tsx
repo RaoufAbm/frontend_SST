@@ -36,7 +36,8 @@ function table() {
           <td>{cuve.Rsrp}</td>
           <td>{cuve.id}</td>
           </tr>
-        }
+        })}
+
        
         /* <tr>
           <th scope='col'></th>
