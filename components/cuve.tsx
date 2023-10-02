@@ -1,21 +1,22 @@
 import styles from "/app/page.module.css";
 import React, { useRef } from "react";
+import Link from "next/link";
 import alert from "@/images/alert.png";
 import info from "@/images/info.png";
 import warning from "@/images/warnning.png";
 import Image from "next/image";
-import { log } from "console";
-import Link from "next/link";
+// import { log } from "console";
 
 type headP = {
   title: string;
-  color_: string;
-  Capacity: int;
-  percentage: int;
-  Qte: int;
-  notification: number;
+  type: string;
+  Capacity: number;
+  percentage: number;
+  Qte: number;
   wifi: number;
   battery: number;
+  notification: number;
+  color_: string;
 };
 
 function cuve(props: headP) {
@@ -25,7 +26,16 @@ function cuve(props: headP) {
   const wifi1 = React.useRef();
   const wifi2 = React.useRef();
   const wifi3 = React.useRef();
+  const ColorCuve = React.useRef();
+  const result = props.percentage * props.Qte;
 
+  React.useEffect(() => {
+    if (props.color_== "DIESEL") {
+      ColorCuve.current.style.backgroundColor = "blue";
+    }
+    if (props.color_== "ESSENCE") {
+      ColorCuve.current.style.filter = "yellow";
+    }})
   React.useEffect(() => {
     if (props.notification.a !== null) {
       Info.current.style.filter = "opacity(100)";
@@ -54,31 +64,33 @@ function cuve(props: headP) {
       <Link href="/pages/indexSST" className={styles.aHerf}>
         <div className={styles.boxInformation}>
           <header className={styles.boxHeader}>
-            <span className={styles.title}>Cuve : {props.title}</span>
+            <span className={styles.title}>{props.title}</span>
 
             <p className={styles.capacity}>
-              Capacite <strong>{props.Capacity} L</strong>
+              {/* Capacite <strong>{props.Capacity} L</strong> */}
+              <strong>{props.type}</strong>
             </p>
 
             {/* <div className={styles.infoCuve}> */}
-              <div className={styles.infoContent}>
-                <span className={styles.EtatTitle}>Etat actuel :</span>
-                <p className={styles.EtatActuel}>
-                  {props.percentage}% <br />
-                  <strong>{props.Qte}</strong>L
-                </p>
-                {/* <div className={styles.line}></div> */}
-              </div>
+            <div className={styles.infoContent}>
+              <span className={styles.EtatTitle}>Etat actuel :</span>
+              <p className={styles.EtatActuel}>
+              {result} % <br />
+                <strong>{props.Qte}</strong>L
+              </p>
+              {/* <div className={styles.line}></div> */}
+            </div>
             {/* </div> */}
           </header>
-        
+
           {/* ________________________________battrie reseax_________________________________________*/}
           <div className={styles.Battrie}>
             <div className={styles.borderBattery}>
               <div
                 className={styles.battery}
-                style={{ width: props.battery + "%" }}
-              ></div>
+                style={{ width: props.battery + "%" }}>
+
+                </div>
               <div className={styles.BatteryDiv}></div>
             </div>
 
@@ -105,54 +117,50 @@ function cuve(props: headP) {
         </div>
       </Link>
       {/* ________________________________notification_________________________________________*/}
-  {/* ________________________________cuve _________________________________________*/}
-  <Link href="/pages/musurs" className={styles.aHerf}>
-  <div className={styles.boxAuthor}>
-            <div className={styles.CuveSST}>
-              <div className={styles.bouchon1}></div>
-              <div className={styles.bouchon2}></div>
-              <div className={styles.cylinder}>
-                <div
-                  className={styles.water}
-                  style={{
-                    backgroundColor: props.color_,
-                    top: 100 - props.percentage + "%",
-                  }}
-                ></div>
-              </div>
+      {/* ________________________________cuve _________________________________________*/}
+      <Link href="/pages/musurs" className={styles.aHerf}>
+        <div className={styles.boxAuthor}>
+          <div className={styles.CuveSST}>
+            <div className={styles.bouchon1}></div>
+            <div className={styles.bouchon2}></div>
+            <div className={styles.cylinder}>
+              <div  ref={ColorCuve}
+                className={styles.water}
+                style={{top: 30 + "%",}}></div>
             </div>
           </div>
-          </Link>
+        </div>
+      </Link>
       <div className={styles.notification}>
         <Link href="/pages/achat" className={styles.aHerf}>
           <Image
-          src={info}
-          alt={""}
-          width={30}
-          height={30}
-          style={{ filter: "opacity(0%)" }}
-          ref={Info}
-        />
+            src={info}
+            alt={""}
+            width={30}
+            height={30}
+            style={{ filter: "opacity(0%)" }}
+            ref={Info}
+          />
         </Link>
         <Link href="/pages/achat" className={styles.aHerf}>
           <Image
-          src={warning}
-          alt={""}
-          width={30}
-          height={30}
-          style={{ filter: "opacity(0%)" }}
-          ref={Warning}
-        />
+            src={warning}
+            alt={""}
+            width={30}
+            height={30}
+            style={{ filter: "opacity(0%)" }}
+            ref={Warning}
+          />
         </Link>
         <Link href="/pages/achat" className={styles.aHerf}>
           <Image
-          src={alert}
-          alt={""}
-          width={30}
-          height={30}
-          style={{ filter: "opacity(0% " }}
-          ref={Alert}
-        />
+            src={alert}
+            alt={""}
+            width={30}
+            height={30}
+            style={{ filter: "opacity(0% " }}
+            ref={Alert}
+          />
         </Link>
       </div>
     </div>

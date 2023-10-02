@@ -1,18 +1,18 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import styles from "@/app/page.module.css";
 import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
-import ReactDOM from "react-dom";
-import { faDashboard, faTruckDroplet } from "@fortawesome/free-solid-svg-icons";
-import { faChartLine } from "@fortawesome/free-solid-svg-icons";
-import { faPenToSquare } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import ReactDOM from "react-dom";
+// import { faDashboard, faTruckDroplet } from "@fortawesome/free-solid-svg-icons";
+// import { faChartLine } from "@fortawesome/free-solid-svg-icons";
+// import { faPenToSquare } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
-import graph from "@/icons/GraphColor.png";
+import graph from "@/icons/statistique1.png";
 import Image from "next/image";
-import pmpst from "@/icons/pompiste.png";
-import buy from "@/icons/checklist.png";
-import Dashboard from "@/icons/dashboard-blue.png";
-import gasIndex from "@/icons/gas-pump.png";
+import pmpst from "@/icons/icons8-exposant-96.png";
+import buy from "@/icons/buy.png";
+import Dashboard from "@/icons/dashboard-layout.png";
+import gasIndex from "@/icons/carburant.png";
 
 
 

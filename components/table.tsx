@@ -4,42 +4,52 @@ import React, { useEffect, useRef, useState } from "react";
 
 function table() {
  
- const [data,setData]= useState([])
- useEffect(()=> {
-  axios.get('')
-  .then(res => setData(res.data))
-  .catch(err => console.log(err));
- },[])
-  return (
+  const [values, setValues] = useState({
+    IDCuve: "1",
+    
+  });
+
+  const [data,setData]= useState([])
+  
+  useEffect(()=> {
+    axios.post('http://cdd.dzkimtech.com/api/Mesur',values)
+    .then(res => setData(res.data))
+    .catch(err => console.log(err));
+},[])
+return (
     <div>
     <MDBTable className='table-responsive'>
       <MDBTableHead light>
         <tr>
           <th scope='col'></th>
-          <th scope='col'>level</th>
-          <th scope='col'>alarmLevel</th>
-          <th scope='col'>alarmBattery</th>
-          <th scope='col'>volt</th>
-          <th scope='col'>rsrp</th>
-          <th scope='col'>id</th>
+          <th scope='col'>N°</th>
+          <th scope='col'>Date</th>
+          <th scope='col'>Niveau</th>
+          <th scope='col'>Qte </th>
+          <th scope='col'>Alarme de niveau</th>
+          <th scope='col'>Alarme de batterie</th>
+          <th scope='col'>Volt</th>
+          <th scope='col'>Rsrp</th>
         </tr>
       </MDBTableHead>
       <MDBTableBody>
         { 
-        data.map((cuve,index) =>{
+        data.map((Mesur,index) =>{
           return <tr key={index}>  
           <td></td>
-          <td>{cuve.Level}</td>
-          <td>{cuve.AlarmeLevel} </td>
-          <td>{cuve.AlarmeBattery} </td>
-          <td>{cuve.Volt}</td>
-          <td>{cuve.Rsrp}</td>
-          <td>{cuve.id}</td>
+          <td>{Mesur.id}</td>
+          <td>{Mesur.date}</td>
+          <td>{Mesur.Level} mm</td>
+          <td>{Mesur.Qte} L</td>
+          <td>{Mesur.AlarmeLevel}</td>
+          <td>{Mesur.AlarmeBattery} </td>
+          <td>{Mesur.Volt}</td>
+          <td>{Mesur.Rsrp}</td>
           </tr>
         })}
 
        
-        /* <tr>
+        {/* <tr>
           <th scope='col'></th>
           <td className='text-danger'>
             <MDBIcon className='me-1' fas icon='caret-down' />
@@ -92,7 +102,7 @@ function table() {
             <MDBIcon className='me-1' fas icon='caret-down' />
             $-1.78
           </td>
-        </tr> */
+        </tr>  */}
       </MDBTableBody>
     </MDBTable>
     </div>

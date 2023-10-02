@@ -12,12 +12,10 @@ function indexSST() {
           {/* <h1 className={styles.DevlEncour}>Développement en cours ..</h1>
           <div className={styles.alert}></div> */}
           <div className={styles.grid}>
-            <Carburant NameCarb="gfd "  />
-            <Carburant NameCarb="fg "  />
-            <Carburant NameCarb="Diegfdgsel "  />
-            <Carburant NameCarb="g "  />
-            <Carburant NameCarb="g "  />
-
+            <Carburant NameCarb="carburant 1 "  />
+            <Carburant NameCarb="carburant 2 "  />
+            <Carburant NameCarb="carburant 3 "  />
+          
           </div>
         </div>
       </div>

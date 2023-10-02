@@ -20,8 +20,7 @@ function login() {
   const handleSubmit = (event: { preventDefault: () => void }) => {
     event.preventDefault();
 
-    axios
-      .post("http://localhost:5000/login", values)
+    axios.post("https://cdd.dzkimtech.com/login", values)
       .then((res) => {
         if (res.data === "Success") {
           Swal.fire({

@@ -7,10 +7,12 @@ import styles from "/app/page.module.css";
 import Navbar from "@/components/navbar";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Link from "next/link";
+import { BrowserRouter, Route,Routes } from "react-router-dom";
+
 
 // import { Margarine } from "next/font/google";
-import Link from "next/link";
-import { log } from "console";
+// import { log } from "console";
 
 
 function station() {
@@ -21,7 +23,7 @@ function station() {
 
   const [data,setData]=useState([])
   useEffect(()=> {
-   axios.post('http://localhost:5000/station',values)
+   axios.post('https://cdd.dzkimtech.com/station',values)
    .then(res=> setData(res.data)
    )
    .catch(err=> console.log(err));
@@ -39,16 +41,25 @@ function station() {
     </div>
     
      
-      <div className=' d-flex justify-content-start  pl-5 align-items-stretch flex-wrap row bg-transparent text-decoration-none'  style={{marginTop:"-8%"  }}  >
+      {/* <div className=' d-flex  justify-content-start  pl-5 align-items-stretch flex-wrap  bg-transparent text-decoration-none'  style={{marginTop:"-8%"  }}  > */}
+      <div className={styles.grid}>
  
 
-      <Link href="/home"  className={styles.aHerf}>
-     { data.map((user ,index ) => {
-       return <Cards key={index} title={user.Libelle}  cors={user.Lieu}/>
-      })}  
+     {/* { data.map((station ,index ) => {
+      //  return 
+      <Link key={index} href="/pages/home/"  className={styles.aHerf}>
+       <Cards  title={station.Libelle}  cors={station.Lieu}/>
      </ Link> 
-      {/* <Link href="/home" style={{textDecoration:"none"}} ><Cards title="station 2" cors="arzio"  /></Link> */}
-     
+      })}   */}
+
+{data.map((station, index) => (
+  // <Link key={index} href={`/pages/home/:id`} className={styles.aHerf}>
+  //   <Cards title={station.Libelle} cors={station.Lieu} />
+  // </Link>
+  <Link key={index} href={`/pages/home/:id`} className={styles.aHerf}>
+  <Cards title={station.Libelle} cors={station.Lieu} />
+</Link>
+))}     
     
        </div>
     </div>
