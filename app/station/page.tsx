@@ -16,6 +16,7 @@ import { BrowserRouter, Route,Routes } from "react-router-dom";
 
 
 function station() {
+  const id = 123;
   const [values, setValues] = useState({
     IDClien: "1",
     
@@ -41,22 +42,10 @@ function station() {
     </div>
     
      
-      {/* <div className=' d-flex  justify-content-start  pl-5 align-items-stretch flex-wrap  bg-transparent text-decoration-none'  style={{marginTop:"-8%"  }}  > */}
       <div className={styles.grid}>
  
-
-     {/* { data.map((station ,index ) => {
-      //  return 
-      <Link key={index} href="/pages/home/"  className={styles.aHerf}>
-       <Cards  title={station.Libelle}  cors={station.Lieu}/>
-     </ Link> 
-      })}   */}
-
 {data.map((station, index) => (
-  // <Link key={index} href={`/pages/home/:id`} className={styles.aHerf}>
-  //   <Cards title={station.Libelle} cors={station.Lieu} />
-  // </Link>
-  <Link key={index} href={`/pages/home/:id`} className={styles.aHerf}>
+  <Link key={index} href={`/pages/home`} className={styles.aHerf}>
   <Cards title={station.Libelle} cors={station.Lieu} />
 </Link>
 ))}     

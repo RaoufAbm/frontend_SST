@@ -4,17 +4,15 @@ import React, { useEffect, useRef, useState } from "react";
 import Cuve from "@/components/cuve";
 import axios from "axios";
 import Link from "next/link";
-import { useParams } from "react-router-dom";
+
 
 // import { log } from "console";
 
 
 function home() {
-//   const params = useParams();
-// console.log(params);
 
+  
 const [values, setValues] = useState({
-  // IDStation:router.query,
   IDStation:"1",
   
 });
