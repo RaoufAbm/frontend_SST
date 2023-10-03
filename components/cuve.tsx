@@ -8,18 +8,20 @@ import Image from "next/image";
 // import { log } from "console";
 
 type headP = {
+  id : number;
   title: string;
   type: string;
-  Capacity: number;
+  // Capacity: number;
   percentage: number;
   Qte: number;
   wifi: number;
-  battery: number;
+  // battery: number;
   notification: number;
   color_: string;
 };
 
-function cuve(props: headP) {
+
+function Cuve(props: headP) {
   const Info = React.useRef();
   const Alert = React.useRef();
   const Warning = React.useRef();
@@ -27,15 +29,16 @@ function cuve(props: headP) {
   const wifi2 = React.useRef();
   const wifi3 = React.useRef();
   const ColorCuve = React.useRef();
-  const result = props.percentage * props.Qte;
+  const result = props.percentage ;
 
   React.useEffect(() => {
     if (props.color_== "DIESEL") {
       ColorCuve.current.style.backgroundColor = "blue";
     }
     if (props.color_== "ESSENCE") {
-      ColorCuve.current.style.filter = "yellow";
-    }})
+      ColorCuve.current.style.backgroundColor = "yellow";
+    }});
+
   React.useEffect(() => {
     if (props.notification.a !== null) {
       Info.current.style.filter = "opacity(100)";
@@ -61,30 +64,18 @@ function cuve(props: headP) {
 
   return (
     <div className={styles.box}>
-      <Link href="/pages/indexSST" className={styles.aHerf}>
         <div className={styles.boxInformation}>
-          <header className={styles.boxHeader}>
+            <div className={styles.boxHeader}>
+            <Link href="/pages/indexSST" className={styles.aHerf}>
             <span className={styles.title}>{props.title}</span>
-
-            <p className={styles.capacity}>
+            </Link>
+            <p className={styles.typeCuve}>
               {/* Capacite <strong>{props.Capacity} L</strong> */}
               <strong>{props.type}</strong>
             </p>
-
-            {/* <div className={styles.infoCuve}> */}
-            <div className={styles.infoContent}>
-              <span className={styles.EtatTitle}>Etat actuel :</span>
-              <p className={styles.EtatActuel}>
-              {result} % <br />
-                <strong>{props.Qte}</strong>L
-              </p>
-              {/* <div className={styles.line}></div> */}
             </div>
-            {/* </div> */}
-          </header>
-
           {/* ________________________________battrie reseax_________________________________________*/}
-          <div className={styles.Battrie}>
+          {/* <div className={styles.Battrie}>
             <div className={styles.borderBattery}>
               <div
                 className={styles.battery}
@@ -95,7 +86,7 @@ function cuve(props: headP) {
             </div>
 
             <p className={styles.PercentageBattery}>{props.battery}%</p>
-          </div>
+          </div> */}
 
           <div className={styles.Reseax}>
             <i
@@ -114,23 +105,36 @@ function cuve(props: headP) {
               ref={wifi3}
             />
           </div>
-        </div>
-      </Link>
-      {/* ________________________________notification_________________________________________*/}
+
+
+        </div> 
+      
       {/* ________________________________cuve _________________________________________*/}
-      <Link href="/pages/musurs" className={styles.aHerf}>
         <div className={styles.boxAuthor}>
-          <div className={styles.CuveSST}>
             <div className={styles.bouchon1}></div>
             <div className={styles.bouchon2}></div>
+      <Link href={`/pages/musurs/${props.id}`} className={styles.aHerf}>
             <div className={styles.cylinder}>
               <div  ref={ColorCuve}
                 className={styles.water}
-                style={{top: 30 + "%",}}></div>
+                style={{top:100-70 +"%"}}></div>
             </div>
-          </div>
-        </div>
       </Link>
+        </div>
+
+        {/* ________________________________infoContent_________________________________________*/}
+
+              <div className={styles.infoContent}>
+              <span className={styles.EtatTitle}>Etat actuel :</span>
+              <p className={styles.EtatActuel}>
+              {result} % <br />
+                <strong>{props.percentage}</strong>L
+              </p>
+              {/* <div className={styles.line}></div> */}
+            </div>
+
+            {/* ________________________________notification_________________________________________*/}
+
       <div className={styles.notification}>
         <Link href="/pages/achat" className={styles.aHerf}>
           <Image
@@ -163,7 +167,8 @@ function cuve(props: headP) {
           />
         </Link>
       </div>
+
     </div>
   );
 }
-export default cuve;
+export default Cuve;

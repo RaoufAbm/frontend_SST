@@ -1,7 +1,7 @@
 
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import { CardList } from 'react-bootstrap-icons';
+import { CardList, Outlet } from 'react-bootstrap-icons';
 import "bootstrap/dist/css/bootstrap.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Navbar from '@/components/navbar';
@@ -31,7 +31,8 @@ export default function RootLayout({
       <div className={styles.SideBar}>
           <Sidebar />
         </div>
-        {children}
+        
+        {children }
 
         </body>
       <title></title>

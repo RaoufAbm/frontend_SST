@@ -64,12 +64,12 @@ text-align: center;
 } */
 .li{
   color: white;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 200;
   width: 100%;
   height: 7vh;
   padding-left: 5%;
-  padding-top: 3%;
+  padding-top: 5%;
   border-bottom: 0.1px solid rgba(255, 255, 255, 0.177);
 }
  .li:focus  {
@@ -158,46 +158,45 @@ margin-left: -50%;
 
 /* ______________Cuve joge__________________ */
 
-
-.CuveSST{
-  position: relative;
-height: 40vh;
-
+.boxAuthor {
+  position: absolute;
+  /* display: grid; */
+  /* grid-template-columns: 75px 1fr; */
+  align-items: center;
+  /* margin: 3rem 0 0; */
+  /* background-color: red; */
+  margin-top: 15vh;
+  margin-left:-14px;
+  width: 410px;
 }
+
+
 .bouchon1{
   position: absolute ;
   background-color: rgba(52, 52, 52, 0);
   border: 2px solid rgb(118, 118, 118);  
-  width:50%;
-  height:3%;
-  border-radius: 50px;
-  margin-top:35%;
+  width:7%;
+  height:8%;
+  border-radius: 50px 3px 0px 0px;
+  margin-left:61.5%;
+  margin-top:-4.5%;
 }
 .bouchon2{
   position: absolute ;
   background-color: rgba(52, 52, 52, 0);
   border: 2px solid rgb(118, 118, 118);  
-  width: 60%;
-  height: 4%;
-  margin-top:45%;
+  width: 10%;
+  height: 10%;
+  margin-left:60%;
+  margin-top:-2.6%;
+  border-radius: 3px 3px 0px 0px;
 }
 .cylinder {
-	/* position: relative;
-	overflow: hidden;
-	margin: 0 auto;
-  margin-top: 0%;
-	width:130px;
-	height: 100%;
-  border: rgba(255, 255, 255, 0.308) 1px solid;
-	border-radius: 50px/25px;
-background-color:#8e8c9222; */
-
 position: relative;
 overflow: hidden;
-/* margin-top:1vh; */
-/* margin-left:30%; */
-/* width:100%; */
-height: 45%;
+margin-left:1.5rem;
+width:50%;
+height: 50vh;
 border: rgba(255, 255, 255, 0.308) 1px solid;
 border-radius: 72px/106px;
 background-color: #8e8c9222;
@@ -215,10 +214,10 @@ background-color: #8e8c9222;
 } */
 .water {
  position: absolute;
-  top: 50;
   height: 100%; 
   width: 100%;
   background-color: #ffae00;
+  margin-left: 0%;
   /* width: 458px; 
   padding-top: 100%;
   margin-left: -154%;
@@ -280,26 +279,30 @@ background-color: #8e8c9222;
 .infoContent{
   position: absolute;
   display: flex;
-  margin-left: 1.5rem;
   align-items: start;
   width: 100%;
   z-index: 100;
-  /* margin-top: 100%; */
+  margin-left: -3.8%;
+  margin-top: 40vh;
+  /* margin-left: 1.5rem; */
+  /* background-color: rgb(4, 191, 91); */
 }
 .EtatTitle{
   font-family: 'Arial Black', sans-serif; 
+  color: #8d8d96;
    font-size: 20px;
+   margin-left: 15%;
 }
 .EtatActuel{
   color: white;
   font-size: 20px;
-  margin-left: 15%;
+  margin-left: 10%;
   margin-top: -6%;
   text-align: start;
   border: 1px solid white;
   padding: 6%;
-  border-radius: 25px 25% 25% 25px;
-  width: 28%;
+  width:35%;
+  border-radius: 30px;
   height: 15vh;
   /* background-color:#8d8d96; */
 }
@@ -320,6 +323,9 @@ column-gap: 14px;
   font-family: 'Inter', sans-serif;
   margin-top: 2%;
   padding: 1rem;
+    /* background-color: red; */
+    /* z-index: 100; */
+
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 .boxInformation{
@@ -328,19 +334,13 @@ column-gap: 14px;
   height: 400px;
   width: 100%;
   font-family: 'Inter', sans-serif;
+  /* background-color: red; */
 }
 
 .box:hover {
   transform: translateY(-0.4rem);
 }
 
-.boxAuthor {
-  position: relative;
-  display: grid;
-  grid-template-columns: 75px 1fr;
-  align-items: center;
-  margin: 3rem 0 0;
-}
 
 .authorName {
   color: #7a7a8c;
@@ -375,6 +375,13 @@ column-gap: 14px;
 .boxHeader {
   margin-bottom: auto;
   color: #7a7a8c;
+  height: 12vh;
+}
+.typeCuve{
+  color: #7a7a8c;
+  margin-top: 15%;
+  margin-left: -5rem;
+  width: 100%;
 }
 .paragraph {
   font-size: 16px;
@@ -396,7 +403,7 @@ column-gap: 14px;
   font-size: 20px;
   cursor: pointer;
   font-family: 'Arial Black', sans-serif;
-  margin-left: -10%;
+  margin-left: -35%;
   position: absolute;
   background-color: #27242c;
   border: #7a7a8c 1px solid;
@@ -412,7 +419,7 @@ column-gap: 14px;
 .title:hover {
   font-size: 20px;
   font-family: 'Arial Black', sans-serif;
-  margin-left: -25%;
+  margin-left: -60%;
   position: absolute;
   background: linear-gradient(90deg,#ff8a00,#e52e71);
   text-shadow: none;
@@ -423,12 +430,7 @@ column-gap: 14px;
   overflow: visible;
   width: 100%;
 }
-.capacity{
-  color: #7a7a8c;
-  margin-top: 8vh;
-  margin-left: 1rem;
-  width: 100%;
-}
+
 
 .tags {
   margin: 1rem 0 2rem;
@@ -461,17 +463,17 @@ column-gap: 14px;
   background-clip: text;
   border-color: white;
 }
+/* ______________notification/Battrie/Reseax__________________ */
 
 .notification{
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
-  /* border: 1px yellow solid; */
-  margin-left:5%;
-  margin-top: 80%;
+  column-gap: 2px;
+  margin-left:10%;
+  margin-top: 45vh;
   width: 30%;
   position: absolute;
   z-index: 100;
-  /* background-color: red; */
 }
 
 .Battrie{
@@ -500,7 +502,7 @@ column-gap: 14px;
 }
 .BatteryDiv{
   position: absolute;
-  margin-left: 21%;
+  margin-left: 28%;
   top: 28%;
   z-index: 11;
   content: " ";
@@ -806,20 +808,11 @@ margin-left:-170%;
 /* small desktop */
 @media (min-width: 1171px) and (max-width:1489px) {
   
-
-  .infoContent{
-    margin-top: 30vh;
- 
+  .li:hover {
+   
+    padding-left: 5%;
+   
   }
-  .notification{
-    margin-top: 55vh;
-  
-  }
-  /* .Content {
-    background-color: rgb(60, 0, 255);
-  
-  
-  } */
   /* ______________Cuve joge__________________ */
 
 .bouchon1{
@@ -834,6 +827,7 @@ margin-left:-170%;
 .cylinder {
 width:300px;
 margin-left:-45%;
+
 }	
 }
 
@@ -842,72 +836,50 @@ margin-left:-45%;
 @media (min-width: 1490px) and (max-width:1553px) {
   
 
-  .infoContent{
-    margin-top: 25vh;
- 
-  }
-  .notification{
-    margin-top: 45vh;
-  
-  }
-  /* .Content {
-    background-color: rgb(60, 0, 255);
-  
-  
-  } */
   /* ______________Cuve joge__________________ */
 
-.bouchon1{
-
-  margin-left:305%;
- 
-}
-.bouchon2{
-  margin-left: 300%;
-}
+  .bouchon1{
+    margin-left:71.5%;
+    margin-top:-4.5%;
+  
+  }
+  .bouchon2{
+    margin-left:70%;
+    margin-top:-2.6%;
+  
+  }
 .cylinder {
-width:365px;
-margin-left:-40%;
-}	
-
-
-
-
+  width:23rem;
+  height: 15vh;
+  margin-left:1rem;
+  
+  }	
 }
 
 /* Max ecran */
 @media  (min-width: 1554px) {
-  .infoContent{
-    margin-top: 45%;
-  }
-  .notification{
-    margin-top: 85%;
-  
-  }
-
-  /* .Content {
-    background-color: rgb(255, 0, 0);
-  } */
+ 
     /* ______________Cuve joge__________________ */
 
-.bouchon1{
-  margin-left: 255%;
-  margin-top: 75%;
-
-}
-.bouchon2{
-  margin-left: 250%;
-  margin-top: 85%;
-
-}
-.cylinder {
-width:23rem;
-margin-left:-90%;
-height: 15vh;
-margin-top: 100%;
-
-}	
+    .bouchon1{
+      margin-left:71.5%;
+      margin-top:-4.5%;
+    
+    }
+    .bouchon2{
+      margin-left:70%;
+      margin-top:-2.6%;
+    
+    }
+    .cylinder {
+      width:23rem;
+      height: 15vh;
+      /* margin-top: 100%; */
+      margin-left:1.5rem;
+      
+      }	
 .wrapper {
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
 }
+
 }

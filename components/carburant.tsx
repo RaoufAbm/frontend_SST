@@ -7,7 +7,7 @@ type headP = {
   NameCarb: string;
 };
 
- function carburant(props: headP) {
+ function Carburant(props: headP) {
   return (
     <div className={styles.carburant}>
         <div className={styles.SaisIndex}>
@@ -23,4 +23,4 @@ type headP = {
     </div>
   )
 }
-export default carburant;
+export default Carburant;

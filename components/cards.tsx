@@ -6,7 +6,7 @@ type headP={
   cors:string,
 }
 
-function cards(props:headP) {
+function Cards(props:headP) {
   return (
     <div className="card text-dark bg-light  ml-2  shadow p-3 mb-2  bg-body rounded border " style={{maxWidth: '25rem'}}>
   <div className="card-header h3 bg-dark-opacity-10 shadow-none p-3 mb-0  rounded">{props.title}</div>
@@ -18,4 +18,4 @@ function cards(props:headP) {
 
   );
 }
-export default cards;
+export default Cards;

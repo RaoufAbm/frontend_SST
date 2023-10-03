@@ -1,4 +1,4 @@
-import Login from "@/components/login";
+import Login from "@/components/Login";
 import styles from '/app/page.module.css'
 import Sidebar from "@/components/sidebar";
 function login() {

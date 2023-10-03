@@ -1,11 +1,15 @@
 import { MDBTable, MDBTableHead, MDBTableBody, MDBIcon } from 'mdb-react-ui-kit';
 import axios from 'axios';
 import React, { useEffect, useRef, useState } from "react";
-
-function table() {
+type headP = {
+  IDCuve : number;
+};
+function Table(props:headP) {
  
+
+
   const [values, setValues] = useState({
-    IDCuve: "1",
+    IDCuve: props.IDCuve,
     
   });
 
@@ -37,14 +41,14 @@ return (
         data.map((Mesur,index) =>{
           return <tr key={index}>  
           <td></td>
-          <td>{Mesur.id}</td>
-          <td>{Mesur.date}</td>
-          <td>{Mesur.Level} mm</td>
-          <td>{Mesur.Qte} L</td>
-          <td>{Mesur.AlarmeLevel}</td>
-          <td>{Mesur.AlarmeBattery} </td>
-          <td>{Mesur.Volt}</td>
-          <td>{Mesur.Rsrp}</td>
+          <td>{Mesur["id"]}</td>
+          <td>{Mesur["date"]}</td>
+          <td>{Mesur["Level"]} mm</td>
+          <td>{Mesur["Qte"]} L</td>
+          <td>{Mesur["AlarmeLevel"]}</td>
+          <td>{Mesur["AlarmeBattery"]} </td>
+          <td>{Mesur["Volt"]}</td>
+          <td>{Mesur["Rsrp"]}</td>
           </tr>
         })}
 
@@ -108,4 +112,4 @@ return (
     </div>
   );
 }
-export default table;
+export default Table;

@@ -1,58 +1,46 @@
-
 "use client"; // This is a client component 👈🏽
 
-import Cards from "@/components/cards";
+import Cards from "@/components/Cards";
 import Header from "@/components/header";
 import styles from "/app/page.module.css";
 import Navbar from "@/components/navbar";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Link from "next/link";
-import { BrowserRouter, Route,Routes } from "react-router-dom";
 
+function Station() {
+  // Define a state variable for the data fetched from the API
+  const [fetchedData, setFetchedData] = useState([]);
 
-// import { Margarine } from "next/font/google";
-// import { log } from "console";
+  useEffect(() => {
+    const initialValues = {
+      IDClien: "1",
+      // Add other initial values as needed
+    };
 
-
-function station() {
-  const id = 123;
-  const [values, setValues] = useState({
-    IDClien: "1",
-    
-  });
-
-  const [data,setData]=useState([])
-  useEffect(()=> {
-   axios.post('https://cdd.dzkimtech.com/station',values)
-   .then(res=> setData(res.data)
-   )
-   .catch(err=> console.log(err));
-  },[])
+    // Fetch data from the API and update the state
+    axios.post('https://cdd.dzkimtech.com/station', initialValues)
+      .then((res) => setFetchedData(res.data))
+      .catch((err) => console.log(err));
+  }, []);
 
   return (
-    <div className='d-flex col-md-12 row '>
-<div className={styles.navbar}>
- 
- <Navbar />
-
- </div>
-      <div  className=' col-md-12 '>
-      <Header />
-    </div>
-    
-     
+    <div className='d-flex col-md-12 row'>
+      <div className={styles.navbar}>
+        <Navbar />
+      </div>
+      <div className='col-md-12'>
+        <Header />
+      </div>
       <div className={styles.grid}>
- 
-{data.map((station, index) => (
-  <Link key={index} href={`/pages/home`} className={styles.aHerf}>
-  <Cards title={station.Libelle} cors={station.Lieu} />
-</Link>
-))}     
-    
-       </div>
+        {fetchedData.map((station, index) => (
+          <Link key={index} href={`/pages/home/${station["IDStation"]}`} className={styles.aHerf}>
+            <Cards  title={station["Libelle"]} cors={station["Lieu"]}  />
+          </Link>
+        ))}
+      </div>
     </div>
   );
 }
 
-export default station;
+export default Station;

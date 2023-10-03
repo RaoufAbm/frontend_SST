@@ -5,7 +5,7 @@ import { useState } from "react";
 import axios from "axios";
 import Swal from "sweetalert2";
 
-function login() {
+function Login() {
   const [values, setValues] = useState({
     Name: "",
     Password: "",
@@ -20,7 +20,7 @@ function login() {
   const handleSubmit = (event: { preventDefault: () => void }) => {
     event.preventDefault();
 
-    axios.post("https://cdd.dzkimtech.com/login", values)
+    axios.post("https://cdd.dzkimtech.com/login",values)
       .then((res) => {
         if (res.data === "Success") {
           Swal.fire({
@@ -104,4 +104,8 @@ function login() {
   );
 }
 
-export default login;
+export default Login;
+function setValues(arg0: (prev: any) => any) {
+  throw new Error("Function not implemented.");
+}
+

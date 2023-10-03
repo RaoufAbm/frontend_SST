@@ -1,3 +1,4 @@
+"use client"
 import "bootstrap/dist/css/bootstrap.min.css";
 import styles from "@/app/page.module.css";
 import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
@@ -13,10 +14,11 @@ import pmpst from "@/icons/icons8-exposant-96.png";
 import buy from "@/icons/buy.png";
 import Dashboard from "@/icons/dashboard-layout.png";
 import gasIndex from "@/icons/carburant.png";
+import Home from "@/app/pages/home/page";
 
 
 
-export function sidebar() {
+export function sidebar(params) {
   return (
     <div className="col-auto  col-xl-0 px-sm-2 px-0  " style={{background:"#17141D"}}>
       <div className="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
@@ -27,8 +29,7 @@ export function sidebar() {
         >
           <Link href="/pages/home"  className={`${styles.li} ${styles.aHerf}`}>
             <li >
-              {/* <i className="fs-4 bi-speedometer2" /> */}
-              {/* <i className="bi bi-calendar3-range-fill"></i> */}
+            
               <Image src={Dashboard} alt={""} width={25} height={25}  />
               <span className="ml-3 ms-1 d-none d-sm-inline">
                 tableau de bord
@@ -37,32 +38,27 @@ export function sidebar() {
           </Link>
           <Link href="/pages/pompist" className={`${`${styles.li} ${styles.aHerf}`}`}>
             <li >
-              {/* <i className="fs-4 bi-people" /> */}
               <Image src={pmpst} alt={""} width={25} height={25}  />
               <span className="ml-3 ms-1 d-none d-sm-inline">Pompist</span>
             </li>
           </Link>
           <Link href="/pages/achat" className={`${styles.li} ${styles.aHerf}`}>
             <li >
-              {/* <i className="fs-4 bi-bootstrap" /> */}
-              {/* <FontAwesomeIcon icon={faHome} /> */}
-              {/* <FontAwesomeIcon icon={faTruckDroplet}  style={{width:"10%"}}/> */}
+             
               <Image src={buy} alt={""} width={25} height={25}  />
               <span className="ml-3 ms-1 d-none d-sm-inline">Achat</span>
             </li>
           </Link>
           <Link href="/pages/indexSST" className={`${styles.li} ${styles.aHerf}`}>
             <li >
-              {/* <i className="fs-4 bi-grid" /> */}
-              {/* <FontAwesomeIcon icon={faPenToSquare} style={{width:"10%"}} /> */}
+              
               <Image src={gasIndex} alt={""} width={25} height={25}  />
               <span className="ml-3 ms-1 d-none d-sm-inline">Index</span>
             </li>
           </Link>
           <Link href="/pages/statistique" className={`${styles.li} ${styles.aHerf}`}>
             <li>
-              {/* <i className="fs-4 bi-table" /> */}
-              {/* <FontAwesomeIcon icon={faChartLine} style={{width:"10%"}}/> */}
+              
               <Image src={graph} alt={""} width={25} height={25}  />
 
               <span className="ml-3 ms-1 d-none d-sm-inline">statistique</span>
@@ -79,6 +75,7 @@ export function sidebar() {
             </li>
           </Link>
         </ul>
+      
       </div>
     </div>
   );
