@@ -24,7 +24,7 @@
     "eslint": "8.48.0",
     "eslint-config-next": "13.4.19",
     "mdb-react-ui-kit": "^6.2.0",
-    "@next/env": "^12.0.7",
+    "next": "^13.4.19",
     "react": "18.2.0",
     "react-bootstrap-icons": "^1.10.3",
     "react-bootstrap-sidebar-menu": "^2.0.3",
