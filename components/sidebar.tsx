@@ -14,11 +14,11 @@ import pmpst from "@/icons/icons8-exposant-96.png";
 import buy from "@/icons/buy.png";
 import Dashboard from "@/icons/dashboard-layout.png";
 import gasIndex from "@/icons/carburant.png";
-import Home from "@/app/pages/home/page";
 
 
 
-export function sidebar(params) {
+function sidebar() {
+
   return (
     <div className="col-auto  col-xl-0 px-sm-2 px-0  " style={{background:"#17141D"}}>
       <div className="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
@@ -27,7 +27,7 @@ export function sidebar(params) {
           style={{ width: "118%", marginLeft: "-9%" }}
           id="menu"
         >
-          <Link href="/pages/home"  className={`${styles.li} ${styles.aHerf}`}>
+          <Link href="/pages/home/"  className={`${styles.li} ${styles.aHerf}`}>
             <li >
             
               <Image src={Dashboard} alt={""} width={25} height={25}  />

@@ -11,7 +11,7 @@ type headP = {
   id : number;
   title: string;
   type: string;
-  // Capacity: number;
+  Capacity: number;
   percentage: number;
   Qte: number;
   wifi: number;
@@ -70,12 +70,12 @@ function Cuve(props: headP) {
             <span className={styles.title}>{props.title}</span>
             </Link>
             <p className={styles.typeCuve}>
-              {/* Capacite <strong>{props.Capacity} L</strong> */}
-              <strong>{props.type}</strong>
+              <strong style={{color:"white"}}>{props.type}</strong><br />
+              Capacite <strong >{props.Capacity} L</strong>
             </p>
             </div>
           {/* ________________________________battrie reseax_________________________________________*/}
-          {/* <div className={styles.Battrie}>
+          <div className={styles.Battrie}>
             <div className={styles.borderBattery}>
               <div
                 className={styles.battery}
@@ -86,7 +86,7 @@ function Cuve(props: headP) {
             </div>
 
             <p className={styles.PercentageBattery}>{props.battery}%</p>
-          </div> */}
+          </div>
 
           <div className={styles.Reseax}>
             <i

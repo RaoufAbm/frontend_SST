@@ -21,8 +21,8 @@ function Table(props:headP) {
     .catch(err => console.log(err));
 },[])
 return (
-    <div>
-    <MDBTable className='table-responsive'>
+    <div className='bg-dark p-5 w-100'>
+    <MDBTable className='table table-responsive w-100'>
       <MDBTableHead light>
         <tr>
           <th scope='col'></th>
@@ -52,7 +52,8 @@ return (
           </tr>
         })}
 
-       
+
+
         {/* <tr>
           <th scope='col'></th>
           <td className='text-danger'>

@@ -3,14 +3,15 @@ import styles from "/app/page.module.css";
 import React, { useEffect, useRef, useState } from "react";
 import Cuve from "@/components/Cuve";
 import axios from "axios";
-import Link from "next/link";
-import Station from "@/app/station/page";
+import router, { Router } from "next/router";
+// import { Router } from "react-bootstrap-icons";
+// import Link from "next/link";
+// import Station from "@/app/station/page";
 
 // import { log } from "console";
 
 
 function Home( {params}) {
-
   
 const [values, setValues] = useState({
   IDStation:params.station,
@@ -44,9 +45,9 @@ const [values, setValues] = useState({
                   percentage={cuve["Pourcentage"]}
                   wifi={3}
                   notification={0}
-                  color_={cuve["type_carburant"]} 
-                  Qte={cuve["Qte"]}                  
-                   />
+                  color_={cuve["type_carburant"]}
+                  Qte={cuve["Qte"]} 
+                  Capacity={cuve["volume_cuve"]}                  />
               ))}
           </div>
         </div>
