@@ -4,6 +4,7 @@ import styles from "@/app/page.module.css";
 
 
 export function navbar() {
+
   return (
     <nav className="navbar navbar-expand-lg navbar-light  h-100" style={{background:"#1EB2E8"}}>
   <div className="container-fluid">
@@ -11,7 +12,7 @@ export function navbar() {
       <span className="navbar-toggler-icon" />
     </button>
     <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-      <a className={`${styles.NavbarBrand} ${styles.aHerf}`}  href="#">BI Analytic solutions</a>
+      <a className={`${styles.NavbarBrand} ${styles.aHerf}`}  href="#">BI Analytic solutions  </a>
     
       
         <input className="form-control " type="search" style={{width:"15%",marginLeft:"70%"}} placeholder="Search" aria-label="Search" />

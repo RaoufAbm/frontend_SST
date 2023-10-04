@@ -21,9 +21,11 @@ function Table(props:headP) {
     .catch(err => console.log(err));
 },[])
 return (
-    <div className='bg-dark p-5 w-100'>
-    <MDBTable className='table table-responsive w-100'>
-      <MDBTableHead light>
+  <div className=' p-5  w-100ml-5'>
+      <h3 style={{ marginLeft:"-85%"}}><strong>Museures</strong></h3>
+      <br />
+    <MDBTable className=' table-responsive '>
+      <MDBTableHead className=''>
         <tr>
           <th scope='col'></th>
           <th scope='col'>N°</th>
@@ -36,10 +38,10 @@ return (
           <th scope='col'>Rsrp</th>
         </tr>
       </MDBTableHead>
-      <MDBTableBody>
+      <MDBTableBody >
         { 
         data.map((Mesur,index) =>{
-          return <tr key={index}>  
+          return <tr key={index} >  
           <td></td>
           <td>{Mesur["id"]}</td>
           <td>{Mesur["date"]}</td>

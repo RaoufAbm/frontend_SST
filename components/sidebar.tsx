@@ -16,8 +16,15 @@ import Dashboard from "@/icons/dashboard-layout.png";
 import gasIndex from "@/icons/carburant.png";
 
 
-
-function sidebar() {
+type headP = {
+  title : number;
+};
+function sidebar(props: headP) {
+// console.log(props.title);
+const id= (window as any).aa;
+console.log(id);
+// const globalValue = (window as any).aa;
+// console.log(globalValue);
 
   return (
     <div className="col-auto  col-xl-0 px-sm-2 px-0  " style={{background:"#17141D"}}>
@@ -27,7 +34,7 @@ function sidebar() {
           style={{ width: "118%", marginLeft: "-9%" }}
           id="menu"
         >
-          <Link href="/pages/home/"  className={`${styles.li} ${styles.aHerf}`}>
+          <Link href={`/home/${id}`}  className={`${styles.li} ${styles.aHerf}`}>
             <li >
             
               <Image src={Dashboard} alt={""} width={25} height={25}  />

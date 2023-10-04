@@ -29,7 +29,7 @@ export default function RootLayout({
         <Navbar />
       </div>
       <div className={styles.SideBar}>
-          <Sidebar/>
+          <Sidebar />
         </div>
 
         {children }
