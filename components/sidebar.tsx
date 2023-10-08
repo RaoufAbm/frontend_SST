@@ -18,9 +18,11 @@ import gasIndex from "@/icons/carburant.png";
 
 
 function sidebar() {
-const id = (window as any).aa;
-
-
+  
+  if (typeof window !== 'undefined') {
+    const id = (window as any).aa;
+    
+  
   return (
     <div className="col-auto  col-xl-0 px-sm-2 px-0  " style={{background:"#17141D"}}>
       <div className="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
@@ -88,5 +90,5 @@ const id = (window as any).aa;
       </div>
     </div>
   );
-}
+}}
 export default sidebar;

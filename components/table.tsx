@@ -12,7 +12,6 @@ type headP = {
 function Table(props:headP) {
  
 
-
   const [values, setValues] = useState({
     IDCuve: props.IDCuve,
     
@@ -25,12 +24,15 @@ function Table(props:headP) {
     .then(res => setData(res.data))
     .catch(err => console.log(err));
 },[])
+if (typeof window !== 'undefined') {
+  const id = (window as any).aa;
 return (
   <div className=' p-5  w-100 ml-5'>
       <h3 style={{ marginLeft:"-85%"}}><strong>Museures</strong></h3>
-          {/* <Link href={`/home`}   className={styles.aHerf}>
+      <Link href={`/home/${id}`}   className={styles.aHerf}>
                   <Image style={{marginLeft:"10%"}} src={arrow} alt={""} width={25} height={25}  />
-    </Link> */}
+    </Link>
+    {/* <Link href={`/home/${id}`}>aaaaaaaaa</Link> */}
       <br />
     <MDBTable className=' table-responsive '>
       <MDBTableHead className=''>
@@ -122,5 +124,5 @@ return (
     </MDBTable>
     </div>
   );
-}
+}}
 export default Table;
