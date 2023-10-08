@@ -41,7 +41,7 @@ function Home( {params}) {
       </div>
       <div className={styles.body}>
       <div className={styles.SideBar}>
-          <Sidebar title={params.station}/>
+          <Sidebar />
         </div>
         <div className={styles.Content}>
           <div className={styles.wrapper}>
@@ -54,8 +54,9 @@ function Home( {params}) {
                   wifi={3}
                   notification={0}
                   color_={cuve["type_carburant"]}
-                  Qte={cuve["Qte"]} 
-                  Capacity={cuve["volume_cuve"]}                  />
+                  Qte={cuve["dbo.mesure_cuves"][0]?.["Qte"] || 0}
+                  Capacity={cuve["volume_cuve"]}  
+                                  />
               ))}
           </div>
         </div>

@@ -25,7 +25,8 @@ function Station() {
   }, []);
 
   return (
-    <div className='d-flex col-md-12 row'>
+    // <div className='d-flex col-md-12  p-0 row'>
+      <div className="main">
       <div className={styles.navbar}>
         <Navbar />
       </div>

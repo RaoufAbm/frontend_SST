@@ -15,8 +15,8 @@ export function navbar() {
       <a className={`${styles.NavbarBrand} ${styles.aHerf}`}  href="#">BI Analytic solutions  </a>
     
       
-        <input className="form-control " type="search" style={{width:"10%",marginLeft:"70%"}} placeholder="Search" aria-label="Search" />
-        <button className="btn text-white border-white btn-outline-primary ml-1 " type="submit">Search</button>
+        <input className="form-control h-100 " type="search" style={{width:"10%",marginLeft:"70%"}} placeholder="Search" aria-label="Search" />
+        <button className="btn btn-sm text-white border-white btn-outline-primary ml-1  " type="submit">Search</button>
         
     </div>
   </div>

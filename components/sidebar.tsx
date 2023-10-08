@@ -16,15 +16,10 @@ import Dashboard from "@/icons/dashboard-layout.png";
 import gasIndex from "@/icons/carburant.png";
 
 
-// type headP = {
-//   title : number;
-// };
+
 function sidebar() {
-// console.log(props.title);
 const id = (window as any).aa;
-console.log(""+id);
-// const globalValue = (window as any).aa;
-// console.log(globalValue);
+
 
   return (
     <div className="col-auto  col-xl-0 px-sm-2 px-0  " style={{background:"#17141D"}}>

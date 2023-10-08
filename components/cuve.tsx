@@ -29,7 +29,7 @@ function Cuve(props: headP) {
   const wifi2 = React.useRef();
   const wifi3 = React.useRef();
   const ColorCuve = React.useRef();
-  const result = props.percentage ;
+  const result = props.percentage * props.Qte  ;
 
   React.useEffect(() => {
     if (props.color_== "DIESEL") {
@@ -39,17 +39,17 @@ function Cuve(props: headP) {
       ColorCuve.current.style.backgroundColor = "yellow";
     }});
 
-  React.useEffect(() => {
-    if (props.notification.a !== null) {
-      Info.current.style.filter = "opacity(100)";
-    }
-    if (props.notification.b !== "") {
-      Alert.current.style.filter = "opacity(100)";
-    }
-    if (props.notification.c !== "") {
-      Warning.current.style.filter = "opacity(100)";
-    }
-  });
+  // React.useEffect(() => {
+  //   if (props.notification.a !== null) {
+  //     Info.current.style.filter = "opacity(100)";
+  //   }
+  //   if (props.notification.b !== "") {
+  //     Alert.current.style.filter = "opacity(100)";
+  //   }
+  //   if (props.notification.c !== "") {
+  //     Warning.current.style.filter = "opacity(100)";
+  //   }
+  // });
   React.useEffect(() => {
     if (props.wifi == 1) {
       wifi1.current.style.display = "block";
@@ -117,7 +117,7 @@ function Cuve(props: headP) {
             <div className={styles.cylinder}>
               <div  ref={ColorCuve}
                 className={styles.water}
-                style={{top:100-70 +"%"}}></div>
+                style={{top: 100- result  +"%"}}></div>
             </div>
       </Link>
         </div>
@@ -135,7 +135,7 @@ function Cuve(props: headP) {
 
             {/* ________________________________notification_________________________________________*/}
 
-      <div className={styles.notification}>
+      {/* <div className={styles.notification}>
         <Link href="/pages/achat" className={styles.aHerf}>
           <Image
             src={info}
@@ -166,7 +166,7 @@ function Cuve(props: headP) {
             ref={Alert}
           />
         </Link>
-      </div>
+      </div> */}
 
     </div>
   );

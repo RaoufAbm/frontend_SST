@@ -1,6 +1,11 @@
 import { MDBTable, MDBTableHead, MDBTableBody, MDBIcon } from 'mdb-react-ui-kit';
 import axios from 'axios';
 import React, { useEffect, useRef, useState } from "react";
+import arrow from "@/icons/arrow-left.png";
+import Image from "next/image";
+import Link from 'next/link';
+import styles from "@/app/page.module.css";
+
 type headP = {
   IDCuve : number;
 };
@@ -21,8 +26,11 @@ function Table(props:headP) {
     .catch(err => console.log(err));
 },[])
 return (
-  <div className=' p-5  w-100ml-5'>
+  <div className=' p-5  w-100 ml-5'>
       <h3 style={{ marginLeft:"-85%"}}><strong>Museures</strong></h3>
+          {/* <Link href={`/home`}   className={styles.aHerf}>
+                  <Image style={{marginLeft:"10%"}} src={arrow} alt={""} width={25} height={25}  />
+    </Link> */}
       <br />
     <MDBTable className=' table-responsive '>
       <MDBTableHead className=''>

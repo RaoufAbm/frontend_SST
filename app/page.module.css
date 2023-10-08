@@ -3,7 +3,6 @@
   justify-content: space-between;
   align-items: center;
   background-color: rgb(255, 255, 255);
-  /* height: 100vh; */
 }
 .header {
   height: 70vh;
@@ -96,6 +95,7 @@ text-align: center;
 
 .aHerf{
   text-decoration: none;
+  
   }
   .aHerf:hover{
     text-decoration: none;
@@ -191,12 +191,12 @@ margin-left: -50%;
   margin-top:-2.6%;
   border-radius: 3px 3px 0px 0px;
 }
-.cylinder {
+ .cylinder {
 position: relative;
 overflow: hidden;
-margin-left:1.5rem;
-width:50%;
-height: 50vh;
+margin-left:1rem;
+width:90%;
+height: 18vh;
 border: rgba(255, 255, 255, 0.308) 1px solid;
 border-radius: 72px/106px;
 background-color: #8e8c9222;
@@ -379,7 +379,7 @@ column-gap: 14px;
 }
 .typeCuve{
   color: #8c867a;
-  margin-top: 15%;
+  margin-top: 8vh;
   margin-left: -5rem;
   width: 100%;
 }
@@ -590,8 +590,10 @@ width: 80%;
   display: grid;
   grid-template-columns: repeat(4, minmax(25%, auto));
   width: 100%;
-  /* max-width: 100%; */
-  /* width: var(--max-width); */
+  padding: 1%;
+  margin-top: -10vh;
+  margin-left: -0.5%;
+
 }
 
 .card {
@@ -705,73 +707,64 @@ width: 80%;
 /* Mobile */
 @media  (max-width: 425px) {
 
-  .Content {
-    text-align: center;
-    background-color: rgb(0, 204, 255);
-    width: 83%;
-    margin-left: 16%;
-    margin-top: 1%;
-    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-    padding-bottom: 10%;
-  }
   
+  .Content{
+    background-color: palevioletred;
+  }
     /* ______________Cuve joge__________________ */
 
-.bouchon1{
-  margin-left: 255%;
- 
-}
-.bouchon2{
-  margin-left: 250%;
-}
-.cylinder {
-width:300px;
-margin-left:-170%;
-}	
-.infoContent{
-  margin-top: 30vh;
-
-}
-.notification{
-  margin-top: 55vh;
-
-}
+    .bouchon1{
+      margin-left:51.5%;
+      margin-top:3.8%;
+      
+    
+    }
+    .bouchon2{
+      margin-left:50%;
+      margin-top:6.6%;
+    
+    }
+    .cylinder {
+      width:18rem;
+      height: 18vh;
+      margin-top: 10%;
+      margin-left:1.5rem;
+      
+      }		
+      .grid {
+        grid-template-columns: repeat(1, minmax(100%, auto));
+      }
 }
 
 /* Tablet and Smaller Desktop */
 @media (min-width: 426px) and (max-width: 768px) {
  
 
-  .infoContent{
-    position: absolute;
-    display: flex;
-    margin-top: 45%;
-    margin-left: 5%;
-    align-items: start;
-    width: 100%;
-    z-index: 100;
-  }
+ .Content {
+  background-color: red;}
   /* ______________Cuve joge__________________ */
 
   .bouchon1{
-    margin-left: 255%;
-   
+    margin-left:61.5%;
+    margin-top:-2.2vh;
+    
+  
   }
   .bouchon2{
-    margin-left: 250%;
+    margin-left:60%;
+    margin-top:-1vh;
+  
   }
   .cylinder {
-  width:300px;
-  margin-left:-170%;
-}	
-  .infoContent{
-    margin-top: 30vh;
-  
-  }
-  .notification{
-    margin-top: 55vh;
-  
-  }
+    width:21rem;
+    height: 18vh;
+    margin-top: 1vh;
+    margin-left:1rem;
+    
+    }	
+    .grid {
+      grid-template-columns: repeat(2, minmax(50%, auto));
+    }
   
 }
 
@@ -782,37 +775,6 @@ margin-left:-170%;
     background-color: rgb(255, 221, 0);
   
   
-  }
-  /* ______________Cuve joge__________________ */
-
-.bouchon1{
-  margin-left: 255%;
- 
-}
-.bouchon2{
-  margin-left: 250%;
-}
-.cylinder {
-width:300px;
-margin-left:-170%;
-}	
-.infoContent{
-  margin-top: 30vh;
-
-}
-.notification{
-  margin-top: 55vh;
-
-}
-}
-
-/* small desktop */
-@media (min-width: 1171px) and (max-width:1489px) {
-  
-  .li:hover {
-   
-    padding-left: 5%;
-   
   }
   /* ______________Cuve joge__________________ */
 
@@ -834,6 +796,54 @@ margin-left:-170%;
     margin-left:1.5rem;
     
     }	
+    .grid {
+      grid-template-columns: repeat(3, minmax(30%, auto));
+    }
+}
+
+/* small desktop */
+@media (min-width: 1171px) and (max-width:1489px) {
+  
+  .li:hover {
+   
+    padding-left: 5%;
+   
+  }
+  /* ______________Cuve joge__________________ */
+
+  .typeCuve{
+    margin-top:12vh;
+    margin-left: -4rem;
+  }
+  .infoContent{
+    margin-left: -5%;
+    margin-top: 50vh;
+  }
+  .EtatTitle{
+     font-size: 18px;
+  }
+  .EtatActuel{
+    font-size: 18px;
+    padding: 5%;
+  }
+  .bouchon1{
+    margin-left:51.5%;
+    margin-top:3.8%;
+    
+  
+  }
+  .bouchon2{
+    margin-left:50%;
+    margin-top:6.6%;
+  
+  }
+  .cylinder {
+    width:18rem;
+    margin-top: 10%;
+    /* height: 18vh; */
+    /* margin-left:1.5rem; */
+    
+    }	
 }
 
 /* large desktop */
@@ -853,12 +863,7 @@ margin-left:-170%;
     margin-top:-2.6%;
   
   }
-.cylinder {
-  width:23rem;
-  height: 15vh;
-  margin-left:1rem;
-  
-  }	
+
 }
 
 /* Max ecran */
@@ -876,18 +881,18 @@ margin-left:-170%;
       margin-top:-2.6%;
     
     }
+    .wrapper {
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    }
+  
     .cylinder {
-      width:23rem;
-      height: 15vh;
-      /* margin-top: 100%; */
-      margin-left:1.5rem;
+      margin-left: 1.5rem;
+      width:  90%;
       
-      }	
-.wrapper {
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-}
+    }	
 .BatteryDiv{
   margin-left: 21%;
 }
+
 
 }
