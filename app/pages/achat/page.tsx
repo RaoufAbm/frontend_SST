@@ -1,7 +1,5 @@
 "use client";
-import Sidebar from "@/components/sidebar";
 import styles from "/app/page.module.css";
-import Navbar from "@/components/navbar";
 import React from "react";
 
 function achat() {

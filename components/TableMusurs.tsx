@@ -9,7 +9,7 @@ import styles from "@/app/page.module.css";
 type headP = {
   IDCuve : number;
 };
-function Table(props:headP) {
+function TableMusurs(props:headP) {
  
 
   const [values, setValues] = useState({
@@ -125,4 +125,4 @@ return (
     </div>
   );
 }}
-export default Table;
+export default TableMusurs;

@@ -2,7 +2,7 @@
 import Carburant from "@/components/Carburant";
 import styles from "/app/page.module.css";
 import React from "react";
-import Table from "@/components/Table";
+
 
 function indexSST() {
   return (

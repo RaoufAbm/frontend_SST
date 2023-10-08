@@ -1,9 +1,7 @@
 
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import { CardList, Outlet } from 'react-bootstrap-icons';
 import "bootstrap/dist/css/bootstrap.css";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Navbar from '@/components/navbar';
 import Sidebar from '@/components/sidebar';
 import styles from "/app/page.module.css";

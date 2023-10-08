@@ -3,12 +3,9 @@ import styles from "/app/page.module.css";
 import React, { useEffect, useRef, useState } from "react";
 import Cuve from "@/components/Cuve";
 import axios from "axios";
-import router, { Router } from "next/router";
 import Navbar from "@/components/navbar";
 import Sidebar from "@/components/sidebar";
-// import { Router } from "react-bootstrap-icons";
-// import Link from "next/link";
-// import Station from "@/app/station/page";
+
 
 // import { log } from "console";
 

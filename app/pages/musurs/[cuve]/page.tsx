@@ -1,7 +1,7 @@
 "use client";
 import React from 'react'
 import styles from "/app/page.module.css";
-import Table from '@/components/Table';
+import TableMusurs from '@/components/TableMusurs';
 
  function tableCuve({params}) {
   const id=(params.cuve);
@@ -10,7 +10,7 @@ import Table from '@/components/Table';
     <div className={styles.main}>
     <div className={styles.body}>
       <div className={styles.Content}>
-        <Table IDCuve={id} />
+        <TableMusurs IDCuve={id} />
       </div>
     </div>
   </div>
