@@ -33,8 +33,8 @@ function pompist() {
             <div className="d-flex">
           <h3 style={{ marginLeft:"-5%"}}><strong>Pompist</strong></h3>
           <Link href="/pages/insertPompist">
-            <button type="button" className="btn btn-success ml-5">
-              + Ajoute
+            <button type="button" className="btn  btn-success ml-5">
+            <i className="bi bi-person-plus"></i> Ajoute
             </button>
           </Link>
             </div>

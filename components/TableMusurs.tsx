@@ -28,12 +28,15 @@ if (typeof window !== 'undefined') {
   const id = (window as any).aa;
 return (
   <div className=' p-5  w-100 ml-5'>
-      <h3 style={{ marginLeft:"-85%"}}><strong>Museures</strong></h3>
-      <Link href={`/home/${id}`}   className={styles.aHerf}>
-                  <Image style={{marginLeft:"10%"}} src={arrow} alt={""} width={25} height={25}  />
+  
+
+    <div className="d-flex">
+          <Link href={`/home/${id}`}   className={styles.aHerfImg} style={{marginLeft:"-1%"}}>
+                  <Image  src={arrow} alt={""} width={25} height={25}  />
     </Link>
-    {/* <Link href={`/home/${id}`}>aaaaaaaaa</Link> */}
-      <br />
+          <h3 style={{ marginLeft:"2%"}}><strong>Museures</strong></h3>
+            </div>
+            <br />
     <MDBTable className=' table-responsive '>
       <MDBTableHead className=''>
         <tr>

@@ -33,7 +33,7 @@ function Station() {
       <div className='col-md-12'>
         <Header />
       </div>
-      <div className={styles.grid}>
+      <div className={styles.gridS}>
         {fetchedData.map((station, index) => (
           <Link key={index} href={`/home/${station["IDStation"]}`} className={styles.aHerf}>
             <Cards  title={station["Libelle"]} cors={station["Lieu"]}  />

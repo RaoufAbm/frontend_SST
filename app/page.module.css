@@ -101,6 +101,15 @@ text-align: center;
     text-decoration: none;
     cursor: pointer;
   }
+.aHerfImg{
+  text-decoration: none;
+  
+  }
+  .aHerfImg:hover{
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 50px;
+  }
 
 
 
@@ -113,15 +122,6 @@ text-align: center;
 
 /* -----------------------------------------Project current------------------------------------- */
 
-.alert{
-  width: 100%;
-  height: 100%;
-  margin-left: 40%;
-  margin-top: 0%;
-  background-image: url(/_next/static/media/info.bd442e3b.png);
-  background-size: inherit;
-  background-repeat: no-repeat;
-}
 .DevlEncour{
   color :rgb(0, 174, 255);
   font-size: 50px;
@@ -585,13 +585,21 @@ width: 80%;
   font-weight: 700;
   font-family: var(--font-mono);
 }
-
-.grid {
+.gridS {
   display: grid;
   grid-template-columns: repeat(4, minmax(25%, auto));
   width: 100%;
   padding: 1%;
   margin-top: -10vh;
+  margin-left: -0.5%;
+
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(25%, auto));
+  width: 100%;
+  padding: 1%;
+  margin-top: 10vh;
   margin-left: -0.5%;
 
 }
