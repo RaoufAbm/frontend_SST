@@ -732,6 +732,11 @@ width: 80%;
   .Content{
     background-color: palevioletred;
   }
+  .header {
+    height: 50vh;
+    background-size: 200%;
+   
+  }
     /* ______________Cuve joge__________________ */
     .wrapper {
       /* display: none; */
