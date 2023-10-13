@@ -721,7 +721,8 @@ width: 80%;
 
 /* Mobile */
 @media  (max-width: 425px) {
-
+ 
+ 
   .main{
     width: 150%;
   }
@@ -731,6 +732,8 @@ width: 80%;
   }
   .Content{
     background-color: palevioletred;
+    height: 100vh;
+    overflow-y: scroll;
   }
   .header {
     height: 50vh;
@@ -741,6 +744,7 @@ width: 80%;
     .wrapper {
       /* display: none; */
       grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+      height: 100vh;
     }
     .cylinder {
       margin-left: 1.5rem;
