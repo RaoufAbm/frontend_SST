@@ -715,7 +715,7 @@ width: 80%;
 /* Mobile */
 @media  (max-width: 425px) {
 .main{
-  width: 100%;
+  width: 150%;
 }
   .Content{
     background-color: palevioletred;
