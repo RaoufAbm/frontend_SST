@@ -380,10 +380,12 @@ column-gap: 14px;
   height: 12vh;
 }
 .typeCuve{
-  color: #8c867a;
-  margin-top: 8vh;
-  margin-left: -5rem;
-  width: 100%;
+  color: rgb(255, 255, 255);
+  /* color: #8c867a; */
+  margin-top: 7vh;
+  margin-left: 0rem;
+  width: 50%;
+  
 }
 
 .paragraph {
@@ -733,7 +735,8 @@ width: 80%;
     }
     .cylinder {
       margin-left: 1.5rem;
-      width:  60%;
+      width:  75%;
+      height: 15vh;
       margin-top: 5vh;
     }	
     .bouchon1{
@@ -759,6 +762,7 @@ width: 80%;
     .EtatActuel{
       font-size: 16px;
       padding: 5%;
+      border: none;
     }
     .BatteryDiv{
       margin-left: 42.5%;

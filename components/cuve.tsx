@@ -70,8 +70,8 @@ function Cuve(props: headP) {
             <span className={styles.title}>{props.title}</span>
             </Link>
             <p className={styles.typeCuve}>
-              <strong style={{color:"white"}}>{props.type}</strong><br />
-              Capacite <strong >{props.Capacity} L</strong>
+              <strong >{props.type}</strong>
+              {/* Capacite <strong >{props.Capacity} L</strong> */}
             </p>
             </div>
           {/* ________________________________battrie reseax_________________________________________*/}
