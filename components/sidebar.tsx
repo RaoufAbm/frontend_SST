@@ -34,7 +34,7 @@ function sidebar() {
           <Link href={`/home/${id}`}  className={`${styles.li} ${styles.aHerf}`}>
             <li >
             
-              <Image src={Dashboard} alt={""} width={25} height={25}  />
+              <Image className={styles.iconSidebar} src={Dashboard} alt={""}   />
               <span className="ml-3 ms-1 d-none d-sm-inline">
                 tableau de bord
               </span>
@@ -42,28 +42,28 @@ function sidebar() {
           </Link>
           <Link href="/pages/pompist" className={`${`${styles.li} ${styles.aHerf}`}`}>
             <li >
-              <Image src={pmpst} alt={""} width={25} height={25}  />
+              <Image className={styles.iconSidebar} src={pmpst} alt={""} />
               <span className="ml-3 ms-1 d-none d-sm-inline">Pompist</span>
             </li>
           </Link>
           <Link href="/pages/achat" className={`${styles.li} ${styles.aHerf}`}>
             <li >
              
-              <Image src={buy} alt={""} width={25} height={25}  />
+              <Image className={styles.iconSidebar} src={buy} alt={""} />
               <span className="ml-3 ms-1 d-none d-sm-inline">Achat</span>
             </li>
           </Link>
           <Link href="/pages/indexSST" className={`${styles.li} ${styles.aHerf}`}>
             <li >
               
-              <Image src={gasIndex} alt={""} width={25} height={25}  />
+              <Image className={styles.iconSidebar} src={gasIndex} alt={""}  />
               <span className="ml-3 ms-1 d-none d-sm-inline">Index</span>
             </li>
           </Link>
           <Link href="/pages/statistique" className={`${styles.li} ${styles.aHerf}`}>
             <li>
               
-              <Image src={graph} alt={""} width={25} height={25}  />
+              <Image className={styles.iconSidebar} src={graph} alt={""}  />
 
               <span className="ml-3 ms-1 d-none d-sm-inline">statistique</span>
             </li>
