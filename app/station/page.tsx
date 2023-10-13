@@ -1,12 +1,12 @@
 "use client"; // This is a client component 👈🏽
 
-import Cards from "@/components/Cards";
 import Header from "@/components/header";
 import styles from "/app/page.module.css";
 import Navbar from "@/components/navbar";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Link from "next/link";
+import Cards from "@/components/Cards";
 
 function Station() {
   // Define a state variable for the data fetched from the API

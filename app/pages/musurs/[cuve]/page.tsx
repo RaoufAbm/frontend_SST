@@ -7,13 +7,11 @@ import TableMusurs from '@/components/TableMusurs';
   const id=(params.cuve);
   
   return (
-    <div className={styles.main}>
-    <div className={styles.body}>
-      <div className={styles.Content}>
+    
+      <>
         <TableMusurs IDCuve={id} />
-      </div>
-    </div>
-  </div>
+      </>
+   
   )
 }
 export default tableCuve;

@@ -1,7 +1,7 @@
 "use client";
 import styles from "/app/page.module.css";
 import React, { useEffect, useRef, useState } from "react";
-import Cuve from "@/components/Cuve";
+import Cuve from "@/components/cuve";
 import axios from "axios";
 import Navbar from "@/components/navbar";
 import Sidebar from "@/components/sidebar";

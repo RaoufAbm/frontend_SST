@@ -1,12 +1,9 @@
 import Link from "next/link";
-import styles from "/app/page.module.css";
 import React from 'react'
 
     function addUsers() {
       return (
-        <div className={styles.main}>
-        <div className={styles.body}>
-          <div className={styles.Content}>
+      
           <div className=''>
     
           <h1 className='pt-5  text-primary'>Nouveau pompiste</h1>
@@ -54,9 +51,7 @@ import React from 'react'
       </Link>
     </div>
     </div>
-    </div>
-    </div>
-    </div>
+ 
     
     );
     }

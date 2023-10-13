@@ -6,9 +6,8 @@ import React from "react";
 
 function indexSST() {
   return (
-    <div className={styles.main}>
-      <div className={styles.body}>
-        <div className={styles.Content}>
+   
+        <>
           {/* <h1 className={styles.DevlEncour}>Développement en cours ..</h1>
           <div className={styles.alert}></div> */}
           <div className={styles.grid}>
@@ -17,9 +16,8 @@ function indexSST() {
             <Carburant NameCarb="carburant 3 "  />
           
           </div>
-        </div>
-      </div>
-    </div>
+        </>
+   
   );
 }
 export default indexSST;

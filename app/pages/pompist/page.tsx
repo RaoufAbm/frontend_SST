@@ -25,14 +25,12 @@ function pompist() {
       .catch((err) => console.log(err));
   }, []);
   return (
-    <div className={styles.main}>
-      <div className={styles.body}>
-        <div className={styles.Content}>
+    
     
           <div className=' p-5  w-100 ml-5'>
             <div className="d-flex">
           <h3 style={{ marginLeft:"-5%"}}><strong>Pompist</strong></h3>
-          <Link href="/pages/insertPompist">
+          <Link href="/pages/pompist/insertPompist">
             <button type="button" className="btn  btn-success ml-5">
             <i className="bi bi-person-plus"></i> Ajoute
             </button>
@@ -73,9 +71,8 @@ function pompist() {
     
           </MDBTableBody>
         </MDBTable>
-        </div>        </div>
-      </div>
-    </div>
+        </div>       
+      
   );
 }}
 export default pompist;
