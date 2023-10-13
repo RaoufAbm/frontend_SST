@@ -1,7 +1,7 @@
 "use client";
 import React from 'react'
 import styles from "/app/page.module.css";
-import TableMusurs from '@/components/TableMusurs';
+import TableMusurs from '@/components/tableMusurs';
 
  function tableCuve({params}) {
   const id=(params.cuve);

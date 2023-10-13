@@ -1,5 +1,5 @@
 "use client";
-import Carburant from "@/components/Carburant";
+import Carburant from "@/components/carburant";
 import styles from "/app/page.module.css";
 import React from "react";
 
