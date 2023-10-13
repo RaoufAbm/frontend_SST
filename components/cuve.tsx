@@ -85,7 +85,7 @@ function Cuve(props: headP) {
               <div className={styles.BatteryDiv}></div>
             </div>
 
-            <p className={styles.PercentageBattery}>{props.battery}%</p>
+            {/* <p className={styles.PercentageBattery}>{props.battery}%</p> */}
           </div>
 
           <div className={styles.Reseax}>

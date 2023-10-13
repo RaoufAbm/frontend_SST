@@ -195,7 +195,7 @@ margin-left: -50%;
 position: relative;
 overflow: hidden;
 margin-left:1rem;
-width:90%;
+width:70%;
 height: 18vh;
 border: rgba(255, 255, 255, 0.308) 1px solid;
 border-radius: 72px/106px;
@@ -716,32 +716,49 @@ width: 80%;
 @media  (max-width: 425px) {
 
   
-  .Content{
+  /* .Content{
     background-color: palevioletred;
-  }
+  } */
     /* ______________Cuve joge__________________ */
-
-    .bouchon1{
-      margin-left:51.5%;
-      margin-top:3.8%;
-      
-    
-    }
-    .bouchon2{
-      margin-left:50%;
-      margin-top:6.6%;
-    
+    .wrapper {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     }
     .cylinder {
-      width:18rem;
-      height: 18vh;
-      margin-top: 10%;
-      margin-left:1.5rem;
-      
-      }		
-      .grid {
+      margin-left: 1.5rem;
+      width:  60%;
+      margin-top: 5vh;
+    }	
+    .bouchon1{
+      margin-left:40.5%;
+      margin-top:-4.5%;
+      margin-top:1.4vh;
+
+    }
+    .bouchon2{
+      margin-left:39%;
+      margin-top:-2.6%;
+      margin-top: 3vh;
+
+    }
+   
+    .infoContent{
+      margin-left: -10%;
+      margin-top: 44vh;
+    }
+    .EtatTitle{
+       font-size: 16px;
+    }
+    .EtatActuel{
+      font-size: 16px;
+      padding: 5%;
+    }
+    .BatteryDiv{
+      margin-left: 42.5%;
+    }
+      .gridS {
         grid-template-columns: repeat(1, minmax(100%, auto));
       }
+     
 }
 
 /* Tablet and Smaller Desktop */
@@ -763,14 +780,8 @@ width: 80%;
     margin-top:-1vh;
   
   }
-  .cylinder {
-    width:21rem;
-    height: 18vh;
-    margin-top: 1vh;
-    margin-left:1rem;
-    
-    }	
-    .grid {
+ 
+    .gridS {
       grid-template-columns: repeat(2, minmax(50%, auto));
     }
   
