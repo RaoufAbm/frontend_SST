@@ -715,10 +715,12 @@ width: 80%;
 /* Mobile */
 @media  (max-width: 425px) {
 
-  
-  /* .Content{
+  .main {
+    width: 120%;
+  }
+  .Content{
     background-color: palevioletred;
-  } */
+  }
     /* ______________Cuve joge__________________ */
     .wrapper {
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));

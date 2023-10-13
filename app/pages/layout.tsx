@@ -18,8 +18,6 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
         <div className={styles.main}>
             <div className={styles.navbar}>
               <Navbar />
@@ -32,8 +30,6 @@ export default function RootLayout({
             <div className={styles.Content}>{children}</div>
           </div>
         </div>
-      </body>
-      <title></title>
-    </html>
+     
   );
 }
