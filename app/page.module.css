@@ -725,6 +725,7 @@ width: 80%;
  
   .main{
     width: 150%;
+    height: 150vh;
   }
   .iconSidebar{
     width: 30px;
