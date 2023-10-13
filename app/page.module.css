@@ -715,15 +715,15 @@ width: 80%;
 /* Mobile */
 @media  (max-width: 425px) {
 
-  .main {
-    width: 120%;
-  }
+  /* .main {
+    width: 140%;
+  } */
   .Content{
     background-color: palevioletred;
   }
     /* ______________Cuve joge__________________ */
     .wrapper {
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(150%, 1fr));
     }
     .cylinder {
       margin-left: 1.5rem;
