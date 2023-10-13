@@ -128,7 +128,7 @@ function Cuve(props: headP) {
               <span className={styles.EtatTitle}>Etat actuel :</span>
               <p className={styles.EtatActuel}>
               {result} % <br />
-                <strong>{props.percentage}</strong>L
+                <strong>{props.Qte}</strong>L
               </p>
               {/* <div className={styles.line}></div> */}
             </div>
