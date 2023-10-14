@@ -734,7 +734,7 @@ width: 80%;
     height: 150vh;
   }
   .Content{
-    background-color: palevioletred;
+    /* background-color: palevioletred; */
     /* height: 150vh; */
     overflow-y: scroll;
   }
@@ -756,26 +756,24 @@ width: 80%;
     }
     .cylinder {
       margin-left: 1.5rem;
-      width:  50%;
+      width:  55%;
       height: 15vh;
-      margin-top: 5vh;
+      margin-top: 3vh;
     }	
     .bouchon1{
       margin-left:40.5%;
-      margin-top:-4.5%;
-      margin-top:1.4vh;
+      margin-top:0vh;
 
     }
     .bouchon2{
       margin-left:39%;
-      margin-top:-2.6%;
-      margin-top: 3vh;
+      margin-top: 1.2vh;
 
     }
    
     .infoContent{
       margin-left: -10%;
-      margin-top: 44vh;
+      margin-top: 40vh;
     }
     .EtatTitle{
        font-size: 16px;
