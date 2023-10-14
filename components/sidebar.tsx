@@ -14,6 +14,7 @@ import pmpst from "@/icons/icons8-exposant-96.png";
 import buy from "@/icons/buy.png";
 import Dashboard from "@/icons/dashboard-layout.png";
 import gasIndex from "@/icons/carburant.png";
+import logout from "@/icons/logout.png";
 
 
 
@@ -73,6 +74,8 @@ function sidebar() {
               className={`${styles.li} ${styles.aHerf}`}
               style={{ bottom: "17%",height:"6vh",borderTop:"1px solid rgba(255, 255, 255, 0.177)" ,position: "absolute" }}
             >
+                            <Image className={styles.iconSidebar} src={logout} alt={""}  />
+
               <span className="ml-3 ms-1 d-none d-sm-inline">Stations</span>
             </li>
           </Link>
@@ -81,7 +84,9 @@ function sidebar() {
               className={`${styles.li} ${styles.aHerf}`}
               style={{ bottom: "10%",height:"6vh",borderTop:"1px solid rgba(255, 255, 255, 0.177)" ,position: "absolute" }}
             >
-              <i className="bi bi-box-arrow-left"></i>
+              
+              <Image className={styles.iconSidebar} src={logout} alt={""}  />
+              {/* <i className="bi bi-box-arrow-left"></i> */}
               <span className="ml-3 ms-1 d-none d-sm-inline">Logout</span>
             </li>
           </Link>
