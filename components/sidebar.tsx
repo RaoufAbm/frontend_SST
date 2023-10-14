@@ -41,7 +41,7 @@ function sidebar() {
               </span>
             </li>
           </Link>
-          <Link href="/pages/pompist" className={`${`${styles.li} ${styles.aHerf}`}`}>
+          <Link href="/pages/pompist" className={`${styles.li} ${styles.aHerf}`}>
             <li >
               <Image className={styles.iconSidebar} src={pmpst} alt={""} />
               <span className="ml-3 ms-1 d-none d-sm-inline">Pompist</span>
@@ -69,27 +69,20 @@ function sidebar() {
               <span className="ml-3 ms-1 d-none d-sm-inline">statistique</span>
             </li>
           </Link>
-          <Link href="/station" className={`${styles.li} ${styles.aHerf}`} >
-            <li 
-              style={{ bottom: "17%",height:"6vh",borderTop:"1px solid rgba(255, 255, 255, 0.177)" ,position: "absolute" }}
-            >
+          <Link href="/station" className={`${styles.li} ${styles.aHerf} `} style={{marginTop:"130%"}}>
+            <li  >
                <Image className={styles.iconSidebar} src={gasIndex} alt={""}  />
-
               <span className="ml-3 ms-1 d-none d-sm-inline">Stations</span>
             </li>
           </Link>
-          <Link href="/"  className={`${styles.li} ${styles.aHerf}`}>
-            <li
-              
-              style={{ bottom: "10%",height:"6vh",borderTop:"1px solid rgba(255, 255, 255, 0.177)" ,position: "absolute" }}
-            >
-              
+          <Link href="/"  className={`${styles.li} ${styles.aHerf}`} style={{marginTop:"10%"}}>
+            <li >
               <Image className={styles.iconSidebar} src={logout} alt={""}  />
               {/* <i className="bi bi-box-arrow-left"></i> */}
               <span className="ml-3 ms-1 d-none d-sm-inline">Logout</span>
             </li>
           </Link>
-        </ul>
+          </ul>
       
       </div>
     </div>

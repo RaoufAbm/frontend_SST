@@ -73,6 +73,7 @@ text-align: center;
   padding-top: 5%;
   border-bottom: 0.1px solid rgba(255, 255, 255, 0.177);
 }
+
  .li:focus  {
   background-color: rgb(232, 123, 7);
   width: 100%;
@@ -288,7 +289,7 @@ background-color: #8e8c9222;
   width: 100%;
   z-index: 100;
   margin-left: -3.8%;
-  margin-top: 40vh;
+  margin-top: -10vh;
   /* margin-left: 1.5rem; */
   /* background-color: rgb(4, 191, 91); */
 }
@@ -859,12 +860,12 @@ width: 80%;
   /* ______________Cuve joge__________________ */
 
   .typeCuve{
-    margin-top:12vh;
-    margin-left: -4rem;
+    margin-top:8vh;
+    margin-left: 0rem;
   }
   .infoContent{
     margin-left: -5%;
-    margin-top: 50vh;
+    margin-top: 45vh;
   }
   .EtatTitle{
      font-size: 18px;
