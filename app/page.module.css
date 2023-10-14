@@ -731,7 +731,7 @@ width: 80%;
 
   .Content{
     /* background-color: palevioletred; */
-    /* height: 150vh; */
+    height: 100vh;
     width: 83%;
     overflow-y: scroll;
     overflow-x: hidden;
