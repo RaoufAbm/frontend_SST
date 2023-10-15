@@ -1,5 +1,4 @@
 "use client";
-import styles from "/app/page.module.css";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import axios from "axios";
@@ -12,7 +11,7 @@ function pompist() {
     console.log(id);
     
     const [values, setValues] = useState({
-      IDStation:id,
+      IDStation:"1",
       
     });
 
@@ -53,7 +52,7 @@ function pompist() {
             </tr>
           </MDBTableHead>
           <MDBTableBody >
-            { 
+            {/* { 
             data.map((pompist,index) =>{
               return <tr key={index} >  
               <td></td>
@@ -66,7 +65,7 @@ function pompist() {
               <td>{pompist["ID_Station"]}</td>
               </tr>
             })}
-    
+     */}
     
     
           </MDBTableBody>
