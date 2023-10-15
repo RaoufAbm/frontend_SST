@@ -33,9 +33,16 @@ text-align: center;
   color: white;
 }
 
+.label{
+float: left;}
 
-
-
+/* .footer{
+  background-color: rgb(41, 169, 255);
+  height: 20vh;
+  width: 85%;
+  margin-left: 15%;
+  position: fixed;
+} */
 
 
 /* _____________body_____________ */
@@ -114,7 +121,6 @@ text-align: center;
   .aHerfImg:hover{
     text-decoration: none;
     cursor: pointer;
-    font-size: 50px;
   }
 
 
@@ -819,11 +825,11 @@ width: 80%;
 /* yellow */
 @media (min-width: 778px) and (max-width:1170px) {
   
-  .Content {
+  /* .Content {
     background-color: rgb(255, 221, 0);
   
   
-  }
+  } */
   /* ______________Cuve joge__________________ */
 
   .bouchon1{
@@ -846,6 +852,15 @@ width: 80%;
     }	
     .grid {
       grid-template-columns: repeat(3, minmax(30%, auto));
+    }
+    .li{
+      font-size: 13px;
+    }
+    .li:hover {
+   
+      padding-left: 4%;
+      /* font-size: 13px; */
+
     }
 }
 

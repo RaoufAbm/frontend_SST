@@ -29,6 +29,7 @@ export default function RootLayout({
 
             <div className={styles.Content}>{children}</div>
           </div>
+            {/* <div className={styles.footer} ></div> */}
         </div>
      
   );
