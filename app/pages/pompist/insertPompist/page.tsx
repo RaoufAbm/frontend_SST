@@ -5,6 +5,8 @@ import styles from "/app/page.module.css";
 import axios from "axios";
 import Swal from "sweetalert2";
 import {StationURL, useStationURL} from "@/context/IdStationURL";
+import arrow from "@/icons/arrow-left.png";
+import Image from "next/image";
 
 function addUsers() {
   const {IdStationURL,setIdStationURL}=useStationURL();
@@ -43,23 +45,31 @@ function addUsers() {
           window.location.href = "/pages/pompist";
         });
       } else {
-        // alert("no existed");
         Swal.fire({
           icon: "error",
-          title: "Oops...",
+          title: res.data.message,
           text: "Something went wrong!",
           // footer: 'Why do I have this issue?</a>'
         });
       }
-      console.log(res);
     })
       .catch((err) => console.log(err));
   };
 
   return (
-    <div className='col w-50' style={{ marginLeft: "25%" }}>
+    <div className='col w-50' style={{ marginLeft: "25%" }}> 
+  
       <form onSubmit={handleSubmit}>
-        <h1 className='pt-5  text-primary'>Nouveau pompiste</h1>
+      <div className="d-flex">
+      <Link
+            href={`/pages/pompist`}
+            className={styles.aHerfImg}
+            style={{ marginLeft: "-1%" }}
+          >
+            <Image src={arrow} alt={""} width={25} height={25} />
+          </Link>
+        <h1 className='pt-5  text-primary'>Nouvelle pompiste</h1>
+        </div >
         <div className="group mt-5">
           <label htmlFor="nom" className={styles.label}>Nom</label>
           <input

@@ -4,12 +4,15 @@ import React, { useState, useEffect } from 'react'; // Removed SyntheticEvent
 import styles from "/app/page.module.css";
 import axios from "axios";
 import Swal from "sweetalert2";
+import {PompistURL, usePompistURL} from "@/context/idPompistURL";
+import arrow from "@/icons/arrow-left.png";
+import Image from "next/image";
+function EditUsers() {
+const { IdPompistURL, setIdPompistURL } = usePompistURL();
 
-function EditUsers({ params }) {
-  const ID = params.id;
-  const [Id, setId] = useState({
-    id: params.id,
-  });
+const [Id, setId] = useState({
+  id: IdPompistURL,
+});
 
   const [data, setData] = useState({
     nom: "",
@@ -45,7 +48,7 @@ function EditUsers({ params }) {
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
 
-    axios.put(`http://cdd.dzkimtech.com/api/UpdatePompist?id=${ID}`, data)
+    axios.put(`http://cdd.dzkimtech.com/api/UpdatePompist?id=${Id}`, data)
       .then((res) => {
         if (res.status === 200) {
           Swal.fire({
@@ -72,8 +75,17 @@ function EditUsers({ params }) {
   return (
     <div className='col w-50' style={{ marginLeft: "25%" }}>
       <form onSubmit={handleSubmit}>
+ <div className="d-flex">
+      <Link
+            href={`/pages/pompist`}
+            className={styles.aHerfImg}
+            style={{ marginLeft: "-1%" }}
+          >
+            <Image src={arrow} alt={""} width={25} height={25} />
+          </Link>
         <h1 className='pt-5  text-primary'>Modifie pompiste</h1>
-        <div className="group mt-5">
+        </div >
+                <div className="group mt-5">
           <label htmlFor="nom" className={styles.label}>Nom</label>
           <input
             type="text"

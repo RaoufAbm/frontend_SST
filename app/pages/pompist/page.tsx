@@ -5,24 +5,25 @@ import axios from "axios";
 import { MDBTable, MDBTableHead, MDBTableBody, MDBIcon } from 'mdb-react-ui-kit';
 import "bootstrap/dist/js/bootstrap";
 import {StationURL, useStationURL} from "@/context/IdStationURL";
+import {PompistURL, usePompistURL} from "@/context/idPompistURL";
+import styles from "/app/page.module.css";
 
 
 function pompist() {
   const {IdStationURL,setIdStationURL}=useStationURL();
+  const { IdPompistURL, setIdPompistURL } = usePompistURL();
 
-    const [values, setValues] = useState({
+  const [ID_Station, setID_Station] = useState({
       ID_Station: IdStationURL,
-    });
+  });
 
-    const [Delete, setDelete] = useState({
+  const [Delete, setDelete] = useState({
       sup:"1",
-    });
+  });
 
-  
-  
   const [data, setData] = useState([]);
   useEffect(() => {
-    axios.post(`http://cdd.dzkimtech.com/api/Pompist`,values)
+    axios.post(`http://cdd.dzkimtech.com/api/Pompist`,ID_Station)
       .then((res) => setData(res.data))
       .catch((err) => console.log(err));
   }, []);
@@ -34,9 +35,12 @@ function pompist() {
       setData(data.filter(pompist => pompist["id"] !== id));
     })
   };
-  const EditPompist = (id:number)=> {
-    window.location.href = `/pages/pompist/editPompist/${id}`
+  const handleEditPompist = (id: number) => {
+    setIdPompistURL(id);
   };
+  
+
+
   return (
     
     
@@ -88,9 +92,18 @@ function pompist() {
                   Action
                 </button>
                 <div className="dropdown-menu " aria-labelledby="btnGroupDrop1">
-                  <div className="dropdown-item" onClick={() => EditPompist(pompist["id"])} >
+                <Link key={index} href={`/pages/pompist/editPompist/${pompist["id"]}`} className={styles.aHerf} onClick={() => handleEditPompist(pompist["id"])}>
+
+                  <div className="dropdown-item" 
+                  //  onClick={() => {
+                    //       setIdPompistURL(pompist["id"]);
+                    //       EditPompist(3);
+                    //   }}
+                    // onClick={() => handleEditPompist(pompist["id"])}
+                    >
                     Modifie
                   </div>
+                    </Link>
                   <div className="dropdown-item" onClick={() => DeletePompist(pompist["id"])}>
                     Suprimer
                   </div>
