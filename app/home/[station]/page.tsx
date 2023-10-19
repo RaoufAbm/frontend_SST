@@ -5,15 +5,16 @@ import Cuve from "@/components/cuve";
 import axios from "axios";
 import Navbar from "@/components/navbar";
 import Sidebar from "@/components/sidebar";
+import {ThemeContext, useThemeContext} from "@/context/theme-context";
 
 
 // import { log } from "console";
 
-function Home( {params}) {
-  (window as any).aa = params.station;
-  
+function Home() {
+  const {IdStationURL,setIdStationURL}=useThemeContext();
+
   const [values, setValues] = useState({
-    IDStation:params.station,
+    IDStation:IdStationURL,
     
   });
 

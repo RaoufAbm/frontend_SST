@@ -2,6 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import "bootstrap/dist/css/bootstrap.css";
+import ThemeContextProvider from '@/context/theme-context';
 
 
 
@@ -20,8 +21,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-     
+     <ThemeContextProvider>
         {children}
+     </ThemeContextProvider>
 
         </body>
       <title>SST</title>

@@ -66,7 +66,7 @@ function Cuve(props: headP) {
     <div className={styles.box}>
         <div className={styles.boxInformation}>
             <div className={styles.boxHeader}>
-            <Link href="/pages/indexSST" className={styles.aHerf}>
+            <Link href={`/pages/indexSST/${props.id}`} className={styles.aHerf} >
             <span className={styles.title}>{props.title}</span>
             </Link>
             <p className={styles.typeCuve}>

@@ -5,12 +5,14 @@ import arrow from "@/icons/arrow-left.png";
 import Image from "next/image";
 import Link from 'next/link';
 import styles from "@/app/page.module.css";
+import {ThemeContext, useThemeContext} from "@/context/theme-context";
 
 type headP = {
   IDCuve : number;
 };
 function TableMusurs(props:headP) {
- 
+  const {IdStationURL,setIdStationURL}=useThemeContext();
+
 
   const [values, setValues] = useState({
     IDCuve: props.IDCuve,
@@ -24,14 +26,13 @@ function TableMusurs(props:headP) {
     .then(res => setData(res.data))
     .catch(err => console.log(err));
 },[])
-if (typeof window !== 'undefined') {
-  const id = (window as any).aa;
+
 return (
   <div className=' p-5  w-100 ml-5'>
   
 
     <div className="d-flex">
-          <Link href={`/home/${id}`}   className={styles.aHerfImg} style={{marginLeft:"-1%"}}>
+          <Link href={`/home/${IdStationURL}`}   className={styles.aHerfImg} style={{marginLeft:"-1%"}}>
                   <Image  src={arrow} alt={""} width={25} height={25}  />
     </Link>
           <h3 style={{ marginLeft:"2%"}}><strong>Museures</strong></h3>
@@ -127,5 +128,5 @@ return (
     </MDBTable>
     </div>
   );
-}}
+}
 export default TableMusurs;

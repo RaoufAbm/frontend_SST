@@ -6,17 +6,15 @@ import axios from "axios";
 import Swal from "sweetalert2";
 import {ThemeContext, useThemeContext} from "@/context/theme-context";
 
-function addUsers() {
+function addVent() {
   const {IdStationURL,setIdStationURL}=useThemeContext();
 
     
   const [values, setValues] = useState({
-    nom: "",  
-    prenom: "", 
-    date_de_nessance: "",  
-    date_de_recretement: "",  
-    date_de_sortie: "",  
-    ID_Station: IdStationURL,
+    index: "",  
+    date: "", 
+    Volet_id: 1,
+    pompist_id: 2,
   });
 
   const handleInput = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -30,7 +28,7 @@ function addUsers() {
   const handleSubmit = (event: SyntheticEvent) => { // Change to SyntheticEvent
     event.preventDefault();
 
-    axios.post("http://cdd.dzkimtech.com/api/InsrPompist", values)
+    axios.post("http://cdd.dzkimtech.com/api/InsrVente", values)
     .then((res) => {
       if (res.status === 200) {
         Swal.fire({
@@ -59,57 +57,29 @@ function addUsers() {
   return (
     <div className='col w-50' style={{ marginLeft: "25%" }}>
       <form onSubmit={handleSubmit}>
-        <h1 className='pt-5  text-primary'>Nouveau pompiste</h1>
+        <h1 className='pt-5  text-primary'>Nouvelle vent</h1>
         <div className="group mt-5">
-          <label htmlFor="nom" className={styles.label}>Nom</label>
+          <label htmlFor="index" className={styles.label}>index</label>
           <input
             type="text"
-            name="nom"
+            name="index"
             className="form-control"
-            value={values.nom}
+            value={values.index}
             onChange={handleInput}
           />
         </div>
         <div className="group mt-2">
-          <label htmlFor="prenom" className={styles.label}>Prenom</label>
-          <input
-            type="text"
-            name="prenom"
-            className="form-control"
-            value={values.prenom}
-            onChange={handleInput}
-          />
-        </div>
-        <div className="group mt-2">
-          <label htmlFor="date_de_nessance" className={styles.label}>Date_de_nessance</label>
+          <label htmlFor="date" className={styles.label}>date</label>
           <input
             type="date"
-            name="date_de_nessance"
+            name="date"
             className="form-control"
-            value={values.date_de_nessance}
+            value={values.date}
             onChange={handleInput}
           />
         </div>
-        <div className="group mt-2">
-          <label htmlFor="date_de_recretement" className={styles.label}>Date_de_recretement</label>
-          <input
-            type="date"
-            name="date_de_recretement"
-            className="form-control"
-            value={values.date_de_recretement}
-            onChange={handleInput}
-          />
-        </div>
-        <div className="group mt-2">
-          <label htmlFor="date_de_sortie" className={styles.label}>Date_de_sortie</label>
-          <input
-            type="date"
-            name="date_de_sortie"
-            className="form-control"
-            value={values.date_de_sortie}
-            onChange={handleInput}
-          />
-        </div>
+       
+    
 
         <button type="submit" className="btn btn-success col mt-3">Validez</button>
       </form>
@@ -117,4 +87,4 @@ function addUsers() {
   );
 }
 
-export default addUsers;
+export default addVent;

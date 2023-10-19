@@ -43,7 +43,21 @@ float: left;}
   margin-left: 15%;
   position: fixed;
 } */
+.ventContent {
+  text-align: center;
+  background-color:#ffffff;
+  width: 60%;
+  margin-left: 22%;
+  margin-top: -45vh;
+  padding-bottom: 20%;
+  border-left: 1px solid black;
+  position: absolute;
+  height: 15vh;
+}
 
+.indexTable:hover{
+cursor: pointer;
+}
 
 /* _____________body_____________ */
 .body{

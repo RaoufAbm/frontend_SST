@@ -15,14 +15,15 @@ import buy from "@/icons/buy.png";
 import Dashboard from "@/icons/dashboard-layout.png";
 import gasIndex from "@/icons/carburant.png";
 import logout from "@/icons/logout.png";
+import {ThemeContext, useThemeContext} from "@/context/theme-context";
+import React from 'react';
 
 
 
 function sidebar() {
-  
-  if (typeof window !== 'undefined') {
-    const id = (window as any).aa;
-    
+   const {IdStationURL,setIdStationURL}=useThemeContext();
+   
+
   
   return (
     <div className="col-auto  col-xl-0 px-sm-2 px-0  " style={{background:"#17141D"}}>
@@ -32,7 +33,7 @@ function sidebar() {
           style={{ width: "118%", marginLeft: "-9%" }}
           id="menu"
         >
-          <Link href={`/home/${id}`}  className={`${styles.li} ${styles.aHerf}`}>
+          <Link href={`/home/${IdStationURL}`}  className={`${styles.li} ${styles.aHerf}`}>
             <li >
             
               <Image className={styles.iconSidebar} src={Dashboard} alt={""}   />
@@ -87,5 +88,6 @@ function sidebar() {
       </div>
     </div>
   );
-}}
+}
 export default sidebar;
+
