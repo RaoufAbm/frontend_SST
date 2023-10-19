@@ -5,13 +5,13 @@ import Cuve from "@/components/cuve";
 import axios from "axios";
 import Navbar from "@/components/navbar";
 import Sidebar from "@/components/sidebar";
-import {ThemeContext, useThemeContext} from "@/context/theme-context";
+import {StationURL, useStationURL} from "@/context/IdStationURL";
 
 
 // import { log } from "console";
 
 function Home() {
-  const {IdStationURL,setIdStationURL}=useThemeContext();
+  const {IdStationURL,setIdStationURL}=useStationURL();
 
   const [values, setValues] = useState({
     IDStation:IdStationURL,

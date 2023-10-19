@@ -11,7 +11,7 @@ type ThemeContext = {
     setIdStationURL: React.Dispatch<React.SetStateAction<number>>; // Use the correct type for setId
 };
 
-export const ThemeContext = createContext<ThemeContext | null>(null);
+export const StationURL = createContext<ThemeContext | null>(null);
 
 export default function ThemeContextProvider({
     children,
@@ -19,14 +19,14 @@ export default function ThemeContextProvider({
     const [IdStationURL, setIdStationURL] = useState<number>(1); // Initialize the 'id' state
 
     return (
-        <ThemeContext.Provider value={{ IdStationURL, setIdStationURL }}>
+        <StationURL.Provider value={{ IdStationURL, setIdStationURL }}>
             {children}
-        </ThemeContext.Provider>
+        </StationURL.Provider>
     );
 }
 
-export function useThemeContext() {
-    const context = useContext(ThemeContext);
+export function useStationURL() {
+    const context = useContext(StationURL);
     if (!context) {
         throw new Error("useThemeContext must be used within a ThemeContextProvider");
     }

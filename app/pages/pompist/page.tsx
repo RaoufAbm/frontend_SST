@@ -4,18 +4,18 @@ import Link from "next/link";
 import axios from "axios";
 import { MDBTable, MDBTableHead, MDBTableBody, MDBIcon } from 'mdb-react-ui-kit';
 import "bootstrap/dist/js/bootstrap";
-import {ThemeContext, useThemeContext} from "@/context/theme-context";
+import {StationURL, useStationURL} from "@/context/IdStationURL";
 
 
 function pompist() {
-  const {IdStationURL,setIdStationURL}=useThemeContext();
+  const {IdStationURL,setIdStationURL}=useStationURL();
 
     const [values, setValues] = useState({
       ID_Station: IdStationURL,
     });
+
     const [Delete, setDelete] = useState({
       sup:"1",
-      
     });
 
   

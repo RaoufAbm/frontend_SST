@@ -13,14 +13,16 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "@/app/page.module.css";
 import "bootstrap/dist/js/bootstrap";
-import {ThemeContext, useThemeContext} from "@/context/theme-context";
+import {StationURL, useStationURL} from "@/context/IdStationURL";
 
 type headP = {
   idCuve : number;
 };
 function table_carburant(props:headP) {
 
-  const {IdStationURL,setIdStationURL}=useThemeContext();
+
+  const {IdStationURL,setIdStationURL}=useStationURL();
+
 
 
       

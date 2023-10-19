@@ -7,12 +7,12 @@ import { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import Link from "next/link";
 import Cards from "@/components/cards";
-import {ThemeContext, useThemeContext} from "@/context/theme-context";
+import {StationURL, useStationURL} from "@/context/IdStationURL";
 
 function Station() {
   // Define a state variable for the data fetched from the API
   const [fetchedData, setFetchedData] = useState([]);
-  const {IdStationURL,setIdStationURL}=useThemeContext();
+  const {IdStationURL,setIdStationURL}=useStationURL();
 
   useEffect(() => {
     const initialValues = {

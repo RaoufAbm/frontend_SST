@@ -15,13 +15,13 @@ import buy from "@/icons/buy.png";
 import Dashboard from "@/icons/dashboard-layout.png";
 import gasIndex from "@/icons/carburant.png";
 import logout from "@/icons/logout.png";
-import {ThemeContext, useThemeContext} from "@/context/theme-context";
+import {StationURL, useStationURL} from "@/context/IdStationURL";
 import React from 'react';
 
 
 
 function sidebar() {
-   const {IdStationURL,setIdStationURL}=useThemeContext();
+   const {IdStationURL,setIdStationURL}=useStationURL();
    
 
   

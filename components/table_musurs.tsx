@@ -5,13 +5,14 @@ import arrow from "@/icons/arrow-left.png";
 import Image from "next/image";
 import Link from 'next/link';
 import styles from "@/app/page.module.css";
-import {ThemeContext, useThemeContext} from "@/context/theme-context";
+import {StationURL, useStationURL} from "@/context/IdStationURL";
+
 
 type headP = {
   IDCuve : number;
 };
 function TableMusurs(props:headP) {
-  const {IdStationURL,setIdStationURL}=useThemeContext();
+  const {IdStationURL,setIdStationURL}=useStationURL();
 
 
   const [values, setValues] = useState({
