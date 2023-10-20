@@ -7,12 +7,16 @@ import { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import Link from "next/link";
 import Cards from "@/components/cards";
-import {StationURL, useStationURL} from "@/context/IdStationURL";
+// import {StationURL, useStationURL} from "@/context/IdStationURL";
+// import { useData } from "@/context/dataUser";
+import { useStationURL } from "@/context/IdStationURL";
 
 function Station() {
   // Define a state variable for the data fetched from the API
   const [fetchedData, setFetchedData] = useState([]);
   const {IdStationURL,setIdStationURL}=useStationURL();
+  // const {DataUser,setDataUser}=useData();
+  console.log(IdStationURL);
 
   useEffect(() => {
     const initialValues = {
@@ -37,7 +41,8 @@ function Station() {
       </div>
       <div className={styles.gridS}>
         {fetchedData.map((station, index) => (
-          <Link key={index} href={`/home/${station["IDStation"]}`} className={styles.aHerf} onClick={() => setIdStationURL(station["IDStation"])}
+          <Link key={index} href={`/home/${station["IDStation"]}`} className={styles.aHerf}
+           onClick={() => setIdStationURL(station["IDStation"])}
           >
             <Cards 
              title={station["Libelle"]}

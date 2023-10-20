@@ -5,11 +5,9 @@ import React, { useEffect, useState } from "react";
 import TableCarburant from "@/components/table_carburant";
 import { MDBTable, MDBTableHead, MDBTableBody, MDBIcon } from 'mdb-react-ui-kit';
 import axios from "axios";
-import {StationURL, useStationURL} from "@/context/IdStationURL";
 
 function ventIndex({params}) {
   
-  const {IdStationURL,setIdStationURL}=useStationURL();
 
     const idVolet=params.idVent;
   

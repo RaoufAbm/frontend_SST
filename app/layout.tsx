@@ -2,7 +2,8 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import "bootstrap/dist/css/bootstrap.css";
-import ThemeContextProvider from '@/context/IdStationURL';
+// import ThemeContextProvider from '@/context/dataUser';
+import { StationProvider }  from '@/context/IdStationURL';
 
 
 
@@ -21,9 +22,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-     <ThemeContextProvider>
+      <StationProvider>
         {children}
-     </ThemeContextProvider>
+     </StationProvider>
 
         </body>
       <title>SST</title>

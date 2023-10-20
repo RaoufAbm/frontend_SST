@@ -1,34 +1,33 @@
 "use client"
 
-import React, { createContext, useContext, useState } from "react";
-
-type ThemeContextProvidersProps = {
-    children: React.ReactNode;
-};
+import { createContext, useContext, useState, useEffect, ReactNode } from "react";
 
 type ThemeContext = {
-    IdStationURL: number;
-    setIdStationURL: React.Dispatch<React.SetStateAction<number>>; // Use the correct type for setId
+  IdStationURL: number;
+  setIdStationURL: React.Dispatch<React.SetStateAction<number>>;
 };
 
-export const StationURL = createContext<ThemeContext | null>(null);
+export const StationContext = createContext<ThemeContext | undefined>(undefined);
 
-export default function ThemeContextProvider({
-    children,
-}: ThemeContextProvidersProps) {
-    const [IdStationURL, setIdStationURL] = useState<number>(1); // Initialize the 'id' state
+export const StationProvider = ({ children }: { children: ReactNode }) => {
+  const initialIdStationURL = localStorage.getItem("IdStationURL") || "0";
+  const [IdStationURL, setIdStationURL] = useState<number>(parseInt(initialIdStationURL, 10));
 
-    return (
-        <StationURL.Provider value={{ IdStationURL, setIdStationURL }}>
-            {children}
-        </StationURL.Provider>
-    );
-}
+  useEffect(() => {
+    localStorage.setItem("IdStationURL", IdStationURL.toString());
+  }, [IdStationURL]);
 
-export function useStationURL() {
-    const context = useContext(StationURL);
-    if (!context) {
-        throw new Error("useThemeContext must be used within a ThemeContextProvider");
-    }
-    return context;
-}
+  return (
+    <StationContext.Provider value={{ IdStationURL, setIdStationURL }}>
+      {children}
+    </StationContext.Provider>
+  );
+};
+
+export const useStationURL = () => {
+  const context = useContext(StationContext);
+  if (!context) {
+    throw new Error("useStationURL must be used within a StationProvider");
+  }
+  return context;
+};

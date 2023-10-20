@@ -4,12 +4,15 @@ import "bootstrap/dist/css/bootstrap.css";
 import { useState } from "react";
 import axios from "axios";
 import Swal from "sweetalert2";
+import { useData } from "@/context/dataUser";
 
 function Login() {
   const [values, setValues] = useState({
     Name: "",
     Password: "",
   });
+  const {DataUser,setDataUser}=useData();
+  console.log(DataUser);
 
   const handleInput = (event: { target: { name: any; value: any } }) => {
     setValues((prev) => ({
@@ -21,8 +24,10 @@ function Login() {
     event.preventDefault();
 
     axios.post("https://cdd.dzkimtech.com/login",values)
-      .then((res) => {
-        if (res.data === "Success") {
+      .then((res) => {            
+
+        if (res.data.length === 1 && res.status === 200) {
+          setDataUser(res.data.length);
           Swal.fire({
             position: "top",
             icon: "success",
@@ -30,6 +35,7 @@ function Login() {
             showConfirmButton: false,
             timer: 1500,
           }).then(function () {
+
             window.location.href = "/station";
           });
         } else {

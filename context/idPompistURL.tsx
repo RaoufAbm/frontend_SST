@@ -16,7 +16,7 @@ export const PompistURL = createContext<ThemeContext | null>(null);
 export default function ThemeContextProvider({
     children,
 }: ThemeContextProvidersProps) {
-    const [IdPompistURL, setIdPompistURL] = useState<number>(1); // Initialize the 'id' state
+    const [IdPompistURL, setIdPompistURL] = useState<number>(0); // Initialize the 'id' state
 
     return (
         <PompistURL.Provider value={{ IdPompistURL, setIdPompistURL }}>

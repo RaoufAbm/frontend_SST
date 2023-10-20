@@ -35,6 +35,7 @@ import TableCarburant from "@/components/table_carburant";
 
 import styles from "/app/page.module.css";
 import Link from "next/link";
+import ThemeContextProvider from "@/context/idCuveURL";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -60,7 +61,9 @@ export default function RootLayout({
             <i className="bi bi-person-plus"></i> Ajoute
             </button>
           </Link>
-  {children}
+          <ThemeContextProvider>
+        {children}
+     </ThemeContextProvider>
   </div>
 </>
 
