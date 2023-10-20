@@ -16,7 +16,6 @@ function Station() {
   const [fetchedData, setFetchedData] = useState([]);
   const {IdStationURL,setIdStationURL}=useStationURL();
   // const {DataUser,setDataUser}=useData();
-  console.log(IdStationURL);
 
   useEffect(() => {
     const initialValues = {

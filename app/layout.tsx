@@ -2,7 +2,6 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import "bootstrap/dist/css/bootstrap.css";
-// import ThemeContextProvider from '@/context/dataUser';
 import { StationProvider }  from '@/context/IdStationURL';
 
 

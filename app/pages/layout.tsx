@@ -4,6 +4,9 @@ import "bootstrap/dist/css/bootstrap.css";
 import Navbar from "@/components/navbar";
 import Sidebar from "@/components/sidebar";
 import styles from "/app/page.module.css";
+import IdCuveProvider from "@/context/idCuveURL";
+
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,7 +30,13 @@ export default function RootLayout({
               <Sidebar />
             </div>
 
-            <div className={styles.Content}>{children}</div>
+            <div className={styles.Content}>
+            <IdCuveProvider>
+              {children}
+
+            </IdCuveProvider>
+
+              </div>
           </div>
             {/* <div className={styles.footer} ></div> */}
         </div>

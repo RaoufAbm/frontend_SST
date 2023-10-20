@@ -45,14 +45,15 @@ float: left;}
 } */
 .ventContent {
   text-align: center;
-  background-color:#ffffff;
-  width: 60%;
-  margin-left: 22%;
-  margin-top: -45vh;
+  background-color:#fffcfc1e;
+  width: 55%;
+  margin-left: 25%;
+  margin-top: -36vh;
   padding-bottom: 20%;
-  border-left: 1px solid black;
+  border-left: 1px solid black ;
   position: absolute;
-  height: 15vh;
+  height: 70%;
+  overflow-y: scroll;
 }
 
 .indexTable:hover{

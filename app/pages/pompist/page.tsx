@@ -4,7 +4,7 @@ import Link from "next/link";
 import axios from "axios";
 import { MDBTable, MDBTableHead, MDBTableBody, MDBIcon } from 'mdb-react-ui-kit';
 import "bootstrap/dist/js/bootstrap";
-import {StationURL, useStationURL} from "@/context/IdStationURL";
+import { useStationURL} from "@/context/IdStationURL";
 import {PompistURL, usePompistURL} from "@/context/idPompistURL";
 import styles from "/app/page.module.css";
 

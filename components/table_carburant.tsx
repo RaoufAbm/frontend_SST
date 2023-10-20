@@ -13,7 +13,7 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "@/app/page.module.css";
 import "bootstrap/dist/js/bootstrap";
-import {StationURL, useStationURL} from "@/context/IdStationURL";
+import {StationContext, useStationURL} from "@/context/IdStationURL";
 
 type headP = {
   idCuve : number;
@@ -41,7 +41,10 @@ function table_carburant(props:headP) {
         .catch((err) => console.log(err));
     }, []);
   
-   
+    // const handleEditPompist = (id: number) => {
+    //   window.location.href = `/pages/indexSST/${props.idCuve}/vent/${id}`;
+
+    // };
   
     return (
       <div className=" p-5  w-100 ml-5">
@@ -73,13 +76,13 @@ function table_carburant(props:headP) {
         { 
   data.map((carb, index) => {
     return (
-        <tr key={index}  >
-      <Link className={styles.aHerf}  href={`/pages/indexSST/${props.idCuve}/vent/${carb["id"]}`}>
+      <Link className="row" href={`/pages/indexSST/${props.idCuve}/vent/${carb["id"]}`}>
+        <tr key={index}   >
           <td></td>
           <td>{carb["Num"]}</td>
           <td>{carb["Bloquer"]}</td>
-      </Link>
         </tr>
+      </Link>
     )
   })
 }

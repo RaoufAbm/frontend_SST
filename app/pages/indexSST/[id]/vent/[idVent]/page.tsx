@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 import TableCarburant from "@/components/table_carburant";
 import { MDBTable, MDBTableHead, MDBTableBody, MDBIcon } from 'mdb-react-ui-kit';
 import axios from "axios";
+import Link from "next/link";
 
 function ventIndex({params}) {
   
@@ -35,7 +36,14 @@ function ventIndex({params}) {
    
                   <div className=' p-5  w-100 ml-5'>
 
-        <MDBTable className=' table-responsive '>
+          <Link href={`/pages/indexSST/1/ajouteVent`}>
+            <button type="button" className="btn  btn-success ml-5">
+            <i className="bi bi-person-plus"></i> Ajoute
+            </button>
+          </Link>
+          <br />
+          
+        <MDBTable className=' table-responsive mt-3'>
           <MDBTableHead className=''>
             <tr>
         

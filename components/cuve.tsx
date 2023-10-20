@@ -1,3 +1,5 @@
+"use client"; 
+
 import styles from "/app/page.module.css";
 import React, { useRef } from "react";
 import Link from "next/link";
@@ -5,7 +7,8 @@ import alert from "@/images/alert.png";
 import info from "@/images/info.png";
 import warning from "@/images/warnning.png";
 import Image from "next/image";
-// import { log } from "console";
+import { useCuveURL } from "@/context/idCuveURL";
+import { log } from "console";
 
 type headP = {
   id : number;
@@ -61,12 +64,18 @@ function Cuve(props: headP) {
       wifi3.current.style.display = "block";
     }
   });
-
+  
+  const {IdCuveURL,setIdCuveURL}=useCuveURL();
+  const handleCuveId = () => {
+    setIdCuveURL(props.id);
+  };
+  console.log(IdCuveURL);
+  
   return (
     <div className={styles.box}>
         <div className={styles.boxInformation}>
             <div className={styles.boxHeader}>
-            <Link href={`/pages/indexSST/${props.id}`} className={styles.aHerf} >
+            <Link href={`/pages/indexSST/${props.id}`} onClick={handleCuveId} className={styles.aHerf} >
             <span className={styles.title}>{props.title}</span>
             </Link>
             <p className={styles.typeCuve}>

@@ -1,25 +1,15 @@
 "use client";
-import Carburant from "@/components/carburant";
-import React, { useEffect, useState } from "react";
-import TableCarburant from "@/components/table_carburant";
-import Link from "next/link";
 
-function indexSST({params}) {
-  
+import React from 'react'
+import { useCuveURL } from "@/context/idCuveURL";
 
-    
-    const  ID =  params.id;
-
-
- 
+function page() {
+  const { IdCuveURL } = useCuveURL();
   return (
     <>
-   
-    <TableCarburant idCuve={ID}  />
+    <h1>{IdCuveURL}</h1>
     </>
-         
-    );
-  }
+  )
+}
 
-export default indexSST;
-
+export default page

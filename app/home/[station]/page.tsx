@@ -5,7 +5,8 @@ import Cuve from "@/components/cuve";
 import axios from "axios";
 import Navbar from "@/components/navbar";
 import Sidebar from "@/components/sidebar";
-import {StationURL, useStationURL} from "@/context/IdStationURL";
+import { useStationURL} from "@/context/IdStationURL";
+import IdCuveProvider from "@/context/idCuveURL";
 
 
 // import { log } from "console";
@@ -41,6 +42,7 @@ function Home() {
       <div className={styles.SideBar}>
           <Sidebar />
         </div>
+        <IdCuveProvider>
         <div className={styles.Content}>
           <div className={styles.wrapper}>
               {data.map((cuve, index) => (
@@ -57,7 +59,9 @@ function Home() {
                                   />
               ))}
           </div>
-        </div>
+        </div>.      
+          </IdCuveProvider>
+
       </div>
     </div>
   );
