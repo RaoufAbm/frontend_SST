@@ -4,16 +4,31 @@ import React, { useState, SyntheticEvent } from 'react'; // Import SyntheticEven
 import styles from "/app/page.module.css";
 import axios from "axios";
 import Swal from "sweetalert2";
-import {StationURL, useStationURL} from "@/context/IdStationURL";
+import { useStationURL} from "@/context/IdStationURL";
+import { useIdVoletURL } from "@/context/idVoletURL";
+import { useCuveURL } from "@/context/idCuveURL";
+import "bootstrap/dist/js/bootstrap";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+
+
+
 
 function addVent() {
-  const {IdStationURL,setIdStationURL}=useStationURL();
+  const {IdStationURL}=useStationURL();
+  const {IdVoletURL}=useIdVoletURL();
+  const { IdCuveURL } = useCuveURL();
 
-    
+  const [selectedKeys, setSelectedKeys] = React.useState(new Set(["text"]));
+
+  const selectedValue = React.useMemo(
+    () => Array.from(selectedKeys).join(", ").replaceAll("_", " "),
+    [selectedKeys]  );
+
   const [values, setValues] = useState({
     index: "",  
     date: "", 
-    Volet_id: 1,
+    Volet_id: IdVoletURL,
     pompist_id: 2,
   });
 
@@ -38,7 +53,7 @@ function addVent() {
           showConfirmButton: false,
           timer: 1500,
         }).then(function () {
-          window.location.href = "/pages/pompist";
+          window.location.href = `/pages/indexSST/${IdCuveURL.num}/vent/${IdVoletURL}`;
         });
       } else {
         // alert("no existed");
@@ -78,7 +93,7 @@ function addVent() {
             onChange={handleInput}
           />
         </div>
-       
+
     
 
         <button type="submit" className="btn btn-success col mt-3">Validez</button>

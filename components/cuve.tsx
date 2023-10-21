@@ -66,15 +66,14 @@ function Cuve(props: headP) {
   });
   
   const {IdCuveURL,setIdCuveURL}=useCuveURL();
-  const raouf = {
+  const DataCuve = {
     num: props.id,
     title: props.title
   };
   
   const handleCuveId = () => {
-    setIdCuveURL(raouf);
+    setIdCuveURL(DataCuve);
   };
-  // console.log(raouf);
   
   return (
     <div className={styles.box}>

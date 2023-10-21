@@ -5,6 +5,7 @@ import Navbar from "@/components/navbar";
 import Sidebar from "@/components/sidebar";
 import styles from "/app/page.module.css";
 import IdCuveProvider from "@/context/idCuveURL";
+import { IdVoletProvider } from "@/context/idVoletURL";
 
 
 
@@ -32,7 +33,10 @@ export default function RootLayout({
 
             <div className={styles.Content}>
             <IdCuveProvider>
+            <IdVoletProvider>
+
               {children}
+            </IdVoletProvider>
 
             </IdCuveProvider>
 

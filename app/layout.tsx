@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import "bootstrap/dist/css/bootstrap.css";
 import { StationProvider }  from '@/context/IdStationURL';
+import DataUserProvider from '@/context/dataUser';
 
 
 
@@ -21,9 +22,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+      <DataUserProvider>
       <StationProvider>
         {children}
      </StationProvider>
+      </DataUserProvider>
 
         </body>
       <title>SST</title>

@@ -8,14 +8,17 @@ import axios from "axios";
 import Link from "next/link";
 import Cards from "@/components/cards";
 // import {StationURL, useStationURL} from "@/context/IdStationURL";
-// import { useData } from "@/context/dataUser";
 import { useStationURL } from "@/context/IdStationURL";
+import { useData } from "@/context/dataUser";
 
 function Station() {
   // Define a state variable for the data fetched from the API
   const [fetchedData, setFetchedData] = useState([]);
   const {IdStationURL,setIdStationURL}=useStationURL();
-  // const {DataUser,setDataUser}=useData();
+  const {DataUser}=useData();
+
+  console.log(DataUser[0]);
+
 
   useEffect(() => {
     const initialValues = {

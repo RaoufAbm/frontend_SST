@@ -11,8 +11,7 @@ function Login() {
     Name: "",
     Password: "",
   });
-  const {DataUser,setDataUser}=useData();
-  console.log(DataUser);
+  const {setDataUser}=useData();
 
   const handleInput = (event: { target: { name: any; value: any } }) => {
     setValues((prev) => ({
@@ -27,7 +26,7 @@ function Login() {
       .then((res) => {            
 
         if (res.data.length === 1 && res.status === 200) {
-          setDataUser(res.data.length);
+          setDataUser(res.data);
           Swal.fire({
             position: "top",
             icon: "success",

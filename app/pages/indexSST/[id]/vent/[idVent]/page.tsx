@@ -1,26 +1,24 @@
 "use client";
-import Carburant from "@/components/carburant";
 import styles from "/app/page.module.css";
 import React, { useEffect, useState } from "react";
-import TableCarburant from "@/components/table_carburant";
 import { MDBTable, MDBTableHead, MDBTableBody, MDBIcon } from 'mdb-react-ui-kit';
 import axios from "axios";
 import Link from "next/link";
+import { useIdVoletURL } from "@/context/idVoletURL";
 
-function ventIndex({params}) {
+function ventIndex() {
   
+  const {IdVoletURL}=useIdVoletURL();
 
-    const idVolet=params.idVent;
   
     const [Delete, setDelete] = useState({
       sup:"1",
-      
     });
   
   
   const [data, setData] = useState([]);
   useEffect(() => {
-    axios.get(`http://cdd.dzkimtech.com/api/Vente?idVolet=${idVolet}`)
+    axios.get(`http://cdd.dzkimtech.com/api/Vente?idVolet=${IdVoletURL}`)
       .then((res) => setData(res.data))
       .catch((err) => console.log(err));
   }, []);
