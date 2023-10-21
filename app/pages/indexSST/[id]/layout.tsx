@@ -24,7 +24,7 @@ export default function RootLayout({
    
         
 <>
-<TableCarburant idCuve={IdCuveURL}  />
+<TableCarburant idCuve={IdCuveURL.num} titleCuve={IdCuveURL.title}  />
 
              <div className={styles.ventContent}>
           

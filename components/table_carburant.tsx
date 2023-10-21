@@ -17,6 +17,7 @@ import {StationContext, useStationURL} from "@/context/IdStationURL";
 
 type headP = {
   idCuve : number;
+  titleCuve:string;
 };
 function table_carburant(props:headP) {
 
@@ -57,7 +58,7 @@ function table_carburant(props:headP) {
             <Image src={arrow} alt={""} width={25} height={25} />
           </Link>
           <h3 style={{ marginLeft: "2%" }}>
-            <strong>{props.idCuve}</strong>
+            <strong>{props.titleCuve}</strong>
           </h3>
         
         </div>
