@@ -6,6 +6,7 @@ import Sidebar from "@/components/sidebar";
 import styles from "/app/page.module.css";
 import IdCuveProvider from "@/context/idCuveURL";
 import { IdVoletProvider } from "@/context/idVoletURL";
+import AllPompistProvider from "@/context/dataPompist";
 
 
 
@@ -34,8 +35,11 @@ export default function RootLayout({
             <div className={styles.Content}>
             <IdCuveProvider>
             <IdVoletProvider>
+            <AllPompistProvider>
 
               {children}
+            </AllPompistProvider>
+
             </IdVoletProvider>
 
             </IdCuveProvider>

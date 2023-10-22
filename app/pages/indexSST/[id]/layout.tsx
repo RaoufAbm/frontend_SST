@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import TableCarburant from '@/components/table_carburant';
 import styles from '/app/page.module.css';
 import { useCuveURL } from '@/context/idCuveURL';
+import AllPompistProvider from '@/context/dataPompist';
 
 export default function RootLayout({
   children,
@@ -17,7 +18,9 @@ export default function RootLayout({
     <>
       <TableCarburant idCuve={IdCuveURL.num} titleCuve={IdCuveURL.title} />
       <div className={styles.ventContent}>
-        {children}
+
+                {children}
+      
       </div>
     </>
   );

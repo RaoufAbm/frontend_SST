@@ -7,11 +7,13 @@ import "bootstrap/dist/js/bootstrap";
 import { useStationURL} from "@/context/IdStationURL";
 import {PompistURL, usePompistURL} from "@/context/idPompistURL";
 import styles from "/app/page.module.css";
+import { useDataPompist } from "@/context/dataPompist";
 
 
 function pompist() {
   const {IdStationURL,setIdStationURL}=useStationURL();
   const { IdPompistURL, setIdPompistURL } = usePompistURL();
+  const { AllPompist, setAllPompist } = useDataPompist();
 
   const [ID_Station, setID_Station] = useState({
       ID_Station: IdStationURL,
@@ -22,19 +24,31 @@ function pompist() {
   });
 
   const [data, setData] = useState([]);
+
   useEffect(() => {
-    axios.post(`http://cdd.dzkimtech.com/api/Pompist`,ID_Station)
-      .then((res) => setData(res.data))
+    axios
+      .post(`http://cdd.dzkimtech.com/api/Pompist`, ID_Station)
+      .then((res) => {
+        // Set the data in the context using setAllPompist
+        setAllPompist(res.data);
+        // Set the local component state
+        setData(res.data);
+      })
       .catch((err) => console.log(err));
   }, []);
-
+  
 
   const DeletePompist = (id: number) => {
-    axios.put(`http://cdd.dzkimtech.com/api/supPompist?id=${id}`,Delete)
-    .then((res) => {
-      setData(data.filter(pompist => pompist["id"] !== id));
-    })
+    axios.put(`http://cdd.dzkimtech.com/api/supPompist?id=${id}`, Delete)
+      .then((res) => {
+        // Update the context data by removing the deleted pompist
+        setAllPompist((prevPompists) => prevPompists.filter(pompist => pompist.id !== id));
+        // Update the local component state as well
+        setData(data.filter(pompist => pompist["id"] !== id));
+      })
+      .catch((err) => console.log(err));
   };
+  
   const handleEditPompist = (id: number) => {
     setIdPompistURL(id);
   };

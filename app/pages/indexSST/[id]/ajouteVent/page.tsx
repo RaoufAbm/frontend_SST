@@ -1,38 +1,33 @@
 "use client";
 import Link from "next/link";
-import React, { useState, SyntheticEvent } from 'react'; // Import SyntheticEvent
+import React, { useState, SyntheticEvent } from "react";
 import styles from "/app/page.module.css";
 import axios from "axios";
 import Swal from "sweetalert2";
-import { useStationURL} from "@/context/IdStationURL";
+import { useStationURL } from "@/context/IdStationURL";
 import { useIdVoletURL } from "@/context/idVoletURL";
 import { useCuveURL } from "@/context/idCuveURL";
-import "bootstrap/dist/js/bootstrap";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-
-
-
+import Form from "react-bootstrap/Form";
+import { useDataPompist } from "@/context/dataPompist";
 
 function addVent() {
-  const {IdStationURL}=useStationURL();
-  const {IdVoletURL}=useIdVoletURL();
+  const { IdStationURL } = useStationURL();
+  const { IdVoletURL } = useIdVoletURL();
   const { IdCuveURL } = useCuveURL();
+  const { AllPompist } = useDataPompist();
 
-  const [selectedKeys, setSelectedKeys] = React.useState(new Set(["text"]));
+  const filteredPompists = AllPompist.filter((pompist) => pompist.sup === false);
 
-  const selectedValue = React.useMemo(
-    () => Array.from(selectedKeys).join(", ").replaceAll("_", " "),
-    [selectedKeys]  );
-
+  console.log(filteredPompists);
+  
   const [values, setValues] = useState({
-    index: "",  
-    date: "", 
+    index: "",
+    date: "",
     Volet_id: IdVoletURL,
-    pompist_id: 2,
+    pompist_id: "",
   });
 
-  const handleInput = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInput = (event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = event.target;
     setValues((prev) => ({
       ...prev,
@@ -40,41 +35,42 @@ function addVent() {
     }));
   };
 
-  const handleSubmit = (event: SyntheticEvent) => { // Change to SyntheticEvent
+  const handleSubmit = (event: SyntheticEvent) => {
     event.preventDefault();
 
-    axios.post("http://cdd.dzkimtech.com/api/InsrVente", values)
-    .then((res) => {
-      if (res.status === 200) {
-        Swal.fire({
-          position: "top",
-          icon: "success",
-          title: res.data.message,
-          showConfirmButton: false,
-          timer: 1500,
-        }).then(function () {
-          window.location.href = `/pages/indexSST/${IdCuveURL.num}/vent/${IdVoletURL}`;
-        });
-      } else {
-        // alert("no existed");
-        Swal.fire({
-          icon: "error",
-          title: "Oops...",
-          text: "Something went wrong!",
-          // footer: 'Why do I have this issue?</a>'
-        });
-      }
-      console.log(res);
-    })
+    axios
+      .post("http://cdd.dzkimtech.com/api/InsrVente", values)
+      .then((res) => {
+        if (res.status === 200) {
+          Swal.fire({
+            position: "top",
+            icon: "success",
+            title: res.data.message,
+            showConfirmButton: false,
+            timer: 1500,
+          }).then(function () {
+            window.location.href = `/pages/indexSST/${IdCuveURL.num}/vent/${IdVoletURL}`;
+          });
+        } else {
+          Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Something went wrong!",
+          });
+        }
+        console.log(res);
+      })
       .catch((err) => console.log(err));
   };
 
   return (
-    <div className='col w-50' style={{ marginLeft: "25%" }}>
+    <div className="col w-50" style={{ marginLeft: "25%" }}>
       <form onSubmit={handleSubmit}>
-        <h1 className='pt-5  text-primary'>Nouvelle vent</h1>
+        <h1 className="pt-5 text-primary">Nouvelle vente</h1>
         <div className="group mt-5">
-          <label htmlFor="index" className={styles.label}>index</label>
+          <label htmlFor="index" className={styles.label}>
+            Index
+          </label>
           <input
             type="text"
             name="index"
@@ -84,7 +80,9 @@ function addVent() {
           />
         </div>
         <div className="group mt-2">
-          <label htmlFor="date" className={styles.label}>date</label>
+          <label htmlFor="date" className={styles.label}>
+            Date
+          </label>
           <input
             type="date"
             name="date"
@@ -93,10 +91,29 @@ function addVent() {
             onChange={handleInput}
           />
         </div>
+        <div className="group mt-2">
+          <label htmlFor="pompist_id" className={styles.label}>
+            Pompist
+          </label>
+          <Form.Select
+            aria-label="Select pompist"
+            name="pompist_id"
+            className="form-control"
+            value={values.pompist_id}
+            onChange={handleInput}
+          >
+            <option value="">Choose pompist</option>
+            {filteredPompists.map((pompist) => (
+              <option key={pompist.id} value={pompist.id}>
+                {pompist.nom} {pompist.prenom}
+              </option>
+            ))}
+          </Form.Select>
+        </div>
 
-    
-
-        <button type="submit" className="btn btn-success col mt-3">Validez</button>
+        <button type="submit" className="btn btn-success col mt-3">
+          Valider
+        </button>
       </form>
     </div>
   );
