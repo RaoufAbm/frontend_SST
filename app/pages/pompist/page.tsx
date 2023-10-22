@@ -107,14 +107,7 @@ function pompist() {
                 </button>
                 <div className="dropdown-menu " aria-labelledby="btnGroupDrop1">
                 <Link key={index} href={`/pages/pompist/editPompist/${pompist["id"]}`} className={styles.aHerf} onClick={() => handleEditPompist(pompist["id"])}>
-
-                  <div className="dropdown-item" 
-                  //  onClick={() => {
-                    //       setIdPompistURL(pompist["id"]);
-                    //       EditPompist(3);
-                    //   }}
-                    // onClick={() => handleEditPompist(pompist["id"])}
-                    >
+                  <div className="dropdown-item" >
                     Modifie
                   </div>
                     </Link>

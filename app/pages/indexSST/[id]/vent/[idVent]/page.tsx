@@ -5,11 +5,13 @@ import { MDBTable, MDBTableHead, MDBTableBody, MDBIcon } from 'mdb-react-ui-kit'
 import axios from "axios";
 import Link from "next/link";
 import { useIdVoletURL } from "@/context/idVoletURL";
+import { useVentURL } from "@/context/idVentURL";
 
 function ventIndex() {
   
   const {IdVoletURL}=useIdVoletURL();
-
+const {IdVentURL,setIdVentURL}=useVentURL();
+  
   
     const [Delete, setDelete] = useState({
       sup:"1",
@@ -29,7 +31,9 @@ function ventIndex() {
       setData(data.filter(vent => vent["id"] !== id));
     })
   };
- 
+  const handleEditVent = (id: number) => {
+    setIdVentURL(id);
+  };
   return (
    
                   <div className=' p-5  w-100 ml-5'>
@@ -41,7 +45,7 @@ function ventIndex() {
           </Link>
           <br />
           
-        <MDBTable className=' table-responsive mt-3'>
+        <MDBTable className=' table-responsive table-dark  mt-3'>
           <MDBTableHead className=''>
             <tr>
         
@@ -73,10 +77,14 @@ function ventIndex() {
                 >
                   Action
                 </button>
+
                 <div className="dropdown-menu " aria-labelledby="btnGroupDrop1">
+                <Link key={index} href={`/pages/indexSST/${IdVoletURL}/editVent/${vent["id"]}`} className={styles.aHerf} onClick={() => handleEditVent(vent["id"])}>
                   <div className="dropdown-item"  >
                     Modifie
                   </div>
+                  </Link>
+
                   <div className="dropdown-item" onClick={() => DeleteVent(vent["id"])}>
                     Suprimer
                   </div>

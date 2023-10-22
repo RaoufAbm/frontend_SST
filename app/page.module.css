@@ -131,13 +131,23 @@ cursor: pointer;
   }
 .aHerfImg{
   text-decoration: none;
-  
   }
   .aHerfImg:hover{
     text-decoration: none;
     cursor: pointer;
   }
+  .Link{
+    color: black;
+    text-decoration: none;
+    }
+    .Link:hover{
+      color: black;
 
+      text-decoration: none;
+      cursor: pointer;
+    }
+  
+  
 
 
   
