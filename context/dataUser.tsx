@@ -69,7 +69,7 @@ export default function DataUserProvider({
 export function useData() {
   const context = useContext(Data);
   if (!context) {
-    // throw new Error("useCuveURL must be used within an DataUserProvider");
+    throw new Error("useCuveURL must be used within an DataUserProvider");
   }
   return context;
 }
