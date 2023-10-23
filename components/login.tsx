@@ -3,8 +3,8 @@ import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
 import { useState } from "react";
 import axios from "axios";
-import Swal from "sweetalert2";
 import { useData } from "@/context/dataUser";
+import Swal from "sweetalert2";
 
 function Login() {
   const [values, setValues] = useState({

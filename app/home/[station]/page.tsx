@@ -47,6 +47,7 @@ function Home() {
           <div className={styles.wrapper}>
               {data.map((cuve, index) => (
                 <Cuve
+                key={cuve["cuve_id"]} // Add a unique "key" prop
                   id={cuve["cuve_id"]}
                   title={cuve["libelle"]}
                   type={cuve["type_carburant"]}
