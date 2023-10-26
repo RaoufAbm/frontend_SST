@@ -59,7 +59,7 @@ function addUsers() {
 
   return (
     <>
-      <div className="row w-50 mt-4" style={{ marginLeft: "5%" }}>
+      <div className="d-flex w-100  mt-4 " style={{ marginLeft: "5%" }}>
         <Link
           href={`/pages/pompist`}
           className={styles.aHerfImg}
@@ -67,10 +67,12 @@ function addUsers() {
         >
           <Image src={arrow} alt={""} width={35} height={35} />
         </Link>
-        <h1 className="ml-3">Nouvelle pompiste</h1>
-      </div>
+        <div className="ml-5">
+      <h1 className={styles.textPage}>Nouvelle pompiste</h1>
+    </div>      
+    </div>
 
-      <div className="col w-50" style={{ marginLeft: "25%" }}>
+      <div className={`col-12 col-md-6  ${styles.NewPompistInput}`}>
         <form onSubmit={handleSubmit}>
           <div className="group mt-5">
             <label htmlFor="nom" className={styles.label}>
@@ -132,16 +134,18 @@ function addUsers() {
               onChange={handleInput}
             />
           </div>
-          <div className="row">
+          <div className="d-flex col-12   ml-1">
             <Link href={`/pages/pompist`}>
               <button
                 type="button"
-                className="btn btn-secondary col mt-3 w-75 mr-5"
+                className="btn btn-secondary  mt-3 w-75 mr-5  "
+                style={{ height: "50px" }}
               >
                 Annuler
               </button>
             </Link>
-            <button type="submit" className="btn btn-success col mt-3 w-75">
+            <button type="submit" 
+            className="btn btn-success mt-3 w-75  "style={{ height: "50px" }}>
               Validez
             </button>
           </div>

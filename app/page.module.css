@@ -23,18 +23,19 @@
 }
 .NavbarBrand {
   color: white;
-font-size: unset;
-font-weight: 600;
-width: 20%;
-margin-left: 0%;
-text-align: center;
+  font-size: unset;
+  font-weight: 600;
+  width: 20%;
+  margin-left: 0%;
+  text-align: center;
 }
 .NavbarBrand:hover {
   color: white;
 }
 
-.label{
-float: left;}
+.label {
+  float: left;
+}
 
 /* .footer{
   background-color: rgb(41, 169, 255);
@@ -45,30 +46,29 @@ float: left;}
 } */
 .ventContent {
   text-align: center;
-  background-color:#fffcfc1e;
+  background-color: #fffcfc1e;
   width: 55%;
   margin-left: 25%;
   margin-top: -36vh;
   padding-bottom: 20%;
-  border-left: 1px solid black ;
+  border-left: 1px solid black;
   position: absolute;
   height: 70%;
   overflow-y: scroll;
 }
 
-.indexTable:hover{
-cursor: pointer;
+.indexTable:hover {
+  cursor: pointer;
 }
 
 /* _____________body_____________ */
-.body{
+.body {
   display: flex;
 }
 .SideBar {
   width: 15%;
   margin-left: 0%;
   position: fixed;
-
 }
 .Content {
   text-align: center;
@@ -85,7 +85,7 @@ cursor: pointer;
   height: 100vh;
   background-color: red;
 } */
-.li{
+.li {
   color: white;
   font-size: 15px;
   font-weight: 200;
@@ -96,7 +96,7 @@ cursor: pointer;
   border-bottom: 0.1px solid rgba(255, 255, 255, 0.177);
 }
 
- .li:focus  {
+.li:focus {
   background-color: rgb(232, 123, 7);
   width: 100%;
   padding-left: 10%;
@@ -104,7 +104,6 @@ cursor: pointer;
   font-weight: 600;
   border-radius: 10px;
   margin-top: 2%;
-
 }
 .li:hover {
   background-color: rgba(255, 255, 255, 0.075);
@@ -114,44 +113,42 @@ cursor: pointer;
   font-weight: 600;
   transition: 0.4s;
   border-radius: 10px;
-
 }
-.iconSidebar{
+.iconSidebar {
   width: 25px;
   height: 25px;
 }
 
-.aHerf{
+.aHerf {
   text-decoration: none;
-  
-  }
-  .aHerf:hover{
-    text-decoration: none;
-    cursor: pointer;
-  }
-.aHerfImg{
+}
+.aHerf:hover {
   text-decoration: none;
-  width: 5.5%;
+  cursor: pointer;
+}
+.aHerfImg {
+  text-decoration: none;
+  width: 3%;
   height: 5vh;
   border-radius: 50%;
   margin-top: 1%;
 }
-  .aHerfImg:hover{
-    text-decoration: none;
-    cursor: pointer;
-    background-color: rgba(51, 51, 51, 0.107);
-  }
-  .Link{
-    color: black;
-    text-decoration: none;
-    }
-    .Link:hover{
-      color: black;
+.aHerfImg:hover {
+  text-decoration: none;
+  cursor: pointer;
+  background-color: rgba(51, 51, 51, 0.107);
+}
+.Link {
+  color: black;
+  text-decoration: none;
+}
+.Link:hover {
+  color: black;
 
-      text-decoration: none;
-      cursor: pointer;
-    }
-  
+  text-decoration: none;
+  cursor: pointer;
+}
+
 /*   
     .UnderLine{
       border-bottom: #17141d 1px solid;
@@ -159,28 +156,26 @@ cursor: pointer;
       height: 8vh;
       width: 100%;
     } */
+.NewPompistInput {
+  margin-left: 25%;
+}
 
-  
-/* _______________________________ */ 
-
-
-
-
+/* _______________________________ */
 
 /* -----------------------------------------Project current------------------------------------- */
 
-.DevlEncour{
-  color :rgb(0, 174, 255);
+.DevlEncour {
+  color: rgb(0, 174, 255);
   font-size: 50px;
   margin-top: 20%;
 }
 
 /* *******************************************index page******************************************* */
-.carburant{
-margin-top: 10%;
-margin-left: -50%;
+.carburant {
+  margin-top: 10%;
+  margin-left: -50%;
 }
-.SaisIndex{
+.SaisIndex {
   display: inline-grid;
   text-align: center;
   position: absolute;
@@ -190,16 +185,15 @@ margin-left: -50%;
   justify-items: center;
   margin-top: 3vh;
   margin-left: 14.6%;
-
 }
-.IndexInput{
+.IndexInput {
   height: 5vh;
   width: 80%;
   margin: 1px;
   border-radius: 5px;
 }
 
- /********************************************end index page******************************************* */
+/********************************************end index page******************************************* */
 
 /* *******************************************home page*********************************************** */
 
@@ -213,41 +207,40 @@ margin-left: -50%;
   /* margin: 3rem 0 0; */
   /* background-color: red; */
   margin-top: 15vh;
-  margin-left:-14px;
+  margin-left: -14px;
   width: 410px;
 }
 
-
-.bouchon1{
-  position: absolute ;
+.bouchon1 {
+  position: absolute;
   background-color: rgba(52, 52, 52, 0);
-  border: 2px solid rgb(118, 118, 118);  
-  width:7%;
-  height:8%;
+  border: 2px solid rgb(118, 118, 118);
+  width: 7%;
+  height: 8%;
   border-radius: 50px 3px 0px 0px;
-  margin-left:61.5%;
-  margin-top:-4.5%;
+  margin-left: 61.5%;
+  margin-top: -4.5%;
 }
-.bouchon2{
-  position: absolute ;
+.bouchon2 {
+  position: absolute;
   background-color: rgba(52, 52, 52, 0);
-  border: 2px solid rgb(118, 118, 118);  
+  border: 2px solid rgb(118, 118, 118);
   width: 10%;
   height: 10%;
-  margin-left:60%;
-  margin-top:-2.6%;
+  margin-left: 60%;
+  margin-top: -2.6%;
   border-radius: 3px 3px 0px 0px;
 }
- .cylinder {
-position: relative;
-overflow: hidden;
-margin-left:1rem;
-width:70%;
-height: 18vh;
-border: rgba(255, 255, 255, 0.308) 1px solid;
-border-radius: 72px/106px;
-background-color: #8e8c9222;
-}	
+.cylinder {
+  position: relative;
+  overflow: hidden;
+  margin-left: 1rem;
+  width: 70%;
+  height: 18vh;
+  border: rgba(255, 255, 255, 0.308) 1px solid;
+  border-radius: 72px/106px;
+  background-color: #8e8c9222;
+}
 
 /* .cylinder:before {
 	position: absolute;
@@ -260,8 +253,8 @@ background-color: #8e8c9222;
 	content: '';
 } */
 .water {
- position: absolute;
-  height: 100%; 
+  position: absolute;
+  height: 100%;
   width: 100%;
   background-color: #ffae00;
   margin-left: 0%;
@@ -275,7 +268,6 @@ background-color: #8e8c9222;
   transform: rotate(360deg);
   transition: all 4s ease;
   animation: wave 150s linear infinite;  */
-  
 }
 /* @keyframes wave {
   0% { transform: rotate(0deg); }
@@ -303,27 +295,25 @@ background-color: #8e8c9222;
 	content: '';
 } */
 .water--0:checked ~ .cylinder .water {
-	bottom: -50px;
+  bottom: -50px;
 }
 
 .water--30:checked ~ .cylinder .water {
-	height: calc(250px * 0.3);
+  height: calc(250px * 0.3);
 }
 
 .water--50:checked ~ .cylinder .water {
-	height: calc(250px * 0.5);
+  height: calc(250px * 0.5);
 }
 
 .water--90:checked ~ .cylinder .water {
-	height: calc(250px * 0.9);
+  height: calc(250px * 0.9);
 }
 /* ______________________end___________________________ */
 
-
 /* ______________box Cuve SST__________________ */
 
-
-.infoContent{
+.infoContent {
   position: absolute;
   display: flex;
   align-items: start;
@@ -334,13 +324,13 @@ background-color: #8e8c9222;
   /* margin-left: 1.5rem; */
   /* background-color: rgb(4, 191, 91); */
 }
-.EtatTitle{
-  font-family: 'Arial Black', sans-serif; 
+.EtatTitle {
+  font-family: "Arial Black", sans-serif;
   color: #8d8d96;
-   font-size: 20px;
-   margin-left: 15%;
+  font-size: 20px;
+  margin-left: 15%;
 }
-.EtatActuel{
+.EtatActuel {
   color: white;
   font-size: 20px;
   margin-left: 10%;
@@ -348,7 +338,7 @@ background-color: #8e8c9222;
   text-align: start;
   border: 1px solid white;
   padding: 6%;
-  width:35%;
+  width: 35%;
   border-radius: 30px;
   height: 15vh;
   /* background-color:#8d8d96; */
@@ -357,37 +347,36 @@ background-color: #8e8c9222;
 .wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-padding: 1rem;
-row-gap: 4px;
-column-gap: 14px;
+  padding: 1rem;
+  row-gap: 4px;
+  column-gap: 14px;
 }
-.box{
+.box {
   display: flex;
   position: relative;
   border-radius: 16px;
   background: #17141d;
-  transition: .2s;
-  font-family: 'Inter', sans-serif;
+  transition: 0.2s;
+  font-family: "Inter", sans-serif;
   margin-top: 2%;
   padding: 1rem;
-    /* background-color: red; */
-    /* z-index: 100; */
+  /* background-color: red; */
+  /* z-index: 100; */
 
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
-.boxInformation{
+.boxInformation {
   display: flex;
   flex-direction: column;
   height: 400px;
   width: 100%;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   /* background-color: red; */
 }
 
 .box:hover {
   transform: translateY(-0.4rem);
 }
-
 
 .authorName {
   color: #7a7a8c;
@@ -424,21 +413,19 @@ column-gap: 14px;
   color: #7a7a8c;
   height: 12vh;
 }
-.typeCuve{
+.typeCuve {
   color: rgb(255, 255, 255);
   /* color: #8c867a; */
   margin-top: 7vh;
   margin-left: 0rem;
   width: 50%;
-  
 }
 
 .paragraph {
   font-size: 16px;
   color: #7a7a8c;
- 
 }
-.line{
+.line {
   border-bottom: 2px solid #7a7a8c;
   width: 3%;
   transform: rotate(90deg);
@@ -448,11 +435,10 @@ column-gap: 14px;
   left: 59%;
 }
 
-
 .title {
   font-size: 20px;
   cursor: pointer;
-  font-family: 'Arial Black', sans-serif;
+  font-family: "Arial Black", sans-serif;
   margin-left: -35%;
   position: absolute;
   background-color: #27242c;
@@ -468,23 +454,22 @@ column-gap: 14px;
 
 .title:hover {
   font-size: 20px;
-  font-family: 'Arial Black', sans-serif;
+  font-family: "Arial Black", sans-serif;
   margin-left: -60%;
   position: absolute;
-  background: linear-gradient(90deg,#ff8a00,#e52e71);
+  background: linear-gradient(90deg, #ff8a00, #e52e71);
   text-shadow: none;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  border:none;
+  border: none;
   overflow: visible;
   width: 100%;
 }
 
-
 .tags {
   margin: 1rem 0 2rem;
-  padding: .5rem 0 1rem;
+  padding: 0.5rem 0 1rem;
   line-height: 2;
   margin-bottom: 0;
   position: absolute;
@@ -496,15 +481,15 @@ column-gap: 14px;
   font-weight: 700;
   color: #7a7a8c;
   text-transform: uppercase;
-  font-size: .66rem;
+  font-size: 0.66rem;
   border: 3px solid #28242f;
   border-radius: 2rem;
-  padding: .2rem .85rem .25rem;
+  padding: 0.2rem 0.85rem 0.25rem;
   position: relative;
 }
 
 .tags a:hover {
-  background: linear-gradient(90deg,#ff8a00,#e52e71);
+  background: linear-gradient(90deg, #ff8a00, #e52e71);
   text-shadow: none;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
@@ -515,42 +500,40 @@ column-gap: 14px;
 }
 /* ______________notification/Battrie/Reseax__________________ */
 
-.notification{
+.notification {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
   column-gap: 2px;
-  margin-left:10%;
+  margin-left: 10%;
   margin-top: 45vh;
   width: 30%;
   position: absolute;
   z-index: 100;
 }
 
-.Battrie{
+.Battrie {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
-  margin-left:65%;
-  margin-top:2%;
+  margin-left: 65%;
+  margin-top: 2%;
   width: 30%;
   position: absolute;
 }
-.borderBattery{
+.borderBattery {
   width: 90%;
   height: 80%;
   margin: 5%;
   border: 1px solid #7a7a8c;
   border-radius: 2px;
   padding: 1px 1px;
-
 }
 .battery {
   width: 55%;
   height: 11.5px;
   background: #c0b7b7;
   border-radius: 1px;
-
 }
-.BatteryDiv{
+.BatteryDiv {
   position: absolute;
   margin-left: 28%;
   top: 28%;
@@ -561,25 +544,23 @@ column-gap: 14px;
   background: #c0b7b7;
   border-radius: 0px 2px 2px 0px;
 }
-.PercentageBattery{
-  font-size:10px;
-  margin-left:40%;
-  margin-top:3%;
-  position:absolute;
+.PercentageBattery {
+  font-size: 10px;
+  margin-left: 40%;
+  margin-top: 3%;
+  position: absolute;
   color: rgb(255, 255, 255);
   font-style: italic;
 }
-.Reseax{
+.Reseax {
   position: absolute;
-  margin-left:85%;
+  margin-left: 85%;
   margin-top: 0%;
   font-size: 20px;
   color: white;
 }
 
-
-
- /********************************************end home page******************************************* */
+/********************************************end home page******************************************* */
 
 /* .VosStations {
   color: rgb(143 0 0);
@@ -595,11 +576,6 @@ backdrop-filter: blur(12.3px);
 border: 1px solid rgba(170, 170, 170, 0.82);
 width: 80%;
 } */
-
-
-
-
-
 
 /* --------------------------------react css ------------------------------------------ */
 
@@ -641,7 +617,6 @@ width: 80%;
   padding: 1%;
   margin-top: -10vh;
   margin-left: -0.5%;
-
 }
 .grid {
   display: grid;
@@ -650,7 +625,6 @@ width: 80%;
   padding: 1%;
   margin-top: 10vh;
   margin-left: -0.5%;
-
 }
 
 .card {
@@ -753,113 +727,102 @@ width: 80%;
   }
 }
 
-
-
-
-
-
-
 /* ______________________________________responsivite___________________________________ */
 
 /* Mobile */
-@media  (max-width: 425px) {
- 
- 
+@media (max-width: 425px) {
+  .textPage {
+    font-size: 1.5rem;
+    margin-top: 1vh;
+  }
+  .NewPompistInput {
+    margin-left: 1%;
+  }
 
-  .iconSidebar{
+  .iconSidebar {
     width: 25px;
     height: 25px;
   }
 
-  .Content{
+  .Content {
     /* background-color: palevioletred; */
     height: 100vh;
     width: 83%;
     overflow-y: scroll;
     overflow-x: hidden;
   }
- 
+
   .header {
     height: 50vh;
     background-size: 200%;
-   
   }
-    /* ______________Cuve joge__________________ */
-    .wrapper {
-      /* display: none; */
-      grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
-      /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
+  /* ______________Cuve joge__________________ */
+  .wrapper {
+    /* display: none; */
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
 
-      /* height: 100vh; */
-    }
-    .cylinder {
-      margin-left: 1.5rem;
-      width:  55%;
-      height: 15vh;
-      margin-top: 3vh;
-    }	
-    .bouchon1{
-      margin-left:40.5%;
-      margin-top:0vh;
+    /* height: 100vh; */
+  }
+  .cylinder {
+    margin-left: 1.5rem;
+    width: 55%;
+    height: 15vh;
+    margin-top: 3vh;
+  }
+  .bouchon1 {
+    margin-left: 40.5%;
+    margin-top: 0vh;
+  }
+  .bouchon2 {
+    margin-left: 39%;
+    margin-top: 1.2vh;
+  }
 
-    }
-    .bouchon2{
-      margin-left:39%;
-      margin-top: 1.2vh;
-
-    }
-   
-    .infoContent{
-      margin-left: -10%;
-      margin-top: 37vh;
-    }
-    .EtatTitle{
-       font-size: 16px;
-    }
-    .EtatActuel{
-      font-size: 16px;
-      padding: 5%;
-      height: 10vh;
-      /* border: none; */
-    }
-    .BatteryDiv{
-      margin-left: 42.5%;
-    }
-      .gridS {
-        grid-template-columns: repeat(1, minmax(100%, auto));
-      }
-     
+  .infoContent {
+    margin-left: -10%;
+    margin-top: 37vh;
+  }
+  .EtatTitle {
+    font-size: 16px;
+  }
+  .EtatActuel {
+    font-size: 16px;
+    padding: 5%;
+    height: 10vh;
+    /* border: none; */
+  }
+  .BatteryDiv {
+    margin-left: 42.5%;
+  }
+  .gridS {
+    grid-template-columns: repeat(1, minmax(100%, auto));
+  }
 }
 
 /* Tablet and Smaller Desktop */
 @media (min-width: 426px) and (max-width: 768px) {
- 
-
- .Content {
-  background-color: red;}
+  .Content {
+    background-color: red;
+  }
   /* ______________Cuve joge__________________ */
 
-  .bouchon1{
-    margin-left:61.5%;
-    margin-top:-2.2vh;
-    
-  
+  .bouchon1 {
+    margin-left: 61.5%;
+    margin-top: -2.2vh;
   }
-  .bouchon2{
-    margin-left:60%;
-    margin-top:-1vh;
-  
+  .bouchon2 {
+    margin-left: 60%;
+    margin-top: -1vh;
   }
- 
-    .gridS {
-      grid-template-columns: repeat(2, minmax(50%, auto));
-    }
-  
+
+  .gridS {
+    grid-template-columns: repeat(2, minmax(50%, auto));
+  }
 }
 
 /* yellow */
-@media (min-width: 778px) and (max-width:1170px) {
-  
+@media (min-width: 778px) and (max-width: 1170px) {
   /* .Content {
     background-color: rgb(255, 221, 0);
   
@@ -867,130 +830,106 @@ width: 80%;
   } */
   /* ______________Cuve joge__________________ */
 
-  .bouchon1{
-    margin-left:51.5%;
-    margin-top:3.8%;
-    
-  
+  .bouchon1 {
+    margin-left: 51.5%;
+    margin-top: 3.8%;
   }
-  .bouchon2{
-    margin-left:50%;
-    margin-top:6.6%;
-  
+  .bouchon2 {
+    margin-left: 50%;
+    margin-top: 6.6%;
   }
   .cylinder {
-    width:18rem;
+    width: 18rem;
     height: 18vh;
     margin-top: 10%;
-    margin-left:1.5rem;
-    
-    }	
-    .grid {
-      grid-template-columns: repeat(3, minmax(30%, auto));
-    }
-    .li{
-      font-size: 13px;
-    }
-    .li:hover {
-   
-      padding-left: 4%;
-      /* font-size: 13px; */
-
-    }
+    margin-left: 1.5rem;
+  }
+  .grid {
+    grid-template-columns: repeat(3, minmax(30%, auto));
+  }
+  .li {
+    font-size: 13px;
+  }
+  .li:hover {
+    padding-left: 4%;
+    /* font-size: 13px; */
+  }
 }
 
 /* small desktop */
-@media (min-width: 1171px) and (max-width:1489px) {
-  
+@media (min-width: 1171px) and (max-width: 1489px) {
   .li:hover {
-   
     padding-left: 5%;
-   
   }
   /* ______________Cuve joge__________________ */
 
-  .typeCuve{
-    margin-top:8vh;
+  .typeCuve {
+    margin-top: 8vh;
     margin-left: 0rem;
   }
-  .infoContent{
+  .infoContent {
     margin-left: -5%;
     margin-top: 45vh;
   }
-  .EtatTitle{
-     font-size: 18px;
+  .EtatTitle {
+    font-size: 18px;
   }
-  .EtatActuel{
+  .EtatActuel {
     font-size: 18px;
     padding: 5%;
   }
-  .bouchon1{
-    margin-left:51.5%;
-    margin-top:3.8%;
-    
-  
+  .bouchon1 {
+    margin-left: 51.5%;
+    margin-top: 3.8%;
   }
-  .bouchon2{
-    margin-left:50%;
-    margin-top:6.6%;
-  
+  .bouchon2 {
+    margin-left: 50%;
+    margin-top: 6.6%;
   }
   .cylinder {
-    width:18rem;
+    width: 18rem;
     margin-top: 10%;
     /* height: 18vh; */
     /* margin-left:1.5rem; */
-    
-    }	
+  }
 }
 
 /* large desktop */
 
-@media (min-width: 1490px) and (max-width:1553px) {
-  
-
+@media (min-width: 1490px) and (max-width: 1553px) {
   /* ______________Cuve joge__________________ */
 
-  .bouchon1{
-    margin-left:51.5%;
-    margin-top:-4.5%;
-  
+  .bouchon1 {
+    margin-left: 51.5%;
+    margin-top: -4.5%;
   }
-  .bouchon2{
-    margin-left:50%;
-    margin-top:-2.6%;
-  
+  .bouchon2 {
+    margin-left: 50%;
+    margin-top: -2.6%;
   }
-
 }
 
 /* Max ecran */
-@media  (min-width: 1554px) {
- 
-    /* ______________Cuve joge__________________ */
+@media (min-width: 1554px) {
+  /* ______________Cuve joge__________________ */
 
-    .bouchon1{
-      margin-left:71.5%;
-      margin-top:-4.5%;
-    
-    }
-    .bouchon2{
-      margin-left:70%;
-      margin-top:-2.6%;
-    
-    }
-    .wrapper {
-      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    }
-  
-    .cylinder {
-      margin-left: 1.5rem;
-      width:  90%;
-      
-    }	
-.BatteryDiv{
-  margin-left: 21%;
-}
+  .bouchon1 {
+    margin-left: 71.5%;
+    margin-top: -4.5%;
+  }
+  .bouchon2 {
+    margin-left: 70%;
+    margin-top: -2.6%;
+  }
+  .wrapper {
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  }
 
-
+  .cylinder {
+    margin-left: 1.5rem;
+    width: 90%;
+  }
+  .BatteryDiv {
+    margin-left: 21%;
+  }
 }

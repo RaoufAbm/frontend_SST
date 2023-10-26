@@ -70,7 +70,7 @@ function pompist() {
         </Link>
       </div>
 
-      <div className=" p-5  w-100 ml-5">
+      <div className=" p-5  w-100 ">
         <MDBTable className=" table-responsive ">
           <MDBTableHead className="">
             <tr>
