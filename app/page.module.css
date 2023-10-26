@@ -733,7 +733,6 @@ width: 80%;
 @media (max-width: 425px) {
   .textPage {
     font-size: 1.5rem;
-    margin-top: 1vh;
   }
   .NewPompistInput {
     margin-left: 1%;

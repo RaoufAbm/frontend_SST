@@ -67,10 +67,9 @@ function addUsers() {
         >
           <Image src={arrow} alt={""} width={35} height={35} />
         </Link>
-        <div className="ml-5">
+        <div className="ml-5 mt-1">
       <h1 className={styles.textPage}>Nouvelle pompiste</h1>
-    </div>      
-    </div>
+    </div>      </div>
 
       <div className={`col-12 col-md-6  ${styles.NewPompistInput}`}>
         <form onSubmit={handleSubmit}>
