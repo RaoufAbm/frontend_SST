@@ -38,7 +38,7 @@ function table_carburant(props: headP) {
 
   return (
     <>
-      <div className="row w-50 mt-4" style={{ marginLeft: "10%"  }}>
+      <div className="row w-100 mt-4" style={{ marginLeft: "5%"  }}>
         <Link
           href={`/home/${IdStationURL}`}
           className={styles.aHerfImg}
@@ -46,9 +46,10 @@ function table_carburant(props: headP) {
           >
           <Image src={arrow} alt={""} width={35} height={35} />
         </Link>
-        <h1 style={{ marginLeft: "2%" }}>
-          {props.titleCuve}
-        </h1>
+      
+        <div className="ml-5 mt-1">
+      <h1 className={styles.textPage}>{props.titleCuve}</h1>
+    </div> 
       </div>
     <div className=" p-5  w-25 ml-5">
       <MDBTable className=" table-responsive table-hover ml-1 pl-5">

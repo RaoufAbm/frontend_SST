@@ -1,78 +1,84 @@
-import { MDBTable, MDBTableHead, MDBTableBody, MDBIcon } from 'mdb-react-ui-kit';
-import axios from 'axios';
+import {
+  MDBTable,
+  MDBTableHead,
+  MDBTableBody,
+  MDBIcon,
+} from "mdb-react-ui-kit";
+import axios from "axios";
 import React, { useEffect, useRef, useState } from "react";
 import arrow from "@/icons/ArrowLeft.png";
 import Image from "next/image";
-import Link from 'next/link';
+import Link from "next/link";
 import styles from "@/app/page.module.css";
-import { useStationURL} from "@/context/IdStationURL";
-
+import { useStationURL } from "@/context/IdStationURL";
 
 type headP = {
-  IDCuve : number;
+  IDCuve: number;
 };
-function TableMusurs(props:headP) {
-  const {IdStationURL,setIdStationURL}=useStationURL();
-
+function TableMusurs(props: headP) {
+  const { IdStationURL, setIdStationURL } = useStationURL();
 
   const [values, setValues] = useState({
     IDCuve: props.IDCuve,
-    
   });
 
-  const [data,setData]= useState([])
-  
-  useEffect(()=> {
-    axios.post('http://cdd.dzkimtech.com/api/Mesur',values)
-    .then(res => setData(res.data))
-    .catch(err => console.log(err));
-},[])
+  const [data, setData] = useState([]);
 
-return (
-  <>
-  
-  
-  <div className="row w-50 mt-4"  style={{ marginLeft: "5%" }}>
-          <Link href={`/home/${IdStationURL}`}   className={styles.aHerfImg} style={{marginLeft:"-1%"}}>
-                  <Image  src={arrow} alt={""} width={35} height={35}  />
-    </Link>
-          <h1 className='ml-3'>Museures</h1>
-            </div>
-    <div className=' p-5  w-100 ml-5'>
-            <br />
-    <MDBTable className=' table-responsive '>
-      <MDBTableHead className=''>
-        <tr>
-          <th scope='col'></th>
-          <th scope='col'>N°</th>
-          <th scope='col'>Date</th>
-          <th scope='col'>Niveau</th>
-          <th scope='col'>Qte </th>
-          <th scope='col'>Alarme de niveau</th>
-          <th scope='col'>Alarme de batterie</th>
-          <th scope='col'>Volt</th>
-          <th scope='col'>Rsrp</th>
-        </tr>
-      </MDBTableHead>
-      <MDBTableBody >
-        { 
-        data.map((Mesur,index) =>{
-          return <tr key={index} >  
-          <td></td>
-          <td>{Mesur["id"]}</td>
-          <td>{Mesur["date"]}</td>
-          <td>{Mesur["Level"]} mm</td>
-          <td>{Mesur["Qte"]} L</td>
-          <td>{Mesur["AlarmeLevel"]}</td>
-          <td>{Mesur["AlarmeBattery"]} </td>
-          <td>{Mesur["Volt"]}</td>
-          <td>{Mesur["Rsrp"]}</td>
-          </tr>
-        })}
+  useEffect(() => {
+    axios
+      .post("http://cdd.dzkimtech.com/api/Mesur", values)
+      .then((res) => setData(res.data))
+      .catch((err) => console.log(err));
+  }, []);
 
+  return (
+    <>
+      <div className="row w-100 mt-4" style={{ marginLeft: "5%" }}>
+        <Link
+          href={`/home/${IdStationURL}`}
+          className={styles.aHerfImg}
+          style={{ marginLeft: "-1%" }}
+        >
+          <Image src={arrow} alt={""} width={35} height={35} />
+        </Link>
+        <div className="ml-5 mt-1">
+          <h1 className={styles.textPage}>Museures</h1>
+        </div>
+      </div>
+      <div className=" p-5  w-100 ">
+        <br />
+        <MDBTable className=" table-responsive ">
+          <MDBTableHead className="">
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">N°</th>
+              <th scope="col">Date</th>
+              <th scope="col">Niveau</th>
+              <th scope="col">Qte </th>
+              <th scope="col">Alarme de niveau</th>
+              <th scope="col">Alarme de batterie</th>
+              <th scope="col">Volt</th>
+              <th scope="col">Rsrp</th>
+            </tr>
+          </MDBTableHead>
+          <MDBTableBody>
+            {data.map((Mesur, index) => {
+              return (
+                <tr key={index}>
+                  <td></td>
+                  <td>{Mesur["id"]}</td>
+                  <td>{Mesur["date"]}</td>
+                  <td>{Mesur["Level"]} mm</td>
+                  <td>{Mesur["Qte"]} L</td>
+                  <td>{Mesur["AlarmeLevel"]}</td>
+                  <td>{Mesur["AlarmeBattery"]} </td>
+                  <td>{Mesur["Volt"]}</td>
+                  <td>{Mesur["Rsrp"]}</td>
+                </tr>
+              );
+            })}
 
-
-        {/* <tr>
+            {/* <tr>
           <th scope='col'></th>
           <td className='text-danger'>
             <MDBIcon className='me-1' fas icon='caret-down' />
@@ -126,10 +132,10 @@ return (
             $-1.78
           </td>
         </tr>  */}
-      </MDBTableBody>
-    </MDBTable>
-    </div>
-            </>
+          </MDBTableBody>
+        </MDBTable>
+      </div>
+    </>
   );
 }
 export default TableMusurs;
