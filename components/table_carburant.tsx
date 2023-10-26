@@ -51,8 +51,8 @@ function table_carburant(props: headP) {
       <h1 className={styles.textPage}>{props.titleCuve}</h1>
     </div> 
       </div>
-    <div className=" p-5  w-25 ml-5">
-      <MDBTable className=" table-responsive table-hover ml-1 pl-5">
+    <div className={styles.tableCarburant}>
+      <MDBTable className=" table-responsive table-hover  ml-1 pl-5">
         <MDBTableHead>
           <tr className="row ">
             <th scope="col">Num</th>
@@ -80,6 +80,7 @@ function table_carburant(props: headP) {
           })}
         </MDBTableBody>
       </MDBTable>
+      
     </div>
     </>
 

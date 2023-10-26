@@ -66,9 +66,15 @@ function addVent() {
   };
 
   return (
-    <div className="col w-50" style={{ marginLeft: "25%" }}>
-      <form onSubmit={handleSubmit}>
-        <h1 className="pt-5 ">Nouvelle vente</h1>
+    <>
+      <div className="d-flex w-100  mt-4 " style={{ marginLeft: "5%" }}>
+       
+        <div className="ml-5 mt-1">
+      <h1 className={styles.textPage}>Nouvelle vente</h1>
+    </div>     
+     </div>
+    <div className={`col-12 col-md-6  ${styles.NewPompistInput}`}>
+      <form onSubmit={handleSubmit}>        
         <div className="group mt-5">
           <label htmlFor="index" className={styles.label}>
             Index
@@ -112,22 +118,26 @@ function addVent() {
             ))}
           </Form.Select>
         </div>
-        <div className="row">
+        <div className="d-flex col-12   ml-1">
           <Link href={`/pages/indexSST/${IdCuveURL.num}/vent/${IdVoletURL}`}>
             <button
               type="button"
-              className="btn btn-secondary col mt-3 w-75 mr-5"
+              className="btn btn-secondary  mt-3 w-75 mr-5  "
+                style={{ height: "50px" }}
             >
               Annuler
             </button>
           </Link>
 
-          <button type="submit" className="btn btn-success col mt-3  w-75">
+          <button type="submit" className="btn btn-success mt-3 w-75  "style={{ height: "50px" }}>
+
             Valider
           </button>
         </div>
       </form>
     </div>
+    </>
+
   );
 }
 

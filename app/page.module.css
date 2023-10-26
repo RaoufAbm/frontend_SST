@@ -46,7 +46,7 @@
 } */
 .ventContent {
   text-align: center;
-  background-color: #fffcfc1e;
+  background-color: #0000001e;
   width: 55%;
   margin-left: 25%;
   margin-top: -36vh;
@@ -54,12 +54,30 @@
   border-left: 1px solid black;
   position: absolute;
   height: 70%;
+  overflow-x:hidden;
   overflow-y: scroll;
 }
 
 .indexTable:hover {
   cursor: pointer;
 }
+.tableCarburant{
+  margin-left:5vh ;
+  padding: 5vh; 
+  width: 25%;
+}
+.tableVent{
+  padding: 0vh;
+  margin-left: 0vh;
+  width: 100%;
+}
+
+
+
+
+
+
+
 
 /* _____________body_____________ */
 .body {
@@ -731,8 +749,30 @@ width: 80%;
 
 /* Mobile */
 @media (max-width: 425px) {
+  .tableCarburant{
+    margin-left:0vh ;
+    width: 100%;
+  }
+  .tableVent{
+    padding: 0vh;
+    margin-left: 0vh;
+    width: 100%;
+    background-color: red;
+  }
+  .ventContent {
+    background-color: #9a9a9a1e;
+    width: 83%;
+    margin-left: 0%;
+    margin-top: 6vh;
+    padding-bottom: 10%;
+    border-top: 2px solid rgb(0, 0, 0);
+    border-left: none;
+    height: 50%;
+
+  }
+
   .textPage {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
   }
   .NewPompistInput {
     margin-left: 1%;

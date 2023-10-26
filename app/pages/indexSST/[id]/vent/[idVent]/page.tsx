@@ -45,6 +45,7 @@ function ventIndex() {
     <>
       <div className="row w-100 mt-4" style={{ marginLeft: "10%" }}>
         <h1 style={{ marginLeft: "2%" }}>Vent</h1>
+      
         <Link href={`/pages/indexSST/1/ajouteVent`}>
           <button type="button" className="btn  btn-success ml-5 mt-2">
             <i className="bi bi-person-plus"></i> Ajoute
@@ -52,7 +53,7 @@ function ventIndex() {
         </Link>
       </div>
 
-      <div className=" p-5  w-100 ml-5">
+      <div className={styles.tableVent}>
         <MDBTable className=" table-responsive table-dark  mt-3">
           <MDBTableHead className="">
             <tr>
