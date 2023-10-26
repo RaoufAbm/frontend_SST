@@ -131,10 +131,15 @@ cursor: pointer;
   }
 .aHerfImg{
   text-decoration: none;
-  }
+  width: 5.5%;
+  height: 5vh;
+  border-radius: 50%;
+  margin-top: 1%;
+}
   .aHerfImg:hover{
     text-decoration: none;
     cursor: pointer;
+    background-color: rgba(51, 51, 51, 0.107);
   }
   .Link{
     color: black;
@@ -147,8 +152,13 @@ cursor: pointer;
       cursor: pointer;
     }
   
-  
-
+/*   
+    .UnderLine{
+      border-bottom: #17141d 1px solid;
+      margin-top: -2%;
+      height: 8vh;
+      width: 100%;
+    } */
 
   
 /* _______________________________ */ 

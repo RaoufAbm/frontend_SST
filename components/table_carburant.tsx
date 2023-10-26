@@ -8,7 +8,7 @@ import {
 } from "mdb-react-ui-kit";
 import axios from "axios";
 import React, { useEffect, useRef, useState } from "react";
-import arrow from "@/icons/arrow-left.png";
+import arrow from "@/icons/ArrowLeft.png";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "@/app/page.module.css";
@@ -37,20 +37,20 @@ function table_carburant(props: headP) {
   }, []);
 
   return (
-    <div className=" p-5  w-25 ml-5">
-      <div className="d-flex">
+    <>
+      <div className="row w-50 mt-4" style={{ marginLeft: "10%"  }}>
         <Link
           href={`/home/${IdStationURL}`}
           className={styles.aHerfImg}
           style={{ marginLeft: "-1%" }}
-        >
-          <Image src={arrow} alt={""} width={25} height={25} />
+          >
+          <Image src={arrow} alt={""} width={35} height={35} />
         </Link>
-        <h3 style={{ marginLeft: "2%" }}>
-          <strong>{props.titleCuve}</strong>
-        </h3>
+        <h1 style={{ marginLeft: "2%" }}>
+          {props.titleCuve}
+        </h1>
       </div>
-      <br />
+    <div className=" p-5  w-25 ml-5">
       <MDBTable className=" table-responsive table-hover ml-1 pl-5">
         <MDBTableHead>
           <tr className="row ">
@@ -80,6 +80,8 @@ function table_carburant(props: headP) {
         </MDBTableBody>
       </MDBTable>
     </div>
+    </>
+
   );
 }
 

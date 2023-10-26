@@ -34,8 +34,14 @@ function Login() {
             showConfirmButton: false,
             timer: 1500,
           }).then(function () {
+            if (res.data[0].IDStation===0) {
+              window.location.href = "/station";
+              
+            }
+            else{
+              window.location.href = `/home/${res.data[0].IDStation}`;
 
-            window.location.href = "/station";
+            }
           });
         } else {
           // alert("no existed");
@@ -46,7 +52,7 @@ function Login() {
             // footer: 'Why do I have this issue?</a>'
           });
         }
-        console.log(res);
+        // console.log(res);
       })
 
       .catch((err) => console.log(err));

@@ -16,11 +16,12 @@ function editVent() {
   const { IdVoletURL } = useIdVoletURL();
   const { IdCuveURL } = useCuveURL();
   const { AllPompist } = useDataPompist();
-  const {IdVentURL,setIdVentURL}=useVentURL();
+  const { IdVentURL, setIdVentURL } = useVentURL();
 
-  const filteredPompists = AllPompist.filter((pompist) => pompist.sup === false);
+  const filteredPompists = AllPompist.filter(
+    (pompist) => pompist.sup === false
+  );
 
-  
   const [values, setValues] = useState({
     index: "",
     date: "",
@@ -28,7 +29,9 @@ function editVent() {
     pompist_id: "",
   });
 
-  const handleInput = (event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+  const handleInput = (
+    event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => {
     const { name, value } = event.target;
     setValues((prev) => ({
       ...prev,
@@ -37,14 +40,15 @@ function editVent() {
   };
 
   useEffect(() => {
-    axios.get(`http://cdd.dzkimtech.com/api/FicheVente?id=${IdVentURL}`)
+    axios
+      .get(`https://cdd.dzkimtech.com/api/FicheVente?id=${IdVentURL}`)
       .then((res) => {
-        const responseData = res.data;        
+        const responseData = res.data;
         setValues({
-            index: responseData.index,
-            date: responseData.date,
-            pompist_id: responseData.pompist_id,
-            Volet_id: IdVoletURL,
+          index: responseData.index,
+          date: responseData.date,
+          pompist_id: responseData.pompist_id,
+          Volet_id: IdVoletURL,
         });
       })
       .catch((err) => console.log(err));
@@ -54,7 +58,7 @@ function editVent() {
     event.preventDefault();
 
     axios
-      .put(`http://cdd.dzkimtech.com/api/UpDateVente?id=${IdVentURL}`,values)
+      .put(`http://cdd.dzkimtech.com/api/UpDateVente?id=${IdVentURL}`, values)
       .then((res) => {
         if (res.status === 200) {
           Swal.fire({
@@ -81,7 +85,7 @@ function editVent() {
   return (
     <div className="col w-50" style={{ marginLeft: "25%" }}>
       <form onSubmit={handleSubmit}>
-        <h1 className="pt-5 text-primary">Nouvelle vente</h1>
+        <h1 className="pt-5 ">Modifier vente</h1>
         <div className="group mt-5">
           <label htmlFor="index" className={styles.label}>
             Index
@@ -125,10 +129,20 @@ function editVent() {
             ))}
           </Form.Select>
         </div>
-<h1>{IdVentURL}</h1>
-        <button type="submit" className="btn btn-success col mt-3">
-          Valider
-        </button>
+        <div className="row">
+          <Link href={`/pages/indexSST/${IdCuveURL.num}/vent/${IdVoletURL}`}>
+            <button
+              type="button"
+              className="btn btn-secondary col mt-3 w-75 mr-5"
+            >
+              Annuler
+            </button>
+          </Link>
+
+          <button type="submit" className="btn btn-success col mt-3  w-75">
+            Valider
+          </button>
+        </div>
       </form>
     </div>
   );

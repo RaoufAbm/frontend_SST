@@ -1,11 +1,11 @@
 import { MDBTable, MDBTableHead, MDBTableBody, MDBIcon } from 'mdb-react-ui-kit';
 import axios from 'axios';
 import React, { useEffect, useRef, useState } from "react";
-import arrow from "@/icons/arrow-left.png";
+import arrow from "@/icons/ArrowLeft.png";
 import Image from "next/image";
 import Link from 'next/link';
 import styles from "@/app/page.module.css";
-import {StationURL, useStationURL} from "@/context/IdStationURL";
+import { useStationURL} from "@/context/IdStationURL";
 
 
 type headP = {
@@ -29,15 +29,16 @@ function TableMusurs(props:headP) {
 },[])
 
 return (
-  <div className=' p-5  w-100 ml-5'>
+  <>
   
-
-    <div className="d-flex">
+  
+  <div className="row w-50 mt-4"  style={{ marginLeft: "5%" }}>
           <Link href={`/home/${IdStationURL}`}   className={styles.aHerfImg} style={{marginLeft:"-1%"}}>
-                  <Image  src={arrow} alt={""} width={25} height={25}  />
+                  <Image  src={arrow} alt={""} width={35} height={35}  />
     </Link>
-          <h3 style={{ marginLeft:"2%"}}><strong>Museures</strong></h3>
+          <h1 className='ml-3'>Museures</h1>
             </div>
+    <div className=' p-5  w-100 ml-5'>
             <br />
     <MDBTable className=' table-responsive '>
       <MDBTableHead className=''>
@@ -78,20 +79,20 @@ return (
             -48.8%
           </td>
           <td className='text-success'>
-            <MDBIcon className='me-1' fas icon='caret-up' />
+          <MDBIcon className='me-1' fas icon='caret-up' />
             14.0%
           </td>
           <td className='text-success'>
-            <MDBIcon className='me-1' fas icon='caret-up' />
-            46.4%
+          <MDBIcon className='me-1' fas icon='caret-up' />
+          46.4%
           </td>
           <td className='text-success'>
-            <MDBIcon className='me-1' fas icon='caret-up' />
-            29.6%
+          <MDBIcon className='me-1' fas icon='caret-up' />
+          29.6%
           </td>
           <td className='text-danger'>
-            <MDBIcon className='me-1' fas icon='caret-down' />
-            -11.5%
+          <MDBIcon className='me-1' fas icon='caret-down' />
+          -11.5%
           </td>
           <td className='text-danger'>
             <MDBIcon className='me-1' fas icon='caret-down' />
@@ -99,7 +100,7 @@ return (
           </td>
         </tr>
         <tr>
-          <th scope='col'></th>
+        <th scope='col'></th>
           <td className='text-danger'>
             <MDBIcon className='me-1' fas icon='caret-down' />
             -17,654
@@ -109,13 +110,13 @@ return (
             28
           </td>
           <td className='text-success'>
-            <MDBIcon className='me-1' fas icon='caret-up' />
-            111
+          <MDBIcon className='me-1' fas icon='caret-up' />
+          111
           </td>
           <td className='text-success'>
             <MDBIcon className='me-1' fas icon='caret-up' />
             $1,092.72
-          </td>
+            </td>
           <td className='text-danger'>
             <MDBIcon className='me-1' fas icon='caret-down' />
             $-1.78
@@ -128,6 +129,7 @@ return (
       </MDBTableBody>
     </MDBTable>
     </div>
+            </>
   );
 }
 export default TableMusurs;
