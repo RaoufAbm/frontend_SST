@@ -72,9 +72,17 @@
   width: 100%;
 }
 
+.TableStyle{
+  padding: 5vh;
+  width: 100%;
+}
+.dotsAction{
+  display: none;
 
-
-
+}
+.BottonAction{
+  display: block;
+}
 
 
 
@@ -837,6 +845,37 @@ width: 80%;
   .gridS {
     grid-template-columns: repeat(1, minmax(100%, auto));
   }
+  .TableStyle{
+    padding: 0vh;
+    padding-top: 1vh;
+    width: 100%;
+    font-size: 10px;
+
+  }
+  .ThTableDot{
+    position: absolute;
+    margin-left: -8.5vh;
+    background-color: rgb(255, 255, 255);
+    height: 8%;
+    width: 4.1vh;
+    margin-top: -6vh;
+  }
+  .TdTableDot{
+    position: absolute;
+    margin-left: -7vh;
+    background-color: rgb(255, 255, 255);
+    width: 4vh;
+    height: 10%;
+    z-index: 101;
+  }
+  .dotsAction{
+    display: block;
+   margin-left: 0vh;
+  }
+  .BottonAction{
+    display: none;
+  }
+  
 }
 
 /* Tablet and Smaller Desktop */

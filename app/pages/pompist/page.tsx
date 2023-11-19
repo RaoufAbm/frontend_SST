@@ -13,6 +13,8 @@ import { useStationURL } from "@/context/IdStationURL";
 import { PompistURL, usePompistURL } from "@/context/idPompistURL";
 import styles from "/app/page.module.css";
 import { useDataPompist } from "@/context/dataPompist";
+import dots from "@/icons/3Dots.png";
+import Image from "next/image";
 
 function pompist() {
   const { IdStationURL, setIdStationURL } = useStationURL();
@@ -70,17 +72,17 @@ function pompist() {
         </Link>
       </div>
 
-      <div className=" p-5  w-100 ">
+      <div className={styles.TableStyle}>
         <MDBTable className=" table-responsive ">
           <MDBTableHead className="">
             <tr>
-              <th scope="col"></th>
+              <th scope="col" ></th>
               <th scope="col">Nom</th>
               <th scope="col">Prenom</th>
               <th scope="col">Date de nessance </th>
               <th scope="col">Date de recretement</th>
               <th scope="col">Date de sortie</th>
-              <th scope="col"></th>
+              <th scope="col"  > <div className={styles.ThTableDot}></div> </th>
             </tr>
           </MDBTableHead>
           <MDBTableBody>
@@ -93,18 +95,28 @@ function pompist() {
                   <td>{pompist["date_de_nessance"]}</td>
                   <td>{pompist["date_de_recretement"]}</td>
                   <td>{pompist["date_de_sortie"]}</td>
-                  <td>
-                    <div className="btn-group" role="group">
+                  <td className={styles.TdTableDot}>
+                  <div className="btn-group" role="group">
                       <button
                         id="btnGroupDrop1"
                         type="button"
-                        className="btn btn-info dropdown-toggle"
+                        className={`btn btn-info dropdown-toggle ${styles.BottonAction}`}
                         data-toggle="dropdown"
                         aria-haspopup="true"
                         aria-expanded="false"
                       >
                         Action
                       </button>
+                      <div   
+                     className={styles.dotsAction}
+                        id="btnGroupDrop1"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false">
+                        <Image src={dots} alt={""} width={20} height={20}  />
+
+                        </div>
+             
                       <div
                         className="dropdown-menu "
                         aria-labelledby="btnGroupDrop1"
@@ -131,6 +143,33 @@ function pompist() {
             })}
           </MDBTableBody>
         </MDBTable>
+        <ul className="pagination">
+          <li className="page-item">
+            <a className="page-link" href="#debut">
+              Previous
+            </a>
+          </li>
+          {/* <li className="page-item">
+            <a className="page-link" href="#">
+              1
+            </a>
+          </li>
+          <li className="page-item">
+            <a className="page-link" href="#">
+              2
+            </a>
+          </li>
+          <li className="page-item">
+            <a className="page-link" href="#">
+              3
+            </a>
+          </li> */}
+          <li className="page-item">
+            <a className="page-link" href="#fin">
+              Next
+            </a>
+          </li>
+        </ul>
       </div>
     </>
   );
