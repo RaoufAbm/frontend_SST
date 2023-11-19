@@ -90,12 +90,12 @@ function pompist() {
               return (
                 <tr key={index}>
                   <td></td>
-                  <td>{pompist["nom"]}</td>
+                  <td >{pompist["nom"]}</td>
                   <td>{pompist["prenom"]} </td>
                   <td>{pompist["date_de_nessance"]}</td>
                   <td>{pompist["date_de_recretement"]}</td>
                   <td>{pompist["date_de_sortie"]}</td>
-                  <td className={styles.TdTableDot}>
+                  <td  className={styles.ThTableDot}>
                   <div className="btn-group" role="group">
                       <button
                         id="btnGroupDrop1"

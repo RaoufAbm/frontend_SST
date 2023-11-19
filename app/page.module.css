@@ -104,6 +104,7 @@
   margin-top: 1%;
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
   padding-bottom: 20%;
+  overflow-x:hidden ;
 }
 /* .ul{
   width: 127%;
@@ -849,25 +850,27 @@ width: 80%;
     padding: 0vh;
     padding-top: 1vh;
     width: 100%;
-    font-size: 10px;
+    font-size: 12px;
 
   }
   .ThTableDot{
-    position: absolute;
-    margin-left: -8.5vh;
+    /* position: absolute;
     background-color: rgb(255, 255, 255);
     height: 8%;
     width: 4.1vh;
-    margin-top: -6vh;
+    margin-top: -7vh; */
+    position: sticky;
+    right: 0%;
+    background-color: #c42222;
   }
-  .TdTableDot{
+  /* .TdTableDot{
     position: absolute;
-    margin-left: -7vh;
+    margin-left: -12vh;
     background-color: rgb(255, 255, 255);
     width: 4vh;
     height: 10%;
     z-index: 101;
-  }
+  } */
   .dotsAction{
     display: block;
    margin-left: 0vh;
@@ -875,7 +878,9 @@ width: 80%;
   .BottonAction{
     display: none;
   }
-  
+  .body {
+        overflow-x: hidden;
+  }
 }
 
 /* Tablet and Smaller Desktop */
