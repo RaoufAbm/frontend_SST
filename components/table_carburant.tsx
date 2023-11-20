@@ -102,9 +102,7 @@ function table_carburant(props: headP) {
               >
                  <div className={styles.gridCarb}> 
                     <Carburant NameCarb={ carb["Num"]} color={statut}/>
-                    <Carburant NameCarb={ carb["Num"]} color={statut}/>
-                    <Carburant NameCarb={ carb["Num"]} color={statut}/>
-                    <Carburant NameCarb={ carb["Num"]} color={statut}/>
+                    
                  </div>
                
              </Link>
