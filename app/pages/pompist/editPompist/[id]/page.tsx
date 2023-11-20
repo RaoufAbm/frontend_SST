@@ -122,7 +122,7 @@ function EditUsers() {
           </div>
           <div className="group mt-2">
             <label htmlFor="date_de_nessance" className={styles.label}>
-              Date_de_nessance
+              Date de nessance
             </label>
             <input
               type="date"
@@ -134,7 +134,7 @@ function EditUsers() {
           </div>
           <div className="group mt-2">
             <label htmlFor="date_de_recretement" className={styles.label}>
-              Date_de_recretement
+              Date de recretement
             </label>
             <input
               type="date"
@@ -146,7 +146,7 @@ function EditUsers() {
           </div>
           <div className="group mt-2">
             <label htmlFor="date_de_sortie" className={styles.label}>
-              Date_de_sortie
+              Date de sortie
             </label>
             <input
               type="date"

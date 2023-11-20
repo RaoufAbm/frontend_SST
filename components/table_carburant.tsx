@@ -15,6 +15,7 @@ import styles from "@/app/page.module.css";
 import "bootstrap/dist/js/bootstrap";
 import { StationContext, useStationURL } from "@/context/IdStationURL";
 import { useIdVoletURL } from "@/context/idVoletURL";
+import Carburant from "./carburant";
 
 type headP = {
   idCuve: number;
@@ -36,9 +37,12 @@ function table_carburant(props: headP) {
       .catch((err) => console.log(err));
   }, []);
 
+  
+
   return (
     <>
       <div className="row w-100 mt-4" style={{ marginLeft: "5%"  }}>
+        
         <Link
           href={`/home/${IdStationURL}`}
           className={styles.aHerfImg}
@@ -51,15 +55,15 @@ function table_carburant(props: headP) {
       <h1 className={styles.textPage}>{props.titleCuve}</h1>
     </div> 
       </div>
-    <div className={styles.tableCarburant}>
-      <MDBTable className=" table-responsive table-hover  ml-1 pl-5">
+    {/* <div className={styles.tableCarburant}> */}
+      {/* <MDBTable className=" table-responsive table-hover   ml-1 pl-5">
         <MDBTableHead>
           <tr className="row ">
             <th scope="col">Num</th>
             <th scope="col">Statut</th>
           </tr>
         </MDBTableHead>
-        <MDBTableBody>
+        <MDBTableBody >
           {data.map((carb, index) => {
              const statut = carb["Bloquer"] ? "Actif" : "Block";
 
@@ -72,16 +76,42 @@ function table_carburant(props: headP) {
                 onClick={() => setIdVoletURL(carb["id"])}
               >
                 <tr className="row ">
-                  <td className=" w-50">{carb["Num"]}</td>
+                  <td className=" w-50">  
+                    <Carburant NameCarb={ carb["Num"]}/>
+                    
+                    </td>
                   <td w-50>{statut}</td>
                 </tr>
              </Link>
             );
           })}
         </MDBTableBody>
-      </MDBTable>
-      
+      </MDBTable> */}
+<div className={styles.grid}> 
+    {data.map((carb, index) => {
+             const statut = carb["Bloquer"] ? "Actif" : "Block";
+
+            
+            return (
+
+              <Link
+                key={index}
+                className={styles.Link}
+                href={`/pages/indexSST/${props.idCuve}/vent/${carb["id"]}`}
+                onClick={() => setIdVoletURL(carb["id"])}
+              >
+                 <div className={styles.gridCarb}> 
+                    <Carburant NameCarb={ carb["Num"]} color={statut}/>
+                    <Carburant NameCarb={ carb["Num"]} color={statut}/>
+                    <Carburant NameCarb={ carb["Num"]} color={statut}/>
+                    <Carburant NameCarb={ carb["Num"]} color={statut}/>
+                 </div>
+               
+             </Link>
+            );
+          })}              
     </div>
+    {/* </div> */}
     </>
 
   );

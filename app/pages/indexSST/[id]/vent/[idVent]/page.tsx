@@ -55,7 +55,7 @@ function ventIndex() {
 
       <div className={styles.tableVent}>
         <MDBTable className=" table-responsive table-dark  mt-3">
-          <MDBTableHead className="">
+          <MDBTableHead>
             <tr>
               <th scope="col">index</th>
               <th scope="col">Date </th>

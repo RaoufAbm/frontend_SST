@@ -1,26 +1,36 @@
-import React from 'react'
+import React from "react";
+import green from "@/icons/greenDot.png";
+import red from "@/icons/redDot.png";
 import carbr from "@/images/carburant2.png";
 import Image from "next/image";
 import styles from "/app/page.module.css";
 
-type headP = {
+type HeadProps = {
   NameCarb: string;
+  color: string;
 };
 
- function Carburant(props: headP) {
+function Carburant(props: HeadProps) {
   return (
     <div className={styles.carburant}>
-        <div className={styles.SaisIndex}>
-          
-        <input className={styles.IndexInput} type="number" />
-        <input className={styles.IndexInput} type="number" />
-        <input className="form-control form-control-s mt-5 bg-dark" type="text" placeholder={props.NameCarb} disabled/>
+      <div
+        className="card text-dark bg-light ml-3 shadow p-2 mb-1 bg-body rounded border "
+        style={{ maxWidth: "15rem" }}
+        >
+        <div className="card-header h3 bg-dark-opacity-10 shadow-none p-3 mb-0 rounded">
+          {props.NameCarb}
         </div>
-        <Image src={carbr} alt={""} width={600} height={400}  />
-
-
-
+        <div className="card-body">
+          <Image src={carbr} alt={""} width={150} height={70} />
+        {props.color === "Actif" ? (
+          <Image src={green} alt="" width={20} height={20} />
+        ) : (
+          <Image src={red} alt="" width={20} height={20} />
+        )}
+        </div>
+      </div>
     </div>
-  )
+  );
 }
+
 export default Carburant;
