@@ -72,6 +72,8 @@
   width: 100%;
 }
 
+
+
 .TableStyle{
   padding: 5vh;
   width: 100%;
@@ -83,9 +85,15 @@
 .BottonAction{
   display: block;
 }
-
-
-
+.buttonADDpompist{
+display: none;
+}
+.NamePage{
+  margin-left: -5%;
+}
+.PaginationTable{
+  display: none;
+}
 
 /* _____________body_____________ */
 .body {
@@ -880,6 +888,22 @@ width: 80%;
   }
   .body {
         overflow-x: hidden;
+  }
+  .buttonADDpompist{
+    display: block;
+    position: absolute;
+    margin-left: 2vh;
+  }
+  .buttonPompist{
+    display: none;
+  }
+  .NamePage{
+    font-size: 25px;
+    margin-top: 1vh;
+    padding-bottom: 1vh;
+  }
+  .PaginationTable{
+    display: block;
   }
 }
 

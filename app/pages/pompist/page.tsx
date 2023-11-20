@@ -63,12 +63,17 @@ function pompist() {
 
   return (
     <>
-      <div className="row w-50 mt-4" style={{ marginLeft: "10%"  }}>
-        <h1 style={{ marginLeft: "-5%" }}>Pompist</h1>
+      <div className="row w-50 mt-4 " style={{ marginLeft: "10%"  }}>
+        <h1 className={styles.NamePage}>Pompist</h1>
         <Link href="/pages/pompist/insertPompist" className="mt-2">
+          <button type="button" className={`btn btn-success ${styles.buttonADDpompist}`}>
+            <i className="bi bi-person-plus"></i> 
+          </button>
+          <div className={styles.buttonPompist}>
           <button type="button" className="btn  btn-success ml-5">
             <i className="bi bi-person-plus"></i> Ajoute
           </button>
+          </div>
         </Link>
       </div>
 
@@ -76,13 +81,13 @@ function pompist() {
         <MDBTable className=" table-responsive ">
           <MDBTableHead className="">
             <tr>
-              <th scope="col" ></th>
+              <th scope="col" id="debut" ></th>
               <th scope="col">Nom</th>
               <th scope="col">Prenom</th>
               <th scope="col">Date de nessance </th>
               <th scope="col">Date de recretement</th>
               <th scope="col">Date de sortie</th>
-              <th scope="col"  > <div className={styles.ThTableDot}></div> </th>
+              <th scope="col" id="fin" > <div className={styles.ThTableDot}></div> </th>
             </tr>
           </MDBTableHead>
           <MDBTableBody>
@@ -118,7 +123,7 @@ function pompist() {
                         </div>
              
                       <div
-                        className="dropdown-menu "
+                        className="dropdown-menu mr-5 "
                         aria-labelledby="btnGroupDrop1"
                       >
                         <Link
@@ -143,7 +148,8 @@ function pompist() {
             })}
           </MDBTableBody>
         </MDBTable>
-        <ul className="pagination">
+        <div className={styles.PaginationTable}>
+        <ul className="pagination float-right mr-5">
           <li className="page-item">
             <a className="page-link" href="#debut">
               Previous
@@ -153,7 +159,7 @@ function pompist() {
             <a className="page-link" href="#">
               1
             </a>
-          </li>
+            </li>
           <li className="page-item">
             <a className="page-link" href="#">
               2
@@ -170,6 +176,7 @@ function pompist() {
             </a>
           </li>
         </ul>
+        </div>
       </div>
     </>
   );
