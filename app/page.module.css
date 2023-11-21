@@ -840,7 +840,7 @@ width: 80%;
   }
   .cylinder {
     margin-left: 1.5rem;
-    width: 55%;
+    width: 65%;
     height: 15vh;
     margin-top: 3vh;
   }
@@ -852,7 +852,6 @@ width: 80%;
     margin-left: 39%;
     margin-top: 1.2vh;
   }
-
   .infoContent {
     margin-left: -10%;
     margin-top: 37vh;
@@ -867,8 +866,10 @@ width: 80%;
     /* border: none; */
   }
   .BatteryDiv {
-    margin-left: 42.5%;
+    margin-left: 30%;
   }
+    /* ______________table__________________ */
+
   .gridS {
     grid-template-columns: repeat(1, minmax(100%, auto));
   }
@@ -897,7 +898,9 @@ width: 80%;
   }
   .BottonAction{
     display: none;
-  }
+  }    
+  /* ______________table__________________ */
+
   .body {
         overflow-x: hidden;
   }

@@ -49,9 +49,16 @@ function ventIndex() {
         <h1 style={{ marginLeft: "2%" }}>Vent</h1>
       
         <Link href={`/pages/indexSST/1/ajouteVent`}>
-          <button type="button" className="btn  btn-success ml-5 mt-2">
-            <i className="bi bi-person-plus"></i> Ajoute
+        <button type="button" className={`btn btn-success ${styles.buttonADDpompist}`}>
+        <i className="bi bi-plus"></i>
+        <i className="bi bi-ev-station-fill"></i> 
           </button>
+          <div className={styles.buttonPompist}>
+          <button type="button" className="btn  btn-success ml-5">
+          <i className="bi bi-plus"></i>
+          <i className="bi bi-ev-station-fill"></i> Ajoute
+          </button>
+          </div>
         </Link>
       </div>
 
