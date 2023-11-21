@@ -15,6 +15,7 @@ import styles from "/app/page.module.css";
 import { useDataPompist } from "@/context/dataPompist";
 import dots from "@/icons/3Dots.png";
 import Image from "next/image";
+import arrowNext from "@/icons/arrowNext.png";
 
 function pompist() {
   const { IdStationURL, setIdStationURL } = useStationURL();
@@ -152,7 +153,7 @@ function pompist() {
         <ul className="pagination float-right mr-5">
           <li className="page-item">
             <a className="page-link" href="#debut">
-              Previous
+            <Image src={arrowNext} alt={""} width={20} height={20} className="rotate" style={{ transform: 'rotate(180deg)' }} />
             </a>
           </li>
           {/* <li className="page-item">
@@ -170,9 +171,11 @@ function pompist() {
               3
             </a>
           </li> */}
+           <a className="page-link" href="#">
+            </a>
           <li className="page-item">
             <a className="page-link" href="#fin">
-              Next
+            <Image src={arrowNext} alt={""} width={20} height={20}  />
             </a>
           </li>
         </ul>

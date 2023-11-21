@@ -7,6 +7,7 @@ import {
 import axios from "axios";
 import React, { useEffect, useRef, useState } from "react";
 import arrow from "@/icons/ArrowLeft.png";
+import arrowNext from "@/icons/arrowNext.png";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "@/app/page.module.css";
@@ -45,12 +46,12 @@ function TableMusurs(props: headP) {
           <h1 className={styles.textPage}>Museures</h1>
         </div>
       </div>
-      <div className=" p-5  w-100 ">
-        <br />
+      <div className={styles.TableStyle}>      
+      
         <MDBTable className=" table-responsive ">
           <MDBTableHead className="">
             <tr>
-              <th scope="col"></th>
+              <th scope="col" id="debut"></th>
               <th scope="col">N°</th>
               <th scope="col">Date</th>
               <th scope="col">Niveau</th>
@@ -58,7 +59,7 @@ function TableMusurs(props: headP) {
               <th scope="col">Alarme de niveau</th>
               <th scope="col">Alarme de batterie</th>
               <th scope="col">Volt</th>
-              <th scope="col">Rsrp</th>
+              <th scope="col" id="fin">Rsrp</th>
             </tr>
           </MDBTableHead>
           <MDBTableBody>
@@ -78,7 +79,7 @@ function TableMusurs(props: headP) {
               );
             })}
 
-            {/* <tr>
+          {/* <tr>
           <th scope='col'></th>
           <td className='text-danger'>
             <MDBIcon className='me-1' fas icon='caret-down' />
@@ -134,6 +135,37 @@ function TableMusurs(props: headP) {
         </tr>  */}
           </MDBTableBody>
         </MDBTable>
+        <div className={styles.PaginationTable}>
+        <ul className="pagination float-right mr-5">
+          <li className="page-item">
+            <a className="page-link" href="#debut">
+            <Image src={arrowNext} alt={""} width={20} height={20} className="rotate" style={{ transform: 'rotate(180deg)' }} />
+            </a>
+          </li>
+          {/* <li className="page-item">
+            <a className="page-link" href="#">
+              1
+            </a>
+            </li>
+          <li className="page-item">
+            <a className="page-link" href="#">
+              2
+            </a>
+          </li>
+          <li className="page-item">
+            <a className="page-link" href="#">
+              3
+            </a>
+          </li> */}
+           <a className="page-link" href="#">
+            </a>
+          <li className="page-item">
+            <a className="page-link" href="#fin">
+            <Image src={arrowNext} alt={""} width={20} height={20}  />
+            </a>
+          </li>
+        </ul>
+        </div>
       </div>
     </>
   );

@@ -11,6 +11,8 @@ import axios from "axios";
 import Link from "next/link";
 import { useIdVoletURL } from "@/context/idVoletURL";
 import { useVentURL } from "@/context/idVentURL";
+import dots from "@/icons/3Dots.png";
+import Image from "next/image";
 
 function ventIndex() {
   const { IdVoletURL } = useIdVoletURL();
@@ -43,7 +45,7 @@ function ventIndex() {
   };
   return (
     <>
-      <div className="row w-100 mt-4" style={{ marginLeft: "10%" }}>
+      <div className={`row w-100 mt-4 ${styles.textHeader}` } >
         <h1 style={{ marginLeft: "2%" }}>Vent</h1>
       
         <Link href={`/pages/indexSST/1/ajouteVent`}>
@@ -71,21 +73,29 @@ function ventIndex() {
                   <td>{vent["date"]} </td>
                   <td>{vent["createdAt"]}</td>
                   <td>{vent["updatedAt"]}</td>
-                  <td>
+                  <td  className={styles.ThTableDotDark}>
                     <div className="btn-group" role="group">
                       <button
                         id="btnGroupDrop1"
                         type="button"
-                        className="btn btn-info dropdown-toggle"
+                        className={`btn btn-info dropdown-toggle ${styles.BottonAction}`}
                         data-toggle="dropdown"
                         aria-haspopup="true"
                         aria-expanded="false"
                       >
                         Action
                       </button>
+                      <div   
+                     className={styles.dotsAction}
+                        id="btnGroupDrop1"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false">
+                        <Image src={dots} alt={""} width={20} height={20}  />
 
+                        </div>
                       <div
-                        className="dropdown-menu "
+                        className="dropdown-menu mr-5 "
                         aria-labelledby="btnGroupDrop1"
                       >
                         <Link
