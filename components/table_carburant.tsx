@@ -104,7 +104,7 @@ function table_carburant(props: headP) {
                     <Carburant NameCarb={ carb["Num"]} color={statut}/>
                     
                  </div>
-               
+             
              </Link>
             );
           })}              

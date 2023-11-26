@@ -28,7 +28,7 @@ function Carburant(props: HeadProps) {
           <Image src={red} alt="" width={20} height={20} />
         )}
         </div>
-      </div>
+      </div> 
     </div>
   );
 }
