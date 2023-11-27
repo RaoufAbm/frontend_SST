@@ -826,7 +826,7 @@ width: 80%;
 /* ______________________________________responsive___________________________________ */
 
 /* Mobile */
-@media (max-width: 425px) {
+@media (max-width: 768px) {
   .tableCarburant{
     margin-left:0vh ;
     width: 100%;
@@ -992,36 +992,17 @@ width: 80%;
   }
 }
 
-/* Tablet and Smaller Desktop */
-@media (min-width: 426px) and (max-width: 768px) {
-  .Content {
-    background-color: red;
-  }
-  /* ______________Cuve joge__________________ */
 
-  .bouchon1 {
-    margin-left: 61.5%;
-    margin-top: -2.2vh;
-  }
-  .bouchon2 {
-    margin-left: 60%;
-    margin-top: -1vh;
-  }
-
-  .gridS {
-    grid-template-columns: repeat(2, minmax(50%, auto));
-  }
-}
 
 /* yellow */
-@media (min-width: 778px) and (max-width: 1170px) {
-  /* .Content {
+@media (min-width: 768px) and (max-width: 1170px) {
+  .Content {
     background-color: rgb(255, 221, 0);
   
   
-  } */
+  }
   /* ______________Cuve joge__________________ */
-
+  
   .bouchon1 {
     margin-left: 51.5%;
     margin-top: 3.8%;
@@ -1036,8 +1017,15 @@ width: 80%;
     margin-top: 10%;
     margin-left: 1.5rem;
   }
-  .grid {
-    grid-template-columns: repeat(3, minmax(30%, auto));
+
+  .gridCarb{
+    width: 400%;
+   margin-left: 0%;
+   height: 40vh;
+  }
+  .carburant {
+    margin-top: 10%;
+    left: -10%;
   }
   .li {
     font-size: 13px;
@@ -1045,6 +1033,162 @@ width: 80%;
   .li:hover {
     padding-left: 4%;
     /* font-size: 13px; */
+  }
+  .tableCarburant{
+    margin-left:0vh ;
+    width: 100%;
+  }
+  .tableVent{
+    padding: 0vh;
+    margin-left: 0vh;
+    width: 100%;
+
+  }
+  .ventContent {
+    background-color: #9a9a9a1e;
+    width: 83%;
+    margin-left: 0%;
+    margin-top: 5vh;
+    padding-bottom: 10%;
+    border-top: 2px solid rgb(0, 0, 0);
+    border-left: none;
+    height: 50%;
+  }
+  .textPage {
+    font-size: 1.7rem;
+  }
+  .NewPompistInput {
+    margin-left: 1%;
+    
+  }
+  .iconSidebar {
+    width: 25px;
+    height: 25px;
+  }
+  .Content {
+    /* background-color: palevioletred; */
+    height: 100vh;
+    width: 83%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  .header {
+    height: 50vh;
+    background-size: 200%;
+  }
+  /* ______________Cuve joge__________________ */
+  .wrapper {
+    grid-template-columns: repeat(auto-fill, minmax(49%, 1fr));
+  }
+  .cylinder {
+    margin-left: 1.5rem;
+    width: 120%;
+    height: 15vh;
+    margin-top: -5vh;
+    margin-left: 5vh;
+  }
+  .bouchon1 {
+    margin-left: 35vh;
+    margin-top: -7vh;
+  }
+  .bouchon2 {
+    margin-left: 34.5vh;
+    margin-top: -6.1vh;
+  }
+  .infoContent {
+    margin-left: 5%;
+    margin-top: 29vh;
+  }
+  .EtatTitle {
+    font-size: 16px;
+  }
+  .EtatActuel {
+    font-size: 16px;
+    padding-left: 15%;
+    height: 8vh;
+  }
+  .BatteryDiv {
+    margin-left: 14%;
+  }
+    /* ______________table__________________ */
+
+  .gridS {
+    grid-template-columns: repeat(2, minmax(50%, auto));
+  }
+  .TableStyle{
+    padding: 0vh;
+    padding-top: 1vh;
+    width: 100%;
+    font-size: 12px;
+
+  }
+  .ThTableDot{
+   
+    position: sticky;
+    right: 0%;
+    background-color: #ffffff;
+  }
+  .ThTableDotDark{
+   
+    position: sticky;
+    right: 0%;
+    background-color:#343A40 ;
+  }
+  .dotsAction{
+    display: block;
+   margin-left: 0vh;
+  }
+  .BottonAction{
+    display: none;
+  }    
+  .PaginationTable{
+    display: none;
+  }
+  /* ______________table__________________ */
+
+  .body {
+        overflow-x: hidden;
+  }
+  .buttonADDpompist{
+    display: block;
+    position: absolute;
+    margin-left: 2vh;
+  }
+  .buttonPompist{
+    display: none;
+  }
+  .NamePage{
+    font-size: 25px;
+    margin-top: 1vh;
+    padding-bottom: 1vh;
+  }
+  
+  .aHerfImg:hover {
+    background-color: rgba(255, 255, 255, 0);
+  }
+  .textHeader{
+    margin-left: 0;
+    position: sticky;
+    top: -25px;
+    background: #f3f3f3;
+    height: 10vh;
+    padding: 2%;
+    z-index: 200;
+  }
+  .li {
+    padding-top: 25%;
+  }
+  .li:hover {
+    background-color: rgba(247, 244, 244, 0); 
+  }
+  .NavbarBrand {
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    width: 40%;
+    margin-left: 0%;
+    text-align: center;
+    align-items: center;
   }
 }
 
@@ -1061,7 +1205,7 @@ width: 80%;
   }
   .infoContent {
     margin-left: -5%;
-    margin-top: 45vh;
+    margin-top: 39vh;
   }
   .EtatTitle {
     font-size: 18px;
@@ -1072,15 +1216,15 @@ width: 80%;
   }
   .bouchon1 {
     margin-left: 51.5%;
-    margin-top: 3.8%;
+    margin-top: -1vh;
   }
   .bouchon2 {
     margin-left: 50%;
-    margin-top: 6.6%;
+    margin-top: 0.5vh;
   }
   .cylinder {
     width: 18rem;
-    margin-top: 10%;
+    margin-top: 5%;
     /* height: 18vh; */
     /* margin-left:1.5rem; */
   }
@@ -1093,25 +1237,26 @@ width: 80%;
 
   .bouchon1 {
     margin-left: 51.5%;
-    margin-top: -4.5%;
+    margin-top: -5%;
   }
   .bouchon2 {
     margin-left: 50%;
-    margin-top: -2.6%;
+    margin-top: -3%;
   }
 }
 
 /* Max ecran */
 @media (min-width: 1554px) {
+ 
   /* ______________Cuve joge__________________ */
 
   .bouchon1 {
     margin-left: 71.5%;
-    margin-top: -4.5%;
+    margin-top: -5.5%;
   }
   .bouchon2 {
     margin-left: 70%;
-    margin-top: -2.6%;
+    margin-top: -3.3%;
   }
   .wrapper {
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));

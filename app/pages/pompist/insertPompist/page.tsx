@@ -72,7 +72,7 @@ function addUsers() {
     </div>     
      </div>
 
-      <div className={`col-12 col-md-6  ${styles.NewPompistInput}`}>
+      <div className={`col-12 col-md-12 col-sm3  ${styles.NewPompistInput}`}>
         <form onSubmit={handleSubmit}>
           <div className="group mt-5">
             <label htmlFor="nom" className={styles.label}>

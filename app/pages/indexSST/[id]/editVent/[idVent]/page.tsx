@@ -89,9 +89,8 @@ function editVent() {
           <h1 className={styles.textPage}>Nouvelle vente</h1>
         </div>
       </div>
-      <div className={`col-12 col-md-6  ${styles.NewPompistInput}`}>
+      <div className={`col-12 col-md-12  col-sm-3  ${styles.NewPompistInput}`}>
         <form onSubmit={handleSubmit}>
-          <h1 className="pt-5 ">Modifier vente</h1>
           <div className="group mt-5">
             <label htmlFor="index" className={styles.label}>
               Index
