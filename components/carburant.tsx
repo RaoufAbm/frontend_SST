@@ -29,38 +29,7 @@ function Carburant(props: HeadProps) {
         )}
         </div>
       </div> 
-      <div
-        className="card text-dark bg-light  shadow p-2 mb-1 bg-body rounded border "
-        
-        >
-        <div className="card-header h3 bg-dark-opacity-10 shadow-none p-3 mb-0 rounded">
-          {props.NameCarb}
-        </div>
-        <div className="card-body">
-          <Image src={carbr} alt={""} width={150} height={70} />
-        {props.color === "Actif" ? (
-          <Image src={green} alt="" width={20} height={20} />
-        ) : (
-          <Image src={red} alt="" width={20} height={20} />
-        )}
-        </div>
-      </div> 
-      <div
-        className="card text-dark bg-light  shadow p-2 mb-1 bg-body rounded border "
-        
-        >
-        <div className="card-header h3 bg-dark-opacity-10 shadow-none p-3 mb-0 rounded">
-          {props.NameCarb}
-        </div>
-        <div className="card-body">
-          <Image src={carbr} alt={""} width={150} height={70} />
-        {props.color === "Actif" ? (
-          <Image src={green} alt="" width={20} height={20} />
-        ) : (
-          <Image src={red} alt="" width={20} height={20} />
-        )}
-        </div>
-      </div> 
+    
     </div>
   );
 }
